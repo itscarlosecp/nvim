@@ -7,4 +7,5 @@ call plug#begin('~/.nvim/plugged')
     Plug 'dracula/vim'
 call plug#end()
 
-color dracula
+colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
