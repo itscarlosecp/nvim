@@ -1,9 +1,9 @@
 " Configuring indentation settings
-set shiftwidth=4
 set tabstop=4
 set shiftwidth=4
-set expandtab
 set softtabstop=4
+
+set expandtab
 set autoindent
 set smartindent
 
@@ -13,7 +13,7 @@ set relativenumber
 " Declaring active plugins with VimPlus
 call plug#begin('~/.nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'dracula/vim'
+    Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Coc allows us to use some neat autocompletion functionallity, similar to
@@ -188,5 +188,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Coloring Configuration
-colorscheme dracula
+colorscheme gruvbox 
 hi Normal guibg=NONE ctermbg=NONE
