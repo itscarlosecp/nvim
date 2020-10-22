@@ -10,11 +10,35 @@ set smartindent
 " Vim show line relative numbers
 set relativenumber
 
-" Declaring active plugins with VimPlus
+set encoding=utf8
+set guifont=Fira\ Code:h11
+
+" Declaring active plugins with VimPlug 
 call plug#begin('~/.nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'morhetz/gruvbox'
+    Plug 'preservim/nerdtree'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'mattn/emmet-vim'
+    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+    Plug 'junegunn/fzf.vim'
 call plug#end()
+
+" Emmet Configuration
+let g:user_emmet_mode='a'
+" Remapping just Emmet's leader to ',' so the emmet command is ',,'
+let g:user_emmet_leader_key=','
+
+" NERDTree Configuration
+nmap <C-n> :NERDTreeToggle<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
+
+" Open NERDTree automatically on start
+" autocmd vimenter * NERDTree
+
+" Close NERDTree if there's no file opened
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Coc allows us to use some neat autocompletion functionallity, similar to
 " VSCode
