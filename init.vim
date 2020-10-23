@@ -13,6 +13,9 @@ set relativenumber
 set encoding=utf8
 set guifont=Fira\ Code:h11
 
+" Custom VIm Keybinds 
+nmap <C-p> :GFiles<Return> 
+
 " Declaring active plugins with VimPlug 
 call plug#begin('~/.nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -21,7 +24,8 @@ call plug#begin('~/.nvim/plugged')
     Plug 'ryanoasis/vim-devicons'
     Plug 'mattn/emmet-vim'
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-    Plug 'junegunn/fzf.vim'
+    Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+    Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " Emmet Configuration
@@ -29,8 +33,17 @@ let g:user_emmet_mode='a'
 " Remapping just Emmet's leader to ',' so the emmet command is ',,'
 let g:user_emmet_leader_key=','
 
+" Prettier Configuration
+let g:prettier#config#tab_width=4
+let g:prettier#config#use_tabs='true'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#semi = 'false'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat = 1
+
 " NERDTree Configuration
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-e> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -45,9 +58,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-pairs',
+    \ 'coc-eslint'
+    \ 'coc-tslint'
     \ 'coc-tsserver',
-    \ 'coc-eslint',
-    \ 'coc-prettier',
     \ 'coc-json',
     \ ]
 
