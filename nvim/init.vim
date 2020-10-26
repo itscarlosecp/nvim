@@ -11,21 +11,30 @@ set smartindent
 set relativenumber
 
 set encoding=utf8
-set guifont=Fira\ Code:h11
 
-" Custom VIm Keybinds 
-nmap <C-p> :GFiles<Return> 
+" Custom Vim Keybinds 
+function! SearchFile()
+  :! git add .
+  :GFiles
+endfunction
+
+nmap <C-P> :call SearchFile()<Return> 
 
 " Declaring active plugins with VimPlug 
 call plug#begin('~/.nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mxw/vim-jsx' 
+    Plug 'styled-components/vim-styled-components'
     Plug 'morhetz/gruvbox'
     Plug 'preservim/nerdtree'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'sheerun/vim-polyglot'
     Plug 'mattn/emmet-vim'
+    Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
     Plug 'scrooloose/nerdcommenter'
+    Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " Emmet Configuration
@@ -46,6 +55,7 @@ let g:prettier#autoformat = 1
 nmap <C-e> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
+let NERDTreeMinimalUI=1
 
 " Open NERDTree automatically on start
 " autocmd vimenter * NERDTree
@@ -58,8 +68,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-pairs',
-    \ 'coc-eslint'
-    \ 'coc-tslint'
+    \ 'coc-tslint',
     \ 'coc-tsserver',
     \ 'coc-json',
     \ ]

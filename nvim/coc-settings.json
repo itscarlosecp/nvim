@@ -1,0 +1,18 @@
+{
+    "suggest.noselect": false,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "typescript",
+        "typescripreact",
+        "json",
+        "javascriptreact",
+        "typescript.tsx",
+        "graphql"
+    ],
+    "eslint.options": {
+        "extends": [
+            "plugin:react/recommended"
+        ]
+    },
+    "python.jediEnabled": false
+}
