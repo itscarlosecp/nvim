@@ -8,11 +8,5 @@
         "javascriptreact",
         "typescript.tsx",
         "graphql"
-    ],
-    "eslint.options": {
-        "extends": [
-            "plugin:react/recommended"
-        ]
-    },
-    "python.jediEnabled": false
+    ]
 }
