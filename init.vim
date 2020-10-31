@@ -9,16 +9,19 @@ set smartindent
 
 " Vim show line relative numbers
 set relativenumber
-
+set number
 set encoding=utf8
 
 " Custom Vim Keybinds 
+let mapleader=' '
+
 function! SearchFile()
   :! git add .
   :GFiles
 endfunction
 
 nmap <C-P> :call SearchFile()<Return> 
+inoremap jj <Esc>
 
 " Declaring active plugins with VimPlug 
 call plug#begin('~/.nvim/plugged')
@@ -234,5 +237,12 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Coloring Configuration
-colorscheme gruvbox 
+colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
+
+" Airline Configuration
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemode=':t'
+nmap <leader>1 :bp<CR>
+nmap <leader>2 :bn<CR>
+nmap <C-w> :bd<CR>
