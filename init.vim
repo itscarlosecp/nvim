@@ -40,6 +40,9 @@ call plug#begin('~/.nvim/plugged')
     Plug 'vim-airline/vim-airline'
 call plug#end()
 
+" Disable Python space errors
+let g:python_highlight_space_errors = 0
+
 " Emmet Configuration
 let g:user_emmet_mode='a'
 " Remapping just Emmet's leader to ',' so the emmet command is ',,'
@@ -74,6 +77,7 @@ let g:coc_global_extensions = [
     \ 'coc-tslint',
     \ 'coc-tsserver',
     \ 'coc-json',
+    \ 'coc-python',
     \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
