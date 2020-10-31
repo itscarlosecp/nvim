@@ -11,6 +11,7 @@ set smartindent
 set relativenumber
 set number
 set encoding=utf8
+set guifont=Cascadia\ Code\ Nerd\ Font\ 11
 
 " Custom Vim Keybinds 
 let mapleader=' '
