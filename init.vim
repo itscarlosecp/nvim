@@ -39,6 +39,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline'
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Disable Python space errors
@@ -248,6 +249,3 @@ hi Normal guibg=NONE ctermbg=NONE
 " Airline Configuration
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemode=':t'
-nmap <leader>1 :bp<CR>
-nmap <leader>2 :bn<CR>
-nmap <C-w> :bd<CR>
