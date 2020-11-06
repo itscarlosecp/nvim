@@ -75,7 +75,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Coc allows us to use some neat autocompletion functionallity, similar to
 " VSCode
 let g:coc_global_extensions = [
-    " \ 'coc-snippets',
     \ 'coc-pairs',
     \ 'coc-tslint',
     \ 'coc-tsserver',
