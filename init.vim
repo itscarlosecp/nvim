@@ -30,6 +30,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'mxw/vim-jsx' 
     Plug 'styled-components/vim-styled-components'
     Plug 'morhetz/gruvbox'
+    " Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'preservim/nerdtree'
     Plug 'ryanoasis/vim-devicons'
     Plug 'sheerun/vim-polyglot'
@@ -37,7 +38,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-    Plug 'scrooloose/nerdcommenter'
+    " Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline'
     Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
@@ -74,7 +75,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Coc allows us to use some neat autocompletion functionallity, similar to
 " VSCode
 let g:coc_global_extensions = [
-    \ 'coc-snippets',
+    " \ 'coc-snippets',
     \ 'coc-pairs',
     \ 'coc-tslint',
     \ 'coc-tsserver',
@@ -243,6 +244,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Coloring Configuration
+" colorscheme dracula 
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
