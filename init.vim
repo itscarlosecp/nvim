@@ -22,8 +22,6 @@ endfunction
 
 nmap <C-P> :call SearchFile()<Return> 
 inoremap jj <Esc>
-nnoremap <C-Left> :gT<CR>
-nnoremap <C-Right> :gt<CR>
 nnoremap <C-q> :tabclose<CR>
 
 " Declaring active plugins with VimPlug 
@@ -41,6 +39,8 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
     Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline'
+    Plug 'tell-k/vim-autopep8'
+    Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " Disable Python space errors
@@ -48,6 +48,10 @@ let g:python_highlight_space_errors = 0
 
 " Prettier config
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#jsx_single_quote = 'true'
+let g:prettier#config#use_tabs = 'true'
+let g:prettier#config#semi = 'false'
 
 " Emmet Configuration
 let g:user_emmet_mode='a'
