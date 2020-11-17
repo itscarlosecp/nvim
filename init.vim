@@ -7,14 +7,13 @@ set expandtab
 set autoindent
 set smartindent
 
-" Vim show line relative numbers
 set relativenumber
 set number
 set encoding=utf8
-set guifont=Cascadia\ Code\ Nerd\ Font\ 11
+set guifont=Cascadia\ Code\ Nerd\ Font:h11
 
 " Custom Vim Keybinds 
-let mapleader=' '
+let mapleader=" "
 
 function! SearchFile()
   :! git add .
@@ -23,6 +22,9 @@ endfunction
 
 nmap <C-P> :call SearchFile()<Return> 
 inoremap jj <Esc>
+nnoremap <C-Left> :gT<CR>
+nnoremap <C-Right> :gt<CR>
+nnoremap <C-q> :tabclose<CR>
 
 " Declaring active plugins with VimPlug 
 call plug#begin('~/.nvim/plugged')
@@ -30,35 +32,27 @@ call plug#begin('~/.nvim/plugged')
     Plug 'mxw/vim-jsx' 
     Plug 'styled-components/vim-styled-components'
     Plug 'morhetz/gruvbox'
-    " Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'preservim/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
     Plug 'ryanoasis/vim-devicons'
     Plug 'sheerun/vim-polyglot'
     Plug 'mattn/emmet-vim'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-    Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-    " Plug 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline'
-    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
 
+" Prettier config
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
 " Emmet Configuration
 let g:user_emmet_mode='a'
-" Remapping just Emmet's leader to ',' so the emmet command is ',,'
+" Remapping just Emmet's leader to ',' so the emmet command is ';;'
 let g:user_emmet_leader_key=','
-
-" Prettier Configuration
-let g:prettier#config#tab_width=4
-let g:prettier#config#use_tabs='true'
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#semi = 'false'
-let g:prettier#config#trailing_comma = 'none'
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat = 1
 
 " NERDTree Configuration
 nmap <C-e> :NERDTreeToggle<CR>
@@ -72,14 +66,19 @@ let NERDTreeMinimalUI=1
 " Close NERDTree if there's no file opened
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Open file in new tab by default
+" let NERDTreeMapOpenInTab='<ENTER>'
+
 " Coc allows us to use some neat autocompletion functionallity, similar to
 " VSCode
 let g:coc_global_extensions = [
+    \ 'coc-snippets',
     \ 'coc-pairs',
     \ 'coc-tslint',
     \ 'coc-tsserver',
     \ 'coc-json',
     \ 'coc-python',
+    \ 'coc-prettier'
     \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
@@ -243,7 +242,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Coloring Configuration
-" colorscheme dracula 
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
