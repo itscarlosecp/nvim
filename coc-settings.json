@@ -1,5 +1,6 @@
 {
 	"suggest.noselect": false,
+
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
 		"typescript",
@@ -9,10 +10,15 @@
 		"typescript.tsx",
 		"graphql"
 	],
+
 	"python.jediEnabled": false,
+
 	"prettier.singleQuote": true,
 	"prettier.jsxSingleQuote": true,
 	"prettier.useTabs": true,
 	"prettier.semi": false,
-	"snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+
+	"explorer.width": 35,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.file.tabCD": false
 }

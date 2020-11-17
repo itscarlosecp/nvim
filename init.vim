@@ -10,15 +10,17 @@
 " Welcome to my Nvim init.vim config file. I used to be
 " a Visual Studio Code power user, until I woke up (JK). 
 "
-" I've been using with for a few months, so I'm not a 
-" vim pro or anything like that, but I like my config, 
-" I hope it would be usefull for someone how's starting
+" I've been using Neovim for a few months, so I'm not a 
+" pro or anything like that, but I like my config, I
+" hope it would be usefull for someone how's starting
 " with vim too.
 "
 " ===================================================== "
 "
-" * Github User: itscarlosecp
-" * Config Repo: https://github.com/itscarlosecp/nvim
+"   * Github Username: itscarlosecp
+"   * Config Repo: https://github.com/itscarlosecp/nvim
+"
+" ===================================================== "
 
 
 " ================ Indentation & Fonts ================ "
@@ -34,12 +36,6 @@ set relativenumber
 set number
 set encoding=utf8
 set guifont=Cascadia\ Code\ Nerd\ Font:h11
-
-
-" ================ Theming & Asteticts ================ "
-
-colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
 
 
 " ================= Linting & Styling ================= "
@@ -95,20 +91,27 @@ call plug#begin('~/.nvim/plugged')
 call plug#end()
 
 
+" ================ Theming & Asteticts ================ "
+
+colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
+
+
 " =============== Plugins Configuration =============== "
 
+" (NERDTree has been replaced by Coc Explorer)
 " ========== NERDTree ========== "
 
-nmap <C-e> :NERDTreeToggle<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
-let NERDTreeMinimalUI=1
+" nmap <C-e> :NERDTreeToggle<CR>
+" vmap ++ <plug>NERDCommenterToggle
+" nmap ++ <plug>NERDCommenterToggle
+" let NERDTreeMinimalUI=1
 
 " Open NERDTree automatically on start
 " autocmd vimenter * NERDTree
 
 " Close NERDTree if there's no file opened
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Open file in new tab by default
 " let NERDTreeMapOpenInTab='<ENTER>'
@@ -298,6 +301,10 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" ========= Coc Explorer ========== "
+
+:noremap <C-e> :CocCommand explorer<CR>
 
 " ========== Vim Airline ========== "
 
