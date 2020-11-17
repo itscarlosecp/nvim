@@ -1,10 +1,33 @@
-" Configuring indentation settings
+" 
+"    _____        __
+"   /_  _/___  (_) /_    __(_)___ ___
+"    / // __ \/ / __/\  / / / __ `__ \
+"  _/ // / / / / /__\ \/ / / / / / / /
+" /___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
+" 
+" ===================================================== "
+"
+" Welcome to my Nvim init.vim config file. I used to be
+" a Visual Studio Code power user, until I woke up (JK). 
+"
+" I've been using with for a few months, so I'm not a 
+" vim pro or anything like that, but I like my config, 
+" I hope it would be usefull for someone how's starting
+" with vim too.
+"
+" ===================================================== "
+"
+" * Github User: itscarlosecp
+" * Config Repo: https://github.com/itscarlosecp/nvim
+
+
+" ================ Indentation & Fonts ================ "
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-set expandtab
-set autoindent
+set noexpandtab
 set smartindent
 
 set relativenumber
@@ -12,36 +35,14 @@ set number
 set encoding=utf8
 set guifont=Cascadia\ Code\ Nerd\ Font:h11
 
-" Custom Vim Keybinds 
-let mapleader=" "
 
-function! SearchFile()
-  :! git add .
-  :GFiles
-endfunction
+" ================ Theming & Asteticts ================ "
 
-nmap <C-P> :call SearchFile()<Return> 
-inoremap jj <Esc>
-nnoremap <C-q> :tabclose<CR>
+colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
-" Declaring active plugins with VimPlug 
-call plug#begin('~/.nvim/plugged')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'mxw/vim-jsx' 
-    Plug 'styled-components/vim-styled-components'
-    Plug 'morhetz/gruvbox'
-    Plug 'preservim/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'mattn/emmet-vim'
-    Plug 'junegunn/fzf.vim'
-    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'vim-airline/vim-airline'
-    Plug 'tell-k/vim-autopep8'
-    Plug 'Chiel92/vim-autoformat'
-call plug#end()
+
+" ================= Linting & Styling ================= "
 
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
@@ -58,7 +59,46 @@ let g:user_emmet_mode='a'
 " Remapping just Emmet's leader to ',' so the emmet command is ';;'
 let g:user_emmet_leader_key=','
 
-" NERDTree Configuration
+
+" ================== Custom Keybinds ================== "
+
+let mapleader=" "
+
+function! SearchFile()
+  :! git add .
+  :GFiles
+endfunction
+
+nmap <C-P> :call SearchFile()<Return> 
+inoremap jj <Esc>
+nnoremap <C-q> :tabclose<CR>
+
+
+" =============== Plugins Installation =============== "
+
+call plug#begin('~/.nvim/plugged')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mxw/vim-jsx' 
+    Plug 'styled-components/vim-styled-components'
+    Plug 'morhetz/gruvbox'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'mattn/emmet-vim'
+    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'vim-airline/vim-airline'
+    Plug 'tell-k/vim-autopep8'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'preservim/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
+call plug#end()
+
+
+" =============== Plugins Configuration =============== "
+
+" ========== NERDTree ========== "
+
 nmap <C-e> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
@@ -73,16 +113,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Open file in new tab by default
 " let NERDTreeMapOpenInTab='<ENTER>'
 
-" Coc allows us to use some neat autocompletion functionallity, similar to
-" VSCode
+" ========== Conquer of Completion (Coc) ========== "
+
 let g:coc_global_extensions = [
-    \ 'coc-snippets',
     \ 'coc-pairs',
     \ 'coc-tslint',
     \ 'coc-tsserver',
     \ 'coc-json',
     \ 'coc-python',
-    \ 'coc-prettier'
+    \ 'coc-prettier',
     \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
@@ -231,7 +270,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+" nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
@@ -245,10 +284,24 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" Coloring Configuration
-colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" ========== Vim Airline ========== "
 
 " Airline Configuration
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemode=':t'
+

@@ -9,8 +9,10 @@
 		"typescript.tsx",
 		"graphql"
 	],
+	"python.jediEnabled": false,
 	"prettier.singleQuote": true,
 	"prettier.jsxSingleQuote": true,
 	"prettier.useTabs": true,
-	"prettier.semi": false
+	"prettier.semi": false,
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snips"
 }
