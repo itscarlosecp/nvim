@@ -305,6 +305,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " ========= Coc Explorer ========== "
 
 :noremap <C-e> :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " ========== Vim Airline ========== "
 

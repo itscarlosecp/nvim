@@ -20,5 +20,11 @@
 
 	"explorer.width": 35,
 	"explorer.icon.enableNerdfont": true,
-	"explorer.file.tabCD": false
+	"explorer.icon.enableVimDevicons": true,
+	"explorer.file.tabCD": false,
+	"explorer.file.autoReveal": false,
+	"explorer.previewAction.onHover": false,
+	"explorer.keyMappings.global": {
+		"<cr>": "open:vsplit"
+	}
 }
