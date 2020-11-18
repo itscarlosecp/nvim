@@ -6,6 +6,8 @@
 " /___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 " 
 " ===================================================== "
+" = * * * * * * * * * * * * * * * * * * * * * * * * * = "
+" ===================================================== "
 "
 " Welcome to my Nvim init.vim config file. I used to be
 " a Visual Studio Code power user, until I woke up (JK). 
@@ -18,12 +20,16 @@
 " ===================================================== "
 "
 "   * Github Username: itscarlosecp
-"   * Config Repo: https://github.com/itscarlosecp/nvim
+"   * Repository: https://github.com/itscarlosecp/nvim
 "
+" ===================================================== "
+" = * * * * * * * * * * * * * * * * * * * * * * * * * = "
 " ===================================================== "
 
 
+" ===================================================== "
 " ================ Indentation & Fonts ================ "
+" ===================================================== "
 
 set tabstop=4
 set shiftwidth=4
@@ -38,12 +44,16 @@ set encoding=utf8
 set guifont=Cascadia\ Code\ Nerd\ Font:h11
 
 
+" ===================================================== "
 " ================== Buffers & Tabs =================== "
+" ===================================================== "
 
 set splitright
 
 
+" ===================================================== "
 " ================= Linting & Styling ================= "
+" ===================================================== "
 
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
@@ -61,21 +71,9 @@ let g:user_emmet_mode='a'
 let g:user_emmet_leader_key=','
 
 
-" ================== Custom Keybinds ================== "
-
-let mapleader=" "
-
-function! SearchFile()
-  :! git add .
-  :GFiles
-endfunction
-
-nmap <C-P> :call SearchFile()<Return> 
-inoremap jj <Esc>
-nnoremap <C-q> :tabclose<CR>
-
-
-" =============== Plugins Installation =============== "
+" ===================================================== "
+" ================ Plugins Installation =============== "
+" ===================================================== "
 
 call plug#begin('~/.nvim/plugged')
 
@@ -107,13 +105,17 @@ call plug#begin('~/.nvim/plugged')
 call plug#end()
 
 
+" ===================================================== "
 " ================ Theming & Asteticts ================ "
+" ===================================================== "
 
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
 
+" ===================================================== "
 " =============== Plugins Configuration =============== "
+" ===================================================== "
 
 
 " (NERDTree has been replaced by Coc Explorer)
@@ -134,7 +136,9 @@ hi Normal guibg=NONE ctermbg=NONE
 " let NERDTreeMapOpenInTab='<ENTER>'
 
 
-" ========== Conquer of Completion (Coc) ========== "
+" ===================================================== "
+" ============ Conquer of Completion (Coc) ============ "
+" ===================================================== "
 
 let g:coc_global_extensions = [
     \ 'coc-pairs',
@@ -322,7 +326,9 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
-" ========= Coc Explorer ========== "
+" ===================================================== "
+" =================== Coc Explorer ==================== "
+" ===================================================== "
 
 noremap <C-e> :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
@@ -334,11 +340,32 @@ augroup MyCocExplorer
 augroup END
 
 
-" ========== Vim Airline ========== "
+" ===================================================== "
+" ==================== Vim Airline ==================== "
+" ===================================================== "
 
 " Airline Configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 let g:airline_section_c = ''
 let g:airline_section_y = ''
+
+
+" ===================================================== "
+" ================== Custom Keybinds ================== "
+" ===================================================== "
+
+inoremap jj <Esc>
+let mapleader=" "
+
+function! SearchFile()
+  :! git add .
+  :GFiles
+endfunction
+
+nmap <C-P> :call SearchFile()<Return> 
+
+nnoremap <C-q> :tabclose<CR>
+
+nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
 
