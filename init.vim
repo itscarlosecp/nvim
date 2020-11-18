@@ -38,6 +38,11 @@ set encoding=utf8
 set guifont=Cascadia\ Code\ Nerd\ Font:h11
 
 
+" ================== Buffers & Tabs =================== "
+
+set splitright
+
+
 " ================= Linting & Styling ================= "
 
 " Disable Python space errors
@@ -73,21 +78,32 @@ nnoremap <C-q> :tabclose<CR>
 " =============== Plugins Installation =============== "
 
 call plug#begin('~/.nvim/plugged')
+
+    " Code "
+    Plug 'sheerun/vim-polyglot'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mattn/emmet-vim'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'tell-k/vim-autopep8'
+
+    " Language Support "
     Plug 'mxw/vim-jsx' 
     Plug 'styled-components/vim-styled-components'
+
+    " Styling"
     Plug 'morhetz/gruvbox'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'mattn/emmet-vim'
-    Plug 'junegunn/fzf.vim'
-    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-    Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline'
-    Plug 'tell-k/vim-autopep8'
-    Plug 'Chiel92/vim-autoformat'
+    Plug 'vim-airline/vim-airline-themes'
+
+    " Vim Behaviour "
+    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+    Plug 'junegunn/fzf.vim'
     Plug 'preservim/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 
@@ -98,6 +114,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 
 " =============== Plugins Configuration =============== "
+
 
 " (NERDTree has been replaced by Coc Explorer)
 " ========== NERDTree ========== "
@@ -116,6 +133,7 @@ hi Normal guibg=NONE ctermbg=NONE
 " Open file in new tab by default
 " let NERDTreeMapOpenInTab='<ENTER>'
 
+
 " ========== Conquer of Completion (Coc) ========== "
 
 let g:coc_global_extensions = [
@@ -125,6 +143,7 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-python',
     \ 'coc-prettier',
+    \ 'coc-git'
     \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
@@ -302,14 +321,24 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
+
 " ========= Coc Explorer ========== "
 
-:noremap <C-e> :CocCommand explorer<CR>
+noremap <C-e> :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+augroup MyCocExplorer
+    autocmd!
+    autocmd VimEnter * sil! au! FileExplorer *
+    autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
+augroup END
+
 
 " ========== Vim Airline ========== "
 
 " Airline Configuration
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#fnamemode=':t'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
+let g:airline_section_c = ''
+let g:airline_section_y = ''
 
