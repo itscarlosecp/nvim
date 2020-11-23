@@ -1,35 +1,34 @@
-" 
+"
 "    _____        __
 "   /_  _/___  (_) /_    __(_)___ ___
 "    / // __ \/ / __/\  / / / __ `__ \
 "  _/ // / / / / /__\ \/ / / / / / / /
 " /___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
-" 
-" ===================================================== "
-" = * * * * * * * * * * * * * * * * * * * * * * * * * = "
-" ===================================================== "
 "
-" Welcome to my Nvim init.vim config file. I used to be
-" a Visual Studio Code power user, until I woke up (JK). 
+" =========================================================================== "
+" = * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * = "
+" =========================================================================== "
 "
-" I've been using Neovim for a few months, so I'm not a 
-" pro or anything like that, but I like my config, I
-" hope it would be usefull for someone how's starting
-" with vim too.
+" Welcome to my Nvim init.vim config file. I used to be a Visual Studio Code
+" power user, until I woke up (JK).
 "
-" ===================================================== "
+" I've been using Neovim for a few months, so I'm not a pro or anything like
+" that, but I like my config, I hope it would be usefull for someone how's
+" starting with vim too.
+"
+" =========================================================================== "
 "
 "   * Github Username: itscarlosecp
 "   * Repository: https://github.com/itscarlosecp/nvim
 "
-" ===================================================== "
-" = * * * * * * * * * * * * * * * * * * * * * * * * * = "
-" ===================================================== "
+" =========================================================================== "
+" = * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * = "
+" =========================================================================== "
 
 
-" ===================================================== "
-" ================ Indentation & Fonts ================ "
-" ===================================================== "
+" =========================================================================== "
+" =========================== Indentation & Fonts =========================== "
+" =========================================================================== "
 
 set tabstop=4
 set shiftwidth=4
@@ -38,22 +37,25 @@ set softtabstop=4
 set noexpandtab
 set smartindent
 
+set list
+set lcs+=space:·
+
 set relativenumber
 set number
 set encoding=utf8
 set guifont=Cascadia\ Code\ Nerd\ Font:h11
 
 
-" ===================================================== "
-" ================== Buffers & Tabs =================== "
-" ===================================================== "
+" =========================================================================== "
+" ============================= Buffers & Tabs ============================== "
+" =========================================================================== "
 
 set splitright
 
 
-" ===================================================== "
-" ================= Linting & Styling ================= "
-" ===================================================== "
+" =========================================================================== "
+" ============================ Linting & Styling ============================ "
+" =========================================================================== "
 
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
@@ -71,51 +73,52 @@ let g:user_emmet_mode='a'
 let g:user_emmet_leader_key=','
 
 
-" ===================================================== "
-" ================ Plugins Installation =============== "
-" ===================================================== "
+" =========================================================================== "
+" ========================== Plugins Installation =========================== "
+" =========================================================================== "
 
 call plug#begin('~/.nvim/plugged')
 
-    " Code "
-    Plug 'sheerun/vim-polyglot'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'mattn/emmet-vim'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'Chiel92/vim-autoformat'
-    Plug 'tell-k/vim-autopep8'
+" Code "
+Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Chiel92/vim-autoformat'
+Plug 'tell-k/vim-autopep8'
+Plug 'Yggdroot/indentLine'
 
-    " Language Support "
-    Plug 'mxw/vim-jsx' 
-    Plug 'styled-components/vim-styled-components'
+" Language Support "
+Plug 'mxw/vim-jsx'
+Plug 'styled-components/vim-styled-components'
 
-    " Styling"
-    Plug 'morhetz/gruvbox'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+" Styling"
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-    " Vim Behaviour "
-    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-    Plug 'junegunn/fzf.vim'
-    Plug 'preservim/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'airblade/vim-gitgutter'
+" Vim Behaviour "
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
 
-" ===================================================== "
-" ================ Theming & Asteticts ================ "
-" ===================================================== "
+" =========================================================================== "
+" =========================== Theming & Asteticts =========================== "
+" =========================================================================== "
 
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
 
-" ===================================================== "
-" =============== Plugins Configuration =============== "
-" ===================================================== "
+" =========================================================================== "
+" ========================== Plugins Configuration ========================== "
+" =========================================================================== "
 
 
 " (NERDTree has been replaced by Coc Explorer)
@@ -136,19 +139,19 @@ hi Normal guibg=NONE ctermbg=NONE
 " let NERDTreeMapOpenInTab='<ENTER>'
 
 
-" ===================================================== "
-" ============ Conquer of Completion (Coc) ============ "
-" ===================================================== "
+" =========================================================================== "
+" ======================= Conquer of Completion (Coc) ======================= "
+" =========================================================================== "
 
 let g:coc_global_extensions = [
-    \ 'coc-pairs',
-    \ 'coc-tslint',
-    \ 'coc-tsserver',
-    \ 'coc-json',
-    \ 'coc-python',
-    \ 'coc-prettier',
-    \ 'coc-git'
-    \ ]
+            \ 'coc-pairs',
+            \ 'coc-tslint',
+            \ 'coc-tsserver',
+            \ 'coc-json',
+            \ 'coc-explorer',
+            \ 'coc-prettier',
+            \ 'coc-git'
+            \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
 " TextEdit might fail if hidden is not set.
@@ -171,37 +174,37 @@ set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
+    " Recently vim can merge signcolumn and number column into one
+    set signcolumn=number
 else
-  set signcolumn=yes
+    set signcolumn=yes
 endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -218,13 +221,13 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
@@ -238,11 +241,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Applying codeAction to the selected region.
@@ -326,9 +329,9 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
-" ===================================================== "
-" =================== Coc Explorer ==================== "
-" ===================================================== "
+" =========================================================================== "
+" ============================== Coc Explorer =============================== "
+" =========================================================================== "
 
 noremap <C-e> :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
@@ -340,9 +343,9 @@ augroup MyCocExplorer
 augroup END
 
 
-" ===================================================== "
-" ==================== Vim Airline ==================== "
-" ===================================================== "
+" =========================================================================== "
+" =============================== Vim Airline =============================== "
+" =========================================================================== "
 
 " Airline Configuration
 let g:airline_powerline_fonts = 1
@@ -351,19 +354,27 @@ let g:airline_section_c = ''
 let g:airline_section_y = ''
 
 
-" ===================================================== "
-" ================== Custom Keybinds ================== "
-" ===================================================== "
+" =========================================================================== "
+" ================================= Others ================================== "
+" =========================================================================== "
+
+" Line indentation character
+let g:indentLine_char = '|'
+
+
+" =========================================================================== "
+" ============================= Custom Keybinds ============================= "
+" =========================================================================== "
 
 inoremap jj <Esc>
 let mapleader=" "
 
 function! SearchFile()
-  :! git add .
-  :GFiles
+    :! git add .
+    :GFiles
 endfunction
 
-nmap <C-P> :call SearchFile()<Return> 
+nmap <C-P> :call SearchFile()<Return>
 
 nnoremap <C-q> :tabclose<CR>
 
