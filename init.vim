@@ -37,9 +37,6 @@ set softtabstop=4
 set noexpandtab
 set smartindent
 
-set list
-set lcs+=space:·
-
 set relativenumber
 set number
 set encoding=utf8
@@ -80,30 +77,29 @@ let g:user_emmet_leader_key=','
 call plug#begin('~/.nvim/plugged')
 
 " Code "
-Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Chiel92/vim-autoformat'
-Plug 'tell-k/vim-autopep8'
-Plug 'Yggdroot/indentLine'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mattn/emmet-vim'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'tell-k/vim-autopep8'
+    Plug 'Yggdroot/indentLine'
 
 " Language Support "
-Plug 'mxw/vim-jsx'
-Plug 'styled-components/vim-styled-components'
+    Plug 'mxw/vim-jsx'
+    Plug 'styled-components/vim-styled-components'
 
 " Styling"
-Plug 'morhetz/gruvbox'
-Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    Plug 'morhetz/gruvbox'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
 " Vim Behaviour "
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'airblade/vim-gitgutter'
+    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+    Plug 'junegunn/fzf.vim'
+    Plug 'preservim/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
 
 call plug#end()
 
@@ -120,13 +116,13 @@ hi Normal guibg=NONE ctermbg=NONE
 " ========================== Plugins Configuration ========================== "
 " =========================================================================== "
 
-
 " (NERDTree has been replaced by Coc Explorer)
 " ========== NERDTree ========== "
 
+" NERDTree Configuration
 " nmap <C-e> :NERDTreeToggle<CR>
-" vmap ++ <plug>NERDCommenterToggle
-" nmap ++ <plug>NERDCommenterToggle
+" vmap ++ <plug> NERDCommenterToggle
+" nmap ++ <plug> NERDCommenterToggle
 " let NERDTreeMinimalUI=1
 
 " Open NERDTree automatically on start
@@ -135,23 +131,19 @@ hi Normal guibg=NONE ctermbg=NONE
 " Close NERDTree if there's no file opened
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Open file in new tab by default
-" let NERDTreeMapOpenInTab='<ENTER>'
-
 
 " =========================================================================== "
 " ======================= Conquer of Completion (Coc) ======================= "
 " =========================================================================== "
 
 let g:coc_global_extensions = [
-            \ 'coc-pairs',
-            \ 'coc-tslint',
-            \ 'coc-tsserver',
-            \ 'coc-json',
-            \ 'coc-explorer',
-            \ 'coc-prettier',
-            \ 'coc-git'
-            \ ]
+    \ 'coc-pairs',
+    \ 'coc-tslint',
+    \ 'coc-tsserver',
+    \ 'coc-json',
+    \ 'coc-prettier',
+    \ 'coc-explorer'
+\ ]
 
 " All of this is Coc configuration (copiend from Github repo)
 " TextEdit might fail if hidden is not set.
@@ -184,9 +176,9 @@ endif
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -204,7 +196,7 @@ endif
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -328,13 +320,12 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
-
 " =========================================================================== "
-" ============================== Coc Explorer =============================== "
+" =============================== Coc Explorer ============================== "
 " =========================================================================== "
 
 noremap <C-e> :CocCommand explorer<CR>
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
 
 augroup MyCocExplorer
     autocmd!
@@ -358,8 +349,8 @@ let g:airline_section_y = ''
 " ================================= Others ================================== "
 " =========================================================================== "
 
-" Line indentation character
 let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
 
 
 " =========================================================================== "
