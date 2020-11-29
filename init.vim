@@ -68,7 +68,7 @@ let g:prettier#config#semi = 'false'
 " Emmet Configuration
 let g:user_emmet_mode='a'
 " Remapping just Emmet's leader to ',' so the emmet command is ';;'
-let g:user_emmet_leader_key=','
+let g:user_emmet_leader_key=';'
 
 
 " =========================================================================== "
@@ -78,29 +78,29 @@ let g:user_emmet_leader_key=','
 call plug#begin('~/.nvim/plugged')
 
 " Code "
-Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Chiel92/vim-autoformat'
-Plug 'tell-k/vim-autopep8'
-Plug 'Yggdroot/indentLine'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mattn/emmet-vim'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'tell-k/vim-autopep8'
+    Plug 'Yggdroot/indentLine'
 
 " Language Support "
-Plug 'mxw/vim-jsx'
-Plug 'styled-components/vim-styled-components'
+    Plug 'mxw/vim-jsx'
+    Plug 'styled-components/vim-styled-components'
 
 " Styling"
-Plug 'morhetz/gruvbox'
-Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    Plug 'morhetz/gruvbox'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
 " Vim Behaviour "
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+    Plug 'junegunn/fzf.vim'
+    Plug 'preservim/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
 
 call plug#end()
 
@@ -138,12 +138,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " =========================================================================== "
 
 let g:coc_global_extensions = [
-            \ 'coc-pairs',
-            \ 'coc-tslint',
-            \ 'coc-tsserver',
-            \ 'coc-json',
-            \ 'coc-prettier',
-            \ ]
+    \ 'coc-pairs',
+    \ 'coc-tslint',
+    \ 'coc-tsserver',
+    \ 'coc-json',
+    \ 'coc-prettier',
+    \ 'coc-python',
+    \ 'coc-rls',
+\ ]
 
 " All of this is Coc configuration (copiend from Github repo)
 " TextEdit might fail if hidden is not set.
