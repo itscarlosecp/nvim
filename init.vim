@@ -121,16 +121,16 @@ hi Normal guibg=NONE ctermbg=NONE
 " ========== NERDTree ========== "
 
 " NERDTree Configuration
-nmap <C-e> :NERDTreeToggle<CR>
-vmap ++ <plug> NERDCommenterToggle
-nmap ++ <plug> NERDCommenterToggle
-let NERDTreeMinimalUI=1
+" nmap <C-e> :NERDTreeToggle<CR>
+" vmap ++ <plug> NERDCommenterToggle
+" nmap ++ <plug> NERDCommenterToggle
+" let NERDTreeMinimalUI=1
 
 " Open NERDTree automatically on start
 " autocmd vimenter * NERDTree
 
 " Close NERDTree if there's no file opened
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " =========================================================================== "
@@ -145,6 +145,7 @@ let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-python',
     \ 'coc-rls',
+    \ 'coc-explorer',
 \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
@@ -326,14 +327,14 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " =============================== Coc Explorer ============================== "
 " =========================================================================== "
 
-" noremap <C-e> :CocCommand explorer<CR>
-" autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
+noremap <C-e> :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
 
-" augroup MyCocExplorer
-" autocmd!
-" autocmd VimEnter * sil! au! FileExplorer *
-" autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
-" augroup END
+augroup MyCocExplorer
+autocmd!
+    autocmd VimEnter * sil! au! FileExplorer *
+    autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
+augroup END
 
 
 " =========================================================================== "
