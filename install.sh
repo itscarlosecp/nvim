@@ -11,14 +11,16 @@
 
 #!/bin/bash
 
-cd ~/Downloads
-
 # Apt Installs
 sudo apt install neovim neofetch git kitty zsh gnome-tweaks -y
 
 # Snap Installs
 sudo snap install slack --classic
 sudo snap install spotify discord postman 
+
+# Google Chrome Dev Edition Install
+wget https://dl.google.com/linux/direct/google-chrome-unstable_current_amd64.deb
+sudo dpkg -i google-chrome-unstable_current_amd64.deb
 
 # Cascadia Code Install
 wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/CascadiaCode/Regular/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete.otf
@@ -41,6 +43,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Neovim Configuration
-git clone https://github.com/itscarlosecp/dotfiles.git
-cd dotfiles
 cp -r nvim ~/.config/nvim/
