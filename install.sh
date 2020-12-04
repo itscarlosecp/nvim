@@ -58,9 +58,6 @@ printf "include ./themes/gruvbox_dark.conf\n\nfont_family CaskaydiaCove Nerd Fon
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Oh My Zsh Configuration
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Neovim Configuration
 mkdir ~/.config/nvim/
 cd nvim cp * ~/.config/nvim
@@ -123,10 +120,12 @@ cd shell
 make local-install
 
 # Anaconda Install
-cd Downloads
 wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
 bash ./Anaconda3-2020.11-Linux-x86_64.sh  
 mkdir ~/.conda/conda-auto-env
-cp conda_auto_env.sh ~/.conda/conda-auto-env
-rm conda_auto_env.sh
-echo -e '\n\nsource ~/.conda/conda-auto-env/conda_auto_env.sh' > ~/.zshrc
+cp ./conda_auto_env.sh ~/.conda/conda-auto-env
+rm ./conda_auto_env.sh
+
+# Oh My Zsh Configuration
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
