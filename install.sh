@@ -39,6 +39,7 @@ sudo snap install spotify discord postman
 # Google Chrome Dev Edition Install
 wget https://dl.google.com/linux/direct/google-chrome-unstable_current_amd64.deb
 sudo dpkg -i google-chrome-unstable_current_amd64.deb
+rm google-chrome-unstable_current_amd64.deb
 
 # Cascadia Code Install
 wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/CascadiaCode/Regular/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete.otf
@@ -98,3 +99,34 @@ rm -rf McMojave-cursors.tar.xz
 cd cursors
 cp -r McMojave-cursors ~/.icons/
 rm -rf cursors
+
+# Libinput Gestures and Gestures GUI
+sudo gpasswd -a $USER input
+sudo apt-get install wmctrl xdotool libinput-tools -y
+cd ~
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo ./libinput-gestures-setup install
+
+sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject -y
+git clone https://gitlab.com/cunidev/gestures
+cd gestures
+sudo python3 setup.py install
+cp libinput-gestures.conf ~/.config/
+rm libinput-gestures.conf ~/.config/
+
+# Pop Shell Installation
+cd ~
+sudo apt install node-typescript make git -y
+git clone https://github.com/pop-os/shell
+cd shell
+make local-install
+
+# Anaconda Install
+cd Downloads
+wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+bash ./Anaconda3-2020.11-Linux-x86_64.sh  
+mkdir ~/.conda/conda-auto-env
+cp conda_auto_env.sh ~/.conda/conda-auto-env
+rm conda_auto_env.sh
+echo -e '\n\nsource ~/.conda/conda-auto-env/conda_auto_env.sh' > ~/.zshrc
