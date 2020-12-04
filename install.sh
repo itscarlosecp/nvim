@@ -54,13 +54,13 @@ wget "$THEME" -P ~/.config/kitty/themes
 touch ~/.config/kitty/kitty.conf
 printf "include ./themes/gruvbox_dark.conf\n\nfont_family CaskaydiaCove Nerd Font\ncursor_shape beam\nbackground_opacity 1" > ~/.config/kitty/kitty.conf
 
-# Vim Plug Install
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
 # Neovim Configuration
 mkdir ~/.config/nvim/
 mv nvim ~/.config/nvim 
+
+# Vim Plug Install
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Gnome Customization
 # Icon Theme
@@ -83,7 +83,7 @@ cd gtk-theme
 cd Theme
 mkdir ~/.themes
 cp -r Yaru-Teal-dark ~/.themes/
-cd ../../
+cd ../../../
 rm -rf gtk-theme
 
 # Cursors
@@ -108,8 +108,10 @@ sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools py
 git clone https://gitlab.com/cunidev/gestures
 cd gestures
 sudo python3 setup.py install
-cp libinput-gestures.conf ~/.config/
-rm libinput-gestures.conf ~/.config/
+mv libinput-gestures.conf ~/.config/
+
+libinput-gestures-setup autostart
+libinput-gestures-setup start
 
 # Pop Shell Installation
 cd ~
