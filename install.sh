@@ -59,6 +59,7 @@ mkdir ~/.config/nvim/
 mv nvim ~/.config/nvim 
 
 # Vim Plug Install
+sudo apt install curl -y
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -76,14 +77,13 @@ rm -rf white-sur-icons
 
 # GTK and Shell Themes
 wget https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDQ1MjAyMzUiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjBhZTVmYTQ1ZmJlYTgwMjIwOTk4MjI4MmQ5MDIxZTVlMzE2YjkxNDY2ZDU3NzRkMWQ5MDQyYWI2YjIyYzcxNjdhOWU3YTdkMzJkN2JkNTIyODFhYjcwMjQ5NmEzNTA2YmU1YTRhMmI3Zjk2MmYzNjE4NzA1YmUwNjNiODc5YThiIiwidCI6MTYwNzExNDcwMCwic3RmcCI6ImZlNTcyNDk1MDNlOTEwYmQ2Njg0YTY1OWFmZWQwMjQxIiwic3RpcCI6IjIwMC4xMjYuMjQxLjEwNiJ9.JI24Fxe2PuAKXZnCjoH27eG00qxzaWZupxE2H-bh0is/Yaru-Teal-v20.10.1.tar.xz
-mkdir gtk-theme
-tar -xvf Yaru-Teal-v20.10.1.tar.xz -C gtk-theme
-rm -rf Yaru-Teal-v20.10.1.tar.xz
-cd gtk-theme
-cd Theme
+mkdir theme
 mkdir ~/.themes
-cp -r Yaru-Teal-dark ~/.themes/
-cd ../../../
+tar -xvf Yaru-Teal-v20.10.1.tar.xz -C theme 
+rm -rf Yaru-Teal-v20.10.1.tar.xz
+cd theme/Theme 
+mv Yaru-Teal-dark ~/.themes/
+cd ../../
 rm -rf gtk-theme
 
 # Cursors
