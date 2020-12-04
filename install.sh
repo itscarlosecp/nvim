@@ -60,9 +60,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Neovim Configuration
 mkdir ~/.config/nvim/
-cd nvim cp * ~/.config/nvim
-cd ..
-rm -rf nvim
+mv nvim ~/.config/nvim 
 
 # Gnome Customization
 # Icon Theme
@@ -95,6 +93,7 @@ tar -xvf McMojave-cursors.tar.xz -C cursors
 rm -rf McMojave-cursors.tar.xz
 cd cursors
 cp -r McMojave-cursors ~/.icons/
+cd ..
 rm -rf cursors
 
 # Libinput Gestures and Gestures GUI
@@ -118,13 +117,6 @@ sudo apt install node-typescript make git -y
 git clone https://github.com/pop-os/shell
 cd shell
 make local-install
-
-# Anaconda Install
-wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
-bash ./Anaconda3-2020.11-Linux-x86_64.sh  
-mkdir ~/.conda/conda-auto-env
-cp ./conda_auto_env.sh ~/.conda/conda-auto-env
-rm ./conda_auto_env.sh
 
 # Oh My Zsh Configuration
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
