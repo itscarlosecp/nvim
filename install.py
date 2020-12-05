@@ -36,7 +36,7 @@ def anaconda_conda_install():
 
 if __name__ == '__main__':
     browser, kitty, conda = init()
-    # default_install()
+    default_install()
     chrome_install() if browser else False
     kitty_config() if kitty else False 
     anaconda_conda_install() if conda else False    
