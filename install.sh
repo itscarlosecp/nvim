@@ -30,7 +30,9 @@
 #!/bin/bash
 
 # Apt Installs
-sudo apt install neovim neofetch git kitty zsh gnome-tweaks -y
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install neovim neofetch git kitty zsh gnome-tweaks obs-studio -y
 
 # Snap Installs
 sudo snap install slack --classic
