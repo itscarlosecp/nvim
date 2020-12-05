@@ -56,7 +56,7 @@ printf "include ./themes/gruvbox_dark.conf\n\nfont_family CaskaydiaCove Nerd Fon
 
 # Neovim Configuration
 mkdir ~/.config/nvim/
-mv nvim ~/.config/nvim 
+mv nvim ~/.config
 
 # Vim Plug Install
 sudo apt install curl -y
@@ -84,7 +84,7 @@ rm -rf Yaru-Teal-v20.10.1.tar.xz
 cd theme/Theme 
 mv Yaru-Teal-dark ~/.themes/
 cd ../../
-rm -rf gtk-theme
+rm -rf theme 
 
 # Cursors
 wget https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1ODA0MDIzODkiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImVjMTRlNWRhODk1OGI3NzdlZDQ4ZDFhZTJlZDg4YWU1YmZlMjM5MzkxZmFmY2ViMTlhYWU2OTk5NzhjMGQ2NjdmMjk1ZjA1MjlhYzZkN2NhYTEzNTk1MGM0NmJlY2ViNmNhNjYxYWMyYTg0MGY1NDllN2YxYzNhYzAzOTllOWZmIiwidCI6MTYwNzExNzYzOSwic3RmcCI6ImZlNTcyNDk1MDNlOTEwYmQ2Njg0YTY1OWFmZWQwMjQxIiwic3RpcCI6IjIwMC4xMjYuMjQxLjEwNiJ9.h2cRzNJ84FsbDcv3QdFD7CZ9E859qcQM57Vy0DLeHfA/McMojave-cursors.tar.xz
@@ -108,7 +108,8 @@ sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools py
 git clone https://gitlab.com/cunidev/gestures
 cd gestures
 sudo python3 setup.py install
-mv libinput-gestures.conf ~/.config/
+cp libinput-gestures.conf ~/.config/
+rm libinput-gestures.conf
 
 libinput-gestures-setup autostart
 libinput-gestures-setup start
