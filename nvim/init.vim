@@ -54,26 +54,6 @@ set splitright
 
 
 " =========================================================================== "
-" ============================ Linting & Styling ============================ "
-" =========================================================================== "
-
-" Disable Python space errors
-let g:python_highlight_space_errors = 0
-
-" Prettier config
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#jsx_single_quote = 'true'
-let g:prettier#config#use_tabs = 'true'
-let g:prettier#config#semi = 'false'
-
-" Emmet Configuration
-let g:user_emmet_mode='a'
-" Remapping just Emmet's leader to ',' so the emmet command is ';;'
-let g:user_emmet_leader_key=';'
-
-
-" =========================================================================== "
 " ========================== Plugins Installation =========================== "
 " =========================================================================== "
 
@@ -82,10 +62,10 @@ call plug#begin('~/.nvim/plugged')
 " Code "
     Plug 'sheerun/vim-polyglot'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'mattn/emmet-vim'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
     Plug 'Chiel92/vim-autoformat'
     Plug 'tell-k/vim-autopep8'
+    Plug 'mattn/emmet-vim'
     Plug 'Yggdroot/indentLine'
 
 " Language Support "
@@ -101,8 +81,7 @@ call plug#begin('~/.nvim/plugged')
 " Vim Behaviour "
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
     Plug 'junegunn/fzf.vim'
-    Plug 'preservim/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -148,6 +127,7 @@ let g:coc_global_extensions = [
     \ 'coc-python',
     \ 'coc-rls',
     \ 'coc-explorer',
+    \ 'coc-emmet',
 \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
@@ -325,6 +305,22 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
+
+" =========================================================================== "
+" ============================ Linting & Styling ============================ "
+" =========================================================================== "
+
+" Disable Python space errors
+let g:python_highlight_space_errors = 0
+
+" Prettier config
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#jsx_single_quote = 'true'
+let g:prettier#config#use_tabs = 'true'
+let g:prettier#config#semi = 'false'
+
+
 " =========================================================================== "
 " =============================== Coc Explorer ============================== "
 " =========================================================================== "
@@ -346,9 +342,7 @@ augroup END
 " Airline Configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
-let g:airline_section_c = ''
-let g:airline_section_y = ''
-
+let g:airline_section_c='%t'
 
 " =========================================================================== "
 " ================================= Others ================================== "
@@ -362,7 +356,7 @@ let g:indentLine_color_term = 239
 " ============================= Custom Keybinds ============================= "
 " =========================================================================== "
 
-inoremap jj <Esc>
+" inoremap jj <Esc>
 let mapleader=" "
 
 function! SearchFile()
@@ -371,8 +365,4 @@ function! SearchFile()
 endfunction
 
 nmap <C-P> :call SearchFile()<Return>
-
-nnoremap <C-q> :tabclose<CR>
-
 nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
-
