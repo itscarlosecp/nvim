@@ -39,11 +39,12 @@ set softtabstop=4
 set noexpandtab
 set smartindent
 set linebreak
+set scrolloff=5
 
 set relativenumber
 set number
 set encoding=utf8
-set guifont=Cascadia\ Code\ Nerd\ Font:h11
+set guifont=JetBrains\ Mono:h11
 
 
 " =========================================================================== "
@@ -77,11 +78,13 @@ call plug#begin('~/.nvim/plugged')
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'sainnhe/sonokai'
 
 " Vim Behaviour "
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
+    Plug 'kristijanhusak/vim-carbon-now-sh'
 
 call plug#end()
 
@@ -90,28 +93,8 @@ call plug#end()
 " =========================== Theming & Asteticts =========================== "
 " =========================================================================== "
 
-colorscheme gruvbox
+colorscheme gruvbox 
 hi Normal guibg=NONE ctermbg=NONE
-
-
-" =========================================================================== "
-" ========================== Plugins Configuration ========================== "
-" =========================================================================== "
-
-" (NERDTree has been replaced by Coc Explorer)
-" ========== NERDTree ========== "
-
-" NERDTree Configuration
-" nmap <C-e> :NERDTreeToggle<CR>
-" vmap ++ <plug> NERDCommenterToggle
-" nmap ++ <plug> NERDCommenterToggle
-" let NERDTreeMinimalUI=1
-
-" Open NERDTree automatically on start
-" autocmd vimenter * NERDTree
-
-" Close NERDTree if there's no file opened
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " =========================================================================== "
@@ -128,6 +111,7 @@ let g:coc_global_extensions = [
     \ 'coc-rls',
     \ 'coc-explorer',
     \ 'coc-emmet',
+    \ 'coc-snippets',
 \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
@@ -366,3 +350,8 @@ endfunction
 
 nmap <C-P> :call SearchFile()<Return>
 nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
+
+nmap <leader>rr <Plug>(coc-rename)
+nnoremap <leader>sw :CocSearch <C-R>=expand('<cword>')<CR><CR>
+
+vnoremap <leader>p :CarbonNowSh<CR>
