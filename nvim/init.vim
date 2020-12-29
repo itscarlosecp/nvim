@@ -67,7 +67,6 @@ call plug#begin('~/.nvim/plugged')
     Plug 'Chiel92/vim-autoformat'
     Plug 'tell-k/vim-autopep8'
     Plug 'mattn/emmet-vim'
-    Plug 'Yggdroot/indentLine'
 
 " Language Support "
     Plug 'mxw/vim-jsx'
@@ -327,13 +326,6 @@ augroup END
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 let g:airline_section_c='%t'
-
-" =========================================================================== "
-" ================================= Others ================================== "
-" =========================================================================== "
-
-let g:indentLine_char = '|'
-let g:indentLine_color_term = 239
 
 
 " =========================================================================== "
