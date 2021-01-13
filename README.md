@@ -37,10 +37,16 @@ Estas dependencias deberán ser instaladas manualmente (si quieren hacer un scri
 
 * **Neovim**
  
-  No son instrucciones de como utilizar Vim directamente, sino que mas bien son algunos cambios propios que yo hice:
+  Esto es standard, pero lo indico por si confunde al inicio, el archivo `init.vim`, va dentro del folder `~/.config/nvim/`, no es igual para Vim normal. Todos los folderes que están dentro de mi folder `nvim` tambien van ahí, asi que se puede simplemente copiar todo el directorio `nvim` a `~/.config/`.
+  Las demás no son instrucciones de como utilizar Vim directamente, sino que mas bien son algunos cambios propios que yo hice:
   * El file explorer que utilizo por defecto es [CoC Explorer](https://github.com/weirongxu/coc-explorer). Si se esta iniciando en Vim quizá sea más cómodo utilizar [NERDTree](https://github.com/preservim/nerdtree), para el cual también tengo un archivo de configuración en este repo, en la branch [nerdtree](https://github.com/itscarlosecp/dotfiles/tree/nerdtree).
   Sea cual se el explorer, yo tengo las teclas <kbd>Ctrl+E</kbd> para activarlo, el resto de la navegación por los explorers es la configuración por defecto.
   * Si se quiere acceder rápidamente al archivo de configuración, se presionan las teclas <kbd>Space+c+Enter</kbd> en "normal mode".
   * Esta comentado el remapping de la tecla <kbd>Esc</kbd> para entrar en "normal mode" a la tecla <kbd>j</kbd>, que es más rapido. Si se quiere descomentar referirse a la línea 286.
   * Si se desea utilizar el buscador [FZF](https://github.com/junegunn/fzf) las teclas correspondientes para activarlo son <kbd>Ctrl+P</kbd>, y solo funciona dentro de un repositorio de git. Para cambiar esto último eliminar la línea 293.
+
+* **Tmux**
+
+  Esto también es standard (aunque no debería). El archivo `.tmux.conf`, a diferencia de la gran mayoría de archivos de configuración, no va dentro de la carpeta `~/.config/` sino que va directamte en la raiz de home `~/.tmux.conf`.
   
+  A su vez hay algunas keybinds custom mias para tmux, sugiero mejor revisar el archivo, ya que son pocas y esta bastante claro.
