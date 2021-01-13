@@ -1,39 +1,7 @@
-"
-" 88               88    ,d                     88                      
-"                        88                                             
-" 88  8b,dPPYba,   88  MM88MMM     8b       d8  88  88,dPYba,,adPYba,   
-" 88  88P'   `"8a  88    88        `8b     d8'  88  88P'   '88'    "8a  
-" 88  88       88  88    88         `8b   d8'   88  88      88      88  
-" 88  88       88  88    88,    888  `8b,d8'    88  88      88      88  
-" 88  88       88  88    'Y888  888    '8'      88  88      88      88
+" SYNTAX 
 
-" =========================================================================== "
-" = * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * = "
-" =========================================================================== "
-"
-" Welcome to my Nvim init.vim config file. I used to be a Visual Studio Code
-" power user, until I woke up (JK).
-"
-" I've been using Neovim for a few months, so I'm not a pro or anything like
-" that, but I like my config, I hope it would be usefull for someone how's
-" starting with vim too.
-"
-" =========================================================================== "
-"
-"   * Github Username: itscarlosecp
-"   * Repository: https://github.com/itscarlosecp/dotfiles
-"
-" =========================================================================== "
-" = * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * = "
-" =========================================================================== "
-
-
-" =========================================================================== "
-" =========================== Indentation & Fonts =========================== "
-" =========================================================================== "
-
-set tabstop=4
-set shiftwidth=4
+set tabstop=4 
+set shiftwidth=4 
 set softtabstop=4
 
 set noexpandtab
@@ -46,40 +14,37 @@ set number
 set encoding=utf8
 set guifont=JetBrains\ Mono:h11
 
-
-" =========================================================================== "
-" ============================= Buffers & Tabs ============================== "
-" =========================================================================== "
-
+" TABS 
+"
+" When you open a new split it goes to the rigth pane:
 set splitright
 
 
-" =========================================================================== "
-" ========================== Plugins Installation =========================== "
-" =========================================================================== "
+" PLUGINS 
 
 call plug#begin('~/.nvim/plugged')
 
-" Code "
+    " Code 
     Plug 'sheerun/vim-polyglot'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'preservim/nerdcommenter'
     Plug 'Chiel92/vim-autoformat'
     Plug 'tell-k/vim-autopep8'
     Plug 'mattn/emmet-vim'
+    Plug 'luochen1990/rainbow'
 
-" Language Support "
+    " Language Support
     Plug 'mxw/vim-jsx'
     Plug 'styled-components/vim-styled-components'
 
-" Styling"
+    " Styling
     Plug 'morhetz/gruvbox'
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'sainnhe/sonokai'
 
-" Vim Behaviour "
+    " Vim Behaviour
     Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
@@ -88,30 +53,27 @@ call plug#begin('~/.nvim/plugged')
 call plug#end()
 
 
-" =========================================================================== "
-" =========================== Theming & Asteticts =========================== "
-" =========================================================================== "
+" THEMING
 
-colorscheme gruvbox 
+colorscheme gruvbox
+" This makes my Vim background the same as my terminal's background
 hi Normal guibg=NONE ctermbg=NONE
 
 
-" =========================================================================== "
-" ======================= Conquer of Completion (Coc) ======================= "
-" =========================================================================== "
+" CONQUER OF COMPLETION (COC)
 
 let g:coc_global_extensions = [
-    \ 'coc-pairs',
-    \ 'coc-tslint',
-    \ 'coc-tsserver',
-    \ 'coc-json',
-    \ 'coc-prettier',
-    \ 'coc-python',
-    \ 'coc-rls',
-    \ 'coc-explorer',
-    \ 'coc-emmet',
-    \ 'coc-snippets',
-\ ]
+            \ 'coc-pairs',
+            \ 'coc-tslint',
+            \ 'coc-tsserver',
+            \ 'coc-json',
+            \ 'coc-prettier',
+            \ 'coc-python',
+            \ 'coc-rls',
+            \ 'coc-explorer',
+            \ 'coc-emmet',
+            \ 'coc-snippets',
+            \ ]
 
 " All of this is Coc configuration (copiend from Github repo)
 " TextEdit might fail if hidden is not set.
@@ -289,9 +251,7 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
-" =========================================================================== "
-" ============================ Linting & Styling ============================ "
-" =========================================================================== "
+" EXTENSIONS
 
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
@@ -303,47 +263,47 @@ let g:prettier#config#jsx_single_quote = 'true'
 let g:prettier#config#use_tabs = 'true'
 let g:prettier#config#semi = 'false'
 
-
-" =========================================================================== "
-" =============================== Coc Explorer ============================== "
-" =========================================================================== "
-
+" Coc Explorer (File Explorer)
 noremap <C-e> :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
 
 augroup MyCocExplorer
-autocmd!
+    autocmd!
     autocmd VimEnter * sil! au! FileExplorer *
     autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
 augroup END
 
-
-" =========================================================================== "
-" =============================== Vim Airline =============================== "
-" =========================================================================== "
-
 " Airline Configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
-let g:airline_section_c='%t'
+let g:airline#extensions#tabline#formatter = 'custom_dir_filename'
 
 
-" =========================================================================== "
-" ============================= Custom Keybinds ============================= "
-" =========================================================================== "
+" CUSTOM KEYBINDS
 
+" This remaps <Esc> to j, so you can exit insert mode quickly.
+" I removed this so I can be more Vim agnostic.
 " inoremap jj <Esc>
 let mapleader=" "
 
+" This makes my FZF search only for files inside git repo.
 function! SearchFile()
     :! git add .
     :GFiles
 endfunction
 
+" This calls my FZF
 nmap <C-P> :call SearchFile()<Return>
+
+" This allows me to have easy access to my init.vim file.
 nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
 
+" Renaming keybinds
+" This changes a word in active buffers.
 nmap <leader>rr <Plug>(coc-rename)
+" This searches a word in all files that contain it.
 nnoremap <leader>sw :CocSearch <C-R>=expand('<cword>')<CR><CR>
 
+" This takes a code capture with carbon (you have to be in Visual Mode).
+" Doesn't work in WSL
 vnoremap <leader>p :CarbonNowSh<CR>
