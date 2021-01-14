@@ -1,7 +1,7 @@
-" SYNTAX 
+" SYNTAX
 
-set tabstop=4 
-set shiftwidth=4 
+set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 
 set noexpandtab
@@ -14,41 +14,41 @@ set number
 set encoding=utf8
 set guifont=JetBrains\ Mono:h11
 
-" TABS 
-"
+" TABS
+
 " When you open a new split it goes to the rigth pane:
 set splitright
 
 
-" PLUGINS 
+" PLUGINS
 
 call plug#begin('~/.nvim/plugged')
 
-    " Code 
-    Plug 'sheerun/vim-polyglot'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'preservim/nerdcommenter'
-    Plug 'Chiel92/vim-autoformat'
-    Plug 'tell-k/vim-autopep8'
-    Plug 'mattn/emmet-vim'
-    Plug 'luochen1990/rainbow'
+" Code
+Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
+Plug 'Chiel92/vim-autoformat'
+Plug 'psf/black'
+Plug 'mattn/emmet-vim'
+Plug 'luochen1990/rainbow'
 
-    " Language Support
-    Plug 'mxw/vim-jsx'
-    Plug 'styled-components/vim-styled-components'
+" Language Support
+Plug 'mxw/vim-jsx'
+Plug 'styled-components/vim-styled-components'
 
-    " Styling
-    Plug 'morhetz/gruvbox'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'sainnhe/sonokai'
+" Styling
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'sainnhe/sonokai'
 
-    " Vim Behaviour
-    Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-    Plug 'junegunn/fzf.vim'
-    Plug 'tpope/vim-fugitive'
-    Plug 'kristijanhusak/vim-carbon-now-sh'
+" Vim Behaviour
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 
 call plug#end()
 
@@ -255,6 +255,10 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
+
+" Python Autoformat
+let g:python3_host_prog='/usr/bin/python3'
+au BufWrite * :Autoformat
 
 " Prettier config
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
