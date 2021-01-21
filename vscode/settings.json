@@ -349,6 +349,7 @@
 	"editor.insertSpaces": false,
 	"editor.minimap.enabled": false,
 	"editor.wordWrap": "on",
+	"editor.tabCompletion": "off", // Do not use tab to autocomplete with IntelliSense.
 	"workbench.startupEditor": "newUntitledFile", // Start in a new file.
 	"files.autoSave": "afterDelay",
 
