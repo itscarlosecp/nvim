@@ -1,0 +1,59 @@
+[
+	// & Commenting
+	{
+		"key": "ctrl+k",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	// & Extensions
+	{
+		"key": "ctrl+p ctrl+c",
+		"command": "polacode.activate"
+	},
+	// & Go to File
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	// & Hide File Explorer
+	{
+		"key": "ctrl+e",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "/",
+		"command": "actions.find",
+		"when": "editorFocus || editorIsOpen"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-actions.find",
+		"when": "editorFocus || editorIsOpen"
+	},
+	{
+		"key": "ctrl+shift+h",
+		"command": "workbench.action.replaceInFiles"
+	},
+	{
+		"key": "ctrl+shift+h",
+		"command": "-workbench.action.replaceInFiles"
+	},
+	{
+		"key": "shift+/",
+		"command": "workbench.action.findInFiles"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-workbench.action.findInFiles"
+	}
+]
