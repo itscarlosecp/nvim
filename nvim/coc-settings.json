@@ -26,5 +26,6 @@
 	"explorer.previewAction.onHover": false,
 	"explorer.keyMappings.global": {
 		"<cr>": "open:vsplit"
-	}
+	},
+	"explorer.file.sowHiddenFiles": true
 }
