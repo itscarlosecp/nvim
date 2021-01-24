@@ -25,22 +25,26 @@ set splitright
 call plug#begin('~/.nvim/plugged')
 
 " Code
-Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'psf/black'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
 
 " Language Support
+Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx'
+Plug 'styled-components/vim-styled-components'
+Plug 'leafOfTree/vim-vue-plugin'
 
 " Styling
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasiser/vim-code-dark'
 
 " Vim Behaviour
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
@@ -53,25 +57,27 @@ call plug#end()
 
 " THEMING
 
-colorscheme gruvbox
+"colorscheme gruvbox
 " This makes my Vim background the same as my terminal's background
+colorscheme vscode
 hi Normal guibg=NONE ctermbg=NONE
 
 
 " CONQUER OF COMPLETION (COC)
 
 let g:coc_global_extensions = [
-            \ 'coc-pairs',
-            \ 'coc-tslint',
-            \ 'coc-tsserver',
-            \ 'coc-json',
-            \ 'coc-prettier',
-            \ 'coc-python',
-            \ 'coc-rls',
-            \ 'coc-explorer',
-            \ 'coc-emmet',
-            \ 'coc-snippets',
-            \ ]
+			\ 'coc-pairs',
+			\ 'coc-tslint',
+			\ 'coc-tsserver',
+			\ 'coc-json',
+			\ 'coc-prettier',
+			\ 'coc-python',
+			\ 'coc-rls',
+			\ 'coc-explorer',
+			\ 'coc-emmet',
+			\ 'coc-snippets',
+			\ 'coc-vetur',
+			\ ]
 
 " All of this is Coc configuration (copiend from Github repo)
 " TextEdit might fail if hidden is not set.
@@ -94,37 +100,37 @@ set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
-    " Recently vim can merge signcolumn and number column into one
-    set signcolumn=number
+	" Recently vim can merge signcolumn and number column into one
+	set signcolumn=number
 else
-    set signcolumn=yes
+	set signcolumn=yes
 endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<TAB>" :
+			\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-    inoremap <silent><expr> <c-space> coc#refresh()
+	inoremap <silent><expr> <c-space> coc#refresh()
 else
-    inoremap <silent><expr> <c-@> coc#refresh()
+	inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -141,13 +147,13 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-        call CocActionAsync('doHover')
-    else
-        execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
+	if (index(['vim','help'], &filetype) >= 0)
+		execute 'h '.expand('<cword>')
+	elseif (coc#rpc#ready())
+		call CocActionAsync('doHover')
+	else
+		execute '!' . &keywordprg . " " . expand('<cword>')
+	endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
@@ -161,11 +167,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
-    autocmd!
-    " Setup formatexpr specified filetype(s).
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder.
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+	autocmd!
+	" Setup formatexpr specified filetype(s).
+	autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+	" Update signature help on jump placeholder.
+	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Applying codeAction to the selected region.
@@ -251,6 +257,10 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " EXTENSIONS
 
+" Rainbow
+let g:rainbow_active = 1
+let g:rainbow_ctermfgs = ['lightblue', 'yellow', 'red', 'magenta']
+
 " Disable Python space errors
 let g:python_highlight_space_errors = 0
 
@@ -270,14 +280,15 @@ noremap <C-e> :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
 
 augroup MyCocExplorer
-    autocmd!
-    autocmd VimEnter * sil! au! FileExplorer *
-    autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
+	autocmd!
+	autocmd VimEnter * sil! au! FileExplorer *
+	autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
 augroup END
 
 " Airline Configuration
 let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
+"let g:airline_theme='gruvbox'
+let g:airline_theme='codedark'
 let g:airline#extensions#tabline#formatter = 'custom_dir_filename'
 
 
@@ -290,8 +301,8 @@ let mapleader=" "
 
 " This makes my FZF search only for files inside git repo.
 function! SearchFile()
-    :! git add .
-    :GFiles
+	:! git add .
+	:GFiles
 endfunction
 
 " This calls my FZF
@@ -309,3 +320,5 @@ nnoremap <leader>sw :CocSearch <C-R>=expand('<cword>')<CR><CR>
 " This takes a code capture with carbon (you have to be in Visual Mode).
 " Doesn't work in WSL
 vnoremap <leader>p :CarbonNowSh<CR>
+
+let g:rainbow_active = 1

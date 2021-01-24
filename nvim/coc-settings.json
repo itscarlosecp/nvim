@@ -27,5 +27,5 @@
 	"explorer.keyMappings.global": {
 		"<cr>": "open:vsplit"
 	},
-	"explorer.file.sowHiddenFiles": true
+	"explorer.file.showHiddenFiles": true
 }
