@@ -12,7 +12,7 @@
 		"command": "polacode.activate"
 	},
 
-	// & Go to File	
+	// & Go to File
 	{
 		"key": "ctrl+p",
 		"command": "workbench.action.quickOpen"
@@ -22,7 +22,73 @@
 		"command": "-workbench.action.quickOpen"
 	},
 
-	// & Hide File Explorer
+	// & Intellisense Tab Completion
+	{
+		"key": "tab",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "down",
+		"command": "-selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "shift+tab",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "up",
+		"command": "-selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	// & Groups Switching
+	// ? Vim-like Buffers
+	{
+		"key": "ctrl+w ctrl+w",
+		"command": "workbench.action.navigateEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	// ? Go to Previous and Next File
+	{
+		"key": "ctrl+6",
+		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+	},
+	{
+		"key": "ctrl+tab",
+		"command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+	},
+	{
+		"key": "ctrl+shift+6",
+		"command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+	},
+	// & Terminal
+	// Switch between editor and terminal
+	{ "key": "ctrl+d ctrl+d", "command": "workbench.action.terminal.focus" },
+	{
+		"key": "ctrl+d ctrl+d",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "terminalFocus"
+	},
+	// & File Explorer
+	// ? Hide File Explorer
 	{
 		"key": "ctrl+e",
 		"command": "workbench.action.toggleSidebarVisibility"
@@ -32,25 +98,66 @@
 		"command": "-workbench.action.toggleSidebarVisibility"
 	},
 
-	// & Intellisense Tab Completion
+	// ? Coc-Explorer keybinds
+	// Create a new file
 	{
-		"key": "tab",
-		"command": "selectNextSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-	  },
-	  {
-		"key": "down",
-		"command": "-selectNextSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-	  },
-		{
-		"key": "shift+tab",
-		"command": "selectPrevSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-	  },
-	  {
-		"key": "up",
-		"command": "-selectPrevSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
 	},
+	// Delete a file
+	{
+		"key": "d f",
+		"command": "deleteFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "delete",
+		"command": "-deleteFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
+	},
+	// Rename a file
+	{
+		"key": "r f",
+		"command": "renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "f2",
+		"command": "-renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	// Cut a file
+	{
+		"key": "d d",
+		"command": "filesExplorer.cut",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	{
+		"key": "ctrl+x",
+		"command": "-filesExplorer.cut",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	// Paste a file
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "ctrl+v",
+		"command": "-filesExplorer.paste",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	// Copy a file
+	{
+		"key": "y y",
+		"command": "filesExplorer.copy",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	{
+		"key": "ctrl+c",
+		"command": "-filesExplorer.copy",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	}
 ]

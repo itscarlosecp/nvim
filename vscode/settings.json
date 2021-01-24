@@ -342,6 +342,8 @@
 	// &Fuente
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "JetBrainsMono NF",
+	"terminal.integrated.fontFamily": "JetBrainsMono NF",
+	"terminal.integrated.fontSize": 14,
 
 	// &Formatting
 	"editor.formatOnSave": true,
@@ -350,8 +352,7 @@
 	"editor.minimap.enabled": false,
 	"editor.wordWrap": "on",
 	"editor.tabCompletion": "off", // Do not use tab to autocomplete with IntelliSense.
-	"workbench.startupEditor": "newUntitledFile", // Start in a new file.
-	"files.autoSave": "afterDelay",
+	"workbench.startupEditor": "newUntitledFile",
 
 	// ? Prettier
 	"prettier.tabWidth": 4,
@@ -409,10 +410,15 @@
 		"editor.tabSize": 4,
 		"editor.insertSpaces": true
 	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 
 	// &Settings
 	"liveServer.settings.donotVerifyTags": true,
 	"sync.gist": "9a0e2871da491d97e86b90c7f5c6a10c",
+	"editor.rename.enablePreview": false,
+	"workbench.editor.enablePreview": false,
 
 	// &Icons
 	"workbench.iconTheme": "helium-icon-theme",
@@ -440,9 +446,6 @@
 		}
 	],
 	"liveSassCompile.settings.generateMap": false,
-
-	// &Terminal
-	"terminal.integrated.cursorStyle": "line",
 
 	// &Extensions
 	"better-comments.multilineComments": true,
@@ -495,12 +498,29 @@
 	],
 
 	// &Vim Extension Settings
-	"vim.useCtrlKeys": false,
+	"vim.useCtrlKeys": true,
 	"vim.statusBarColorControl": false,
 	"editor.cursorSurroundingLines": 5, // This is for scrolling before file end.
+	"vim.leader": "<space>",
+	"vim.handleKeys": {
+		"<C-f>": false,
+		"<C-h>": false
+	},
+	// Replacing Vim Search with VSCode's
+	"vim.normalModeKeyBindings": [
+		{
+			"before": ["/"],
+			"commands": ["actions.find"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		{
+			"before": ["/"],
+			"commands": ["actions.find"]
+		}
+	],
 
 	// &WSL Settings
 	"terminal.integrated.inheritEnv": false,
-	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe"
 }
