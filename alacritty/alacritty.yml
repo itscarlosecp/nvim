@@ -339,11 +339,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-<<<<<<< HEAD
 background_opacity: 0.85
-=======
-background_opacity: 0.90
->>>>>>> 70e2044ef3f284b5de69f6cb9e5b1ed6c30b3955
 
 #selection:
   # This string contains all characters that are used as separators for
