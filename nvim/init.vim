@@ -1,4 +1,6 @@
+" ------
 " SYNTAX
+" ------
 
 set tabstop=4
 set shiftwidth=4
@@ -14,13 +16,17 @@ set number
 set encoding=utf8
 set guifont=JetBrains\ Mono:h11
 
+" ----
 " TABS
+" ----
 
 " When you open a new split it goes to the rigth pane:
 set splitright
 
 
+" -------
 " PLUGINS
+" -------
 
 call plug#begin('~/.nvim/plugged')
 
@@ -31,13 +37,12 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'psf/black'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
-Plug 'luochen1990/rainbow'
+Plug 'frazrepo/vim-rainbow'
 
 " Language Support
 Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components'
-Plug 'leafOfTree/vim-vue-plugin'
 
 " Styling
 Plug 'morhetz/gruvbox'
@@ -57,9 +62,8 @@ call plug#end()
 
 " THEMING
 
-"colorscheme gruvbox
 " This makes my Vim background the same as my terminal's background
-colorscheme vscode
+colorscheme colors
 hi Normal guibg=NONE ctermbg=NONE
 
 
@@ -287,12 +291,13 @@ augroup END
 
 " Airline Configuration
 let g:airline_powerline_fonts = 1
-"let g:airline_theme='gruvbox'
 let g:airline_theme='codedark'
 let g:airline#extensions#tabline#formatter = 'custom_dir_filename'
 
 
+" ---------------
 " CUSTOM KEYBINDS
+" ---------------
 
 " This remaps <Esc> to j, so you can exit insert mode quickly.
 " I removed this so I can be more Vim agnostic.
