@@ -349,8 +349,9 @@
 	"editor.formatOnSave": true,
 	"editor.lineNumbers": "relative", // Vim like relative numbers.
 	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
 	"editor.minimap.enabled": false,
-	"editor.wordWrap": "on",
+	"editor.wordWrap": "wordWrapColumn",
 	"editor.tabCompletion": "off", // Do not use tab to autocomplete with IntelliSense.
 	"workbench.startupEditor": "newUntitledFile",
 
@@ -358,8 +359,7 @@
 	"prettier.tabWidth": 4,
 	"prettier.jsxSingleQuote": false,
 	"prettier.singleQuote": false,
-	"prettier.useTabs": true,
-	"prettier.semi": false, // Use simicolon in JavaScript
+	"prettier.useTabs": true, // Use simicolon in JavaScript
 
 	// Web Development
 	"html.format.wrapLineLength": 80,
@@ -384,7 +384,7 @@
 		"javascript": "javascriptreact"
 	},
 	"[javascriptreact]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.tabSize": 2
 	},
 	"[json]": {
@@ -394,10 +394,12 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
 	},
 	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2
 	},
 
 	// Python Development
@@ -427,7 +429,8 @@
 	},
 	"helium-icon-theme.folders.associations": {
 		"context": "react-components",
-		"reducers": "redux-reducer"
+		"reducers": "redux-reducer",
+		"interfaces": "typescript"
 	},
 	"helium-icon-theme.files.associations": {
 		"*.json": "nodejs_alt",
@@ -506,21 +509,24 @@
 		"<C-f>": false,
 		"<C-h>": false
 	},
-	// Replacing Vim Search with VSCode's
+	"vim.useSystemClipboard": true,
+	"vim.hlsearch": true,
 	"vim.normalModeKeyBindings": [
 		{
-			"before": ["/"],
-			"commands": ["actions.find"]
-		}
-	],
-	"vim.visualModeKeyBindings": [
+			"before": ["<tab>"],
+			"commands": ["workbench.action.nextEditor"]
+		},
 		{
-			"before": ["/"],
-			"commands": ["actions.find"]
+			"before": ["<S-tab>"],
+			"commands": ["workbench.action.previousEditor"]
 		}
 	],
 
 	// &WSL Settings
 	"terminal.integrated.inheritEnv": false,
-	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe"
+	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+
+	// & Git Lens
+	"git.enableSmartCommit": true,
+	"prettier.semi": false
 }
