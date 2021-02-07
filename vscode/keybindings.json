@@ -108,7 +108,7 @@
 	{
 		"key": "ctrl+b",
 		"command": "-workbench.action.toggleSidebarVisibility"
-	}
+	},
 
 	// ? Coc-Explorer keybinds
 	// Create a new file
@@ -181,5 +181,5 @@
 	{
 		"key": "ctrl+f4",
 		"command": "-workbench.action.closeActiveEditor"
-	},
+	}
 ]
