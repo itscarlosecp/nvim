@@ -43,6 +43,7 @@
 		"command": "-selectPrevSuggestion",
 		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 	},
+
 	// & Groups Switching
 	// ? Vim-like Buffers
 	{
@@ -62,6 +63,7 @@
 		"key": "ctrl+shift+w",
 		"command": "-workbench.action.closeWindow"
 	},
+
 	// ? Go to Previous and Next File
 	{
 		"key": "ctrl+6",
@@ -79,6 +81,7 @@
 		"key": "ctrl+shift+tab",
 		"command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
 	},
+
 	// & Terminal
 	// Switch between editor and terminal
 	{ "key": "ctrl+d ctrl+d", "command": "workbench.action.terminal.focus" },
@@ -87,16 +90,25 @@
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "terminalFocus"
 	},
+
 	// & File Explorer
 	// ? Hide File Explorer
 	{
 		"key": "ctrl+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+shift+e",
 		"command": "workbench.action.toggleSidebarVisibility"
 	},
 	{
 		"key": "ctrl+b",
 		"command": "-workbench.action.toggleSidebarVisibility"
-	},
+	}
 
 	// ? Coc-Explorer keybinds
 	// Create a new file
@@ -105,6 +117,7 @@
 		"command": "explorer.newFile",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
+
 	// Delete a file
 	{
 		"key": "d shift+f",
@@ -116,12 +129,14 @@
 		"command": "-deleteFile",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
+
 	// Create a new directory
 	{
 		"key": "shift+a",
 		"command": "explorer.newFolder",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
+
 	// Rename a file
 	{
 		"key": "r shift+f",
@@ -133,6 +148,7 @@
 		"command": "-renameFile",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
+
 	// Cut a file
 	{
 		"key": "d d",
@@ -144,6 +160,7 @@
 		"command": "-filesExplorer.cut",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
 	},
+
 	// Paste a file
 	{
 		"key": "p",
@@ -155,15 +172,14 @@
 		"command": "-filesExplorer.paste",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
 	},
-	// Copy a file
+
+	// Close Editor w/o Vim Keybinds
 	{
-		"key": "y y",
-		"command": "filesExplorer.copy",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.closeActiveEditor"
 	},
 	{
-		"key": "ctrl+c",
-		"command": "-filesExplorer.copy",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-	}
+		"key": "ctrl+f4",
+		"command": "-workbench.action.closeActiveEditor"
+	},
 ]
