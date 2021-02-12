@@ -8,7 +8,7 @@
 
 	// & Extensions
 	{
-		"key": "ctrl+p ctrl+c",
+		"key": "ctrl+s ctrl+s",
 		"command": "polacode.activate"
 	},
 
@@ -65,22 +65,6 @@
 	},
 
 	// ? Go to Previous and Next File
-	{
-		"key": "ctrl+6",
-		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-	},
-	{
-		"key": "ctrl+tab",
-		"command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-	},
-	{
-		"key": "ctrl+shift+6",
-		"command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
-	},
-	{
-		"key": "ctrl+shift+tab",
-		"command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
-	},
 
 	// & Terminal
 	// Switch between editor and terminal
@@ -181,5 +165,26 @@
 	{
 		"key": "ctrl+f4",
 		"command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "y y",
+		"command": "filesExplorer.copy",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	{
+		"key": "ctrl+c",
+		"command": "-filesExplorer.copy",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	// & Collapsing all folders
+	{
+		"key": "shift+h",
+		"command": "list.collapseAll",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "-list.collapseAll",
+		"when": "listFocus && !inputFocus"
 	}
 ]
