@@ -22,7 +22,7 @@ fi
 if ! grep -q "deb .*mmstick76/alacritty" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
 	sudo add-apt-repository ppa:mmstick76/alacritty -y
 fi
-sudo apt install alacritty neovim tmux git curl ripgrep libinput-tools wmctrl xdotool make neofetch gnome-tweaks cmatrix sl cowsay -y
+sudo apt install alacritty neovim tmux vlc git curl ripgrep libinput-tools wmctrl xdotool make neofetch gnome-tweaks cmatrix sl cowsay -y
 sudo snap install spotify discord
 
 #Download Config Files
