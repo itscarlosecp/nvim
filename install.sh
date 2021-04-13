@@ -1,9 +1,5 @@
 #!bin/bash
 
-echo "--------------------------------------------"
-echo "Itscarlosecp's Development Environment Setup"
-echo "--------------------------------------------"
-
 #Firefox Developer Edition
 if [ ! -d "/opt/firefox" ]; then
 	sudo wget -O- https://download-installer.cdn.mozilla.net/pub/devedition/releases/88.0b9/linux-x86_64/en-US/firefox-88.0b9.tar.bz2 | sudo tar xjf - -C /opt && sudo chown -R $USER /opt/firefox
@@ -26,7 +22,8 @@ fi
 if ! grep -q "deb .*mmstick76/alacritty" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
 	sudo add-apt-repository ppa:mmstick76/alacritty -y
 fi
-sudo apt install alacritty neovim tmux git curl ripgrep libinput-tools wmctrl xdotool make -y
+sudo apt install alacritty neovim tmux git curl ripgrep libinput-tools wmctrl xdotool make neofetch gnome-tweaks cmatrix sl cowsay -y
+sudo snap install spotify discord
 
 #Download Config Files
 if [ ! -d "~/.dotfiles" ]; then
