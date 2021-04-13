@@ -32,8 +32,6 @@ call plug#begin('~/.nvim/plugged')
 
 " Code
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdcommenter'
-Plug 'Chiel92/vim-autoformat'
 Plug 'psf/black'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
@@ -270,7 +268,6 @@ let g:python_highlight_space_errors = 0
 
 " Python Autoformat
 let g:python3_host_prog='/usr/bin/python3'
-au BufWrite * :Autoformat
 
 " Prettier config
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

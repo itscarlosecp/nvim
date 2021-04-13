@@ -30,12 +30,11 @@ sudo apt install alacritty neovim tmux git curl ripgrep libinput-tools wmctrl xd
 
 #Download Config Files
 if [ ! -d "~/.dotfiles" ]; then
-	git clone https://github.com/itscarlosecp/.dotfiles.git ~/.dotfiles
-	ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
-	ln -sf ~/.dotfiles/nvim ~/.config/nvim
-	ln -sf ~/.dotfiles/alacritty ~/.config/alacritty
-	ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
-	ln -sf ~/.dotfiles/.libinput-gestures.conf ~/.config/libinput-gestures.conf
+	ln -sf ./.gitconfig ~/.gitconfig
+	ln -sf ./nvim ~/.config/nvim
+	ln -sf ./alacritty ~/.config/alacritty
+	ln -sf ./.tmux.conf ~/.tmux.conf
+	ln -sf ./.libinput-gestures.conf ~/.config/libinput-gestures.conf
 fi
 
 #Install Neovim Plugins
