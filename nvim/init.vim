@@ -1,6 +1,6 @@
 syntax on
 
-set autoindent 
+set autoindent
 set smartindent
 set noexpandtab
 
@@ -19,7 +19,7 @@ set scrolloff=5
 set splitright
 
 let mapleader=" "
-nnoremap <leader>c :e ~/.dotfiles/nvim/init.vim<CR>
+nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
 
 call plug#begin('~/.nvim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -28,6 +28,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'tpope/vim-fugitive'
 	Plug 'nvie/vim-flake8'
+	Plug 'Chiel92/vim-autoformat'
 
 	Plug 'morhetz/gruvbox'
 	Plug 'ryanoasis/vim-devicons'
@@ -42,3 +43,18 @@ colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
 nnoremap <C-p> :Files<CR>
+
+let g:coc_global_extensions = ['coc-pairs', 'coc-json', 'coc-python', 'coc-explorer', 'coc-tslint', 'coc-tsserver', 'coc-prettier', 'coc-emmet']
+
+noremap <C-e> :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
+
+augroup MyCocExplorer
+	autocmd!
+	autocmd VimEnter * sil! au! FileExplorer *
+	autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
+augroup END
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
+let g:rainbow_active = 1
