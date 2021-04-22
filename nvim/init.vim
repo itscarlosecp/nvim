@@ -17,7 +17,6 @@ call plug#begin('~/.nvim/plugged')
 
 	" Interface
 	Plug 'nvim-treesitter/nvim-treesitter'
-	Plug 'christianchiarulli/nvcode-color-schemes.vim'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 call plug#end()
