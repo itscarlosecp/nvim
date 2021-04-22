@@ -25,7 +25,7 @@ EOL
 	sudo apt install alacritty vlc libinput-tools xdotool gnome-tweaks
 	sudo snap install spotify
 
-	ln -sf ~/.dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
+	ln -sf $HOME/.dotfiles/libinput-gestures.conf $HOME/.config/libinput-gestures.conf
 fi
 
 
@@ -33,9 +33,10 @@ fi
 sudo apt install neovim tmux git curl ripgrep wmctrl make neofetch cmatrix sl cowsay -y
 
 #Create Symlinks
-ln -sf ~/.dotfiles/nvim ~/.config/nvim
-ln -sf ~/.dotfiles/alacritty ~/.config/alacritty
-ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf $HOME/.dotfiles/nvim ~/.config/nvim
+ln -sf $HOME/.dotfiles/alacritty ~/.config/alacritty
+ln -sf $HOME/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf $HOME/.dotfiles/.zshrc ~/.zshrc
 
 #Install Neovim Plugins
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -45,4 +46,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 #Get Font
-wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete.ttf -P ~/.fonts
+wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete.ttf -P $HOME/.fonts
