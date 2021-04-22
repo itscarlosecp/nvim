@@ -4,7 +4,8 @@
 		"typescript",
 		"javascriptreact",
 		"typescriptreact",
-		"json"
+		"json",
+		"lua"
 	],
 
 	"prettier.semi": true,
