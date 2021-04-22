@@ -9,6 +9,8 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'tpope/vim-fugitive'
 	Plug 'nvie/vim-flake8'
 	Plug 'Chiel92/vim-autoformat'
+	Plug 'liuchengxu/vim-which-key'
+	Plug 'AckslD/nvim-whichkey-setup.lua'
 
 	" Fuzzy Finder
 	Plug 'nvim-lua/popup.nvim'
