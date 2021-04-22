@@ -1,16 +1,16 @@
 " Plugins
 function! BuildComposer(info)
-  if a:info.status != 'unchanged' || a:info.force
-    if has('nvim')
-      !cargo build --release --locked
-    else
-      !cargo build --release --locked --no-default-features --features json-rpc
-    endif
-  endif
+	if a:info.status != 'unchanged' || a:info.force
+		if has('nvim')
+			!cargo build --release --locked
+		else
+			!cargo build --release --locked --no-default-features --features json-rpc
+		endif
+	endif
 endfunction
 
 call plug#begin('~/.nvim/plugged')
-	" Conquer of Completion
+" Conquer of Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 	" Utilities
