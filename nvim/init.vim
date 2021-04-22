@@ -31,3 +31,4 @@ luafile $HOME/.config/nvim/lua/pl-galaxyline.lua
 colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE
 let g:rainbow_active = 1
+

@@ -28,3 +28,7 @@ require"nvim-treesitter.configs".setup {
     enable = true,
   },
 }
+
+vim.api.nvim_exec([[
+	au BufRead,BufNewFile *.jl set filetype=julia
+]], false)
