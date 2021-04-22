@@ -132,3 +132,6 @@ unset __conda_setup
 alias dev="cd $HOME/Code"
 alias niutek="cd $HOME/Code/niutek"
 alias .files="cd $HOME/.dotfiles"
+
+export EDITOR=nvim
+export BROWSER=wslview

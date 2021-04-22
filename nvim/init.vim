@@ -4,13 +4,11 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 	" Utilities
+	Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'tpope/vim-surround'
 	Plug 'luochen1990/rainbow'
 	Plug 'tpope/vim-fugitive'
-	Plug 'nvie/vim-flake8'
-	Plug 'Chiel92/vim-autoformat'
-	Plug 'liuchengxu/vim-which-key'
-	Plug 'AckslD/nvim-whichkey-setup.lua'
+	Plug 'kristijanhusak/vim-carbon-now-sh'
 
 	" Fuzzy Finder
 	Plug 'nvim-lua/popup.nvim'
@@ -18,7 +16,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'nvim-telescope/telescope.nvim'
 
 	" Interface
-	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 call plug#end()
@@ -34,3 +32,4 @@ colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE
 let g:rainbow_active = 1
 
+let g:carbon_now_sh_browser = 'wslview'
