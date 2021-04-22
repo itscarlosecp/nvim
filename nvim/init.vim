@@ -1,60 +1,34 @@
-syntax on
-
-set autoindent
-set smartindent
-set noexpandtab
-
-set tabstop=4
-set shiftwidth=4
-
-set wrap
-set linebreak
-set nolist
-
-set number
-set relativenumber
-set encoding=utf8
-set scrolloff=5
-
-set splitright
-
-let mapleader=" "
-nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
-
+" Plugins
 call plug#begin('~/.nvim/plugged')
+	" Conquer of Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+	" Utilities
 	Plug 'tpope/vim-surround'
 	Plug 'luochen1990/rainbow'
-	Plug 'sheerun/vim-polyglot'
 	Plug 'tpope/vim-fugitive'
 	Plug 'nvie/vim-flake8'
 	Plug 'Chiel92/vim-autoformat'
 
-	Plug 'morhetz/gruvbox'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+	" Fuzzy Finder
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 
-	Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-	Plug 'junegunn/fzf.vim'
+	" Interface
+	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'christianchiarulli/nvcode-color-schemes.vim'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 call plug#end()
 
-colorscheme gruvbox
+source $HOME/.config/nvim/vimscript/settings.vim
+source $HOME/.config/nvim/vimscript/keymappings.vim
+source $HOME/.config/nvim/vimscript/pl-coc.vim
+luafile $HOME/.config/nvim/lua/pl-treesitter.lua
+luafile $HOME/.config/nvim/lua/pl-telescope.lua
+luafile $HOME/.config/nvim/lua/pl-galaxyline.lua
+
+colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE
-
-nnoremap <C-p> :Files<CR>
-
-let g:coc_global_extensions = ['coc-pairs', 'coc-json', 'coc-python', 'coc-explorer', 'coc-tslint', 'coc-tsserver', 'coc-prettier', 'coc-emmet']
-
-noremap <C-e> :CocCommand explorer<CR>
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer')
-
-augroup MyCocExplorer
-	autocmd!
-	autocmd VimEnter * sil! au! FileExplorer *
-	autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
-augroup END
-
-let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
 let g:rainbow_active = 1
