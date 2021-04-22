@@ -1,4 +1,14 @@
 " Plugins
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release --locked
+    else
+      !cargo build --release --locked --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
 call plug#begin('~/.nvim/plugged')
 	" Conquer of Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -8,7 +18,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'luochen1990/rainbow'
 	Plug 'tpope/vim-fugitive'
-	Plug 'kristijanhusak/vim-carbon-now-sh'
+	Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 	" Fuzzy Finder
 	Plug 'nvim-lua/popup.nvim'
@@ -31,5 +41,3 @@ luafile $HOME/.config/nvim/lua/pl-galaxyline.lua
 colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE
 let g:rainbow_active = 1
-
-let g:carbon_now_sh_browser = 'wslview'
