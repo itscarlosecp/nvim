@@ -1,5 +1,6 @@
 " Extensiones
 let g:coc_global_extensions = [
+			\ 'coc-clangd',
 			\ 'coc-emmet',
 			\ 'coc-explorer',
 			\ 'coc-highlight',
