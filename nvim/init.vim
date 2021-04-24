@@ -47,3 +47,6 @@ let g:rainbow_active = 1
 
 au BufRead,BufNewFile *.jl set filetype=julia
 au BufWrite * :Autoformat
+
+autocmd FileType yml,yaml let b:autoformat_autoindent=0
+autocmd FileType yml,yaml let g:autoformat_retab = 0
