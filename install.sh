@@ -18,20 +18,6 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 EOL
 	fi
 
-	if ! grep -q "deb .*mmstick76/alacritty" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
-		sudo add-apt-repository ppa:mmstick76/alacritty -y
-	fi
-
-	sudo apt install alacritty vlc libinput-tools xdotool gnome-tweaks
-	sudo snap install spotify
-
-	ln -sf $HOME/.dotfiles/libinput-gestures.conf $HOME/.config/libinput-gestures.conf
-fi
-
-
-#Applications
-sudo apt install neovim tmux git curl ripgrep wmctrl make neofetch cmatrix sl cowsay -y
-
 #Create Symlinks
 ln -sf $HOME/.dotfiles/nvim ~/.config/nvim
 ln -sf $HOME/.dotfiles/alacritty ~/.config/alacritty
@@ -39,8 +25,10 @@ ln -sf $HOME/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf $HOME/.dotfiles/.zshrc ~/.zshrc
 
 #Install Neovim Plugins
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' && nvim +slient +PlugInstall +qall
+if command -v nvim; then
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' && nvim +slient +PlugInstall +qall
+fi
 
 #Install Node
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
