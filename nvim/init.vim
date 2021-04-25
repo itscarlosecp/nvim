@@ -1,14 +1,3 @@
-" Plugins
-function! BuildComposer(info)
-	if a:info.status != 'unchanged' || a:info.force
-		if has('nvim')
-			!cargo build --release --locked
-		else
-			!cargo build --release --locked --no-default-features --features json-rpc
-		endif
-	endif
-endfunction
-
 call plug#begin('~/.nvim/plugged')
 " Conquer of Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -18,7 +7,6 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-fugitive'
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
