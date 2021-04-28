@@ -14,9 +14,11 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'Chiel92/vim-autoformat'
 
 " Fuzzy Finder
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-lua/popup.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Interface
 Plug 'kyazdani42/nvim-web-devicons'
@@ -24,13 +26,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasiser/vim-code-dark'
+
 call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
 source $HOME/.config/nvim/vimscript/pl-coc.vim
 luafile $HOME/.config/nvim/lua/pl-treesitter.lua
-luafile $HOME/.config/nvim/lua/pl-telescope.lua
+" luafile $HOME/.config/nvim/lua/pl-telescope.lua
 
 colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE

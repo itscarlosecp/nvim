@@ -132,11 +132,10 @@ unset __conda_setup
 alias dev="cd $HOME/Code"
 alias niutek="cd $HOME/Code/niutek"
 alias .files="cd $HOME/.dotfiles"
-
-alias rg="rg --hidden --glob '!.git'"
+# alias rg="rg --files --hidden"
 
 export EDITOR=nvim
 export BROWSER=wslview
-
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export PATH=$PATH:/usr/local/go/bin
 

@@ -5,7 +5,8 @@ nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
 " ESC
 imap jj <ESC>
 " Fuzzy Finder
-nnoremap <leader>p :Telescope find_files<CR>
+" nnoremap <leader>p :Telescope find_files<CR>
+nnoremap <leader>p :Files<CR>
 " Files Explorer
 noremap <leader>e :CocCommand explorer<CR>
 " Navigation
