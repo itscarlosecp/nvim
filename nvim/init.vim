@@ -32,8 +32,7 @@ source $HOME/.config/nvim/vimscript/pl-coc.vim
 luafile $HOME/.config/nvim/lua/pl-treesitter.lua
 luafile $HOME/.config/nvim/lua/pl-telescope.lua
 
-" colorscheme codedark_mine
-colorscheme nvcode_mine
+colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE
 let g:airline_theme='codedark'
 

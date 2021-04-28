@@ -24,10 +24,11 @@
 	"explorer.file.autoReveal": false,
 	"explorer.previewAction.onHover": false,
 	"explorer.keyMappings.global": {
-		"<cr>": ""
+		"<cr>": "",
+		"<C-v>": "open:vsplit",
+		"<C-h>": "open:split"
 	},
 	"explorer.file.showHiddenFiles": true,
-	"explorer.filename.colored.enable": false,
 
 	"Lua.diagnostics.globals": ["vim"],
 

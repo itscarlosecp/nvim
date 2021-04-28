@@ -242,11 +242,11 @@ hi IndentBlanklineContextChar ctermfg=242 ctermbg=NONE cterm=NONE
 " Custom Colors
 
 " Line numbers highlight
-hi CursorLineNr ctermfg=250 ctermbg=234 cterm=NONE
+hi CursorLineNr ctermfg=250 ctermbg=235 cterm=NONE
 hi LineNr ctermfg=240 ctermbg=NONE cterm=NONE
 
 " Vertical split separator
-hi VertSplit ctermfg=238 ctermbg=234 cterm=NONE
+hi VertSplit ctermfg=238 ctermbg=235 cterm=NONE
 
 " Explorer selected background
 hi CursorColumn ctermfg=NONE ctermbg=235 cterm=NONE
@@ -254,8 +254,8 @@ hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=235 cterm=NONE
 
 " Explorer directories
-hi Directory ctermfg=75 ctermbg=NONE cterm=NONE
+hi Directory ctermfg=74 ctermbg=NONE cterm=NONE
 
 " Coc explorer sections
-hi CocExplorerBufferRoot ctermfg=75 ctermbg=NONE cterm=NONE
-hi CocExplorerFileRoot ctermfg=75 ctermbg=NONE cterm=NONE
+hi CocExplorerBufferRoot ctermfg=74 ctermbg=NONE cterm=NONE
+hi CocExplorerFileRoot ctermfg=74 ctermbg=NONE cterm=NONE

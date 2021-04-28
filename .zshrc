@@ -133,7 +133,10 @@ alias dev="cd $HOME/Code"
 alias niutek="cd $HOME/Code/niutek"
 alias .files="cd $HOME/.dotfiles"
 
+alias rg="rg --hidden --glob '!.git'"
+
 export EDITOR=nvim
 export BROWSER=wslview
 
 export PATH=$PATH:/usr/local/go/bin
+
