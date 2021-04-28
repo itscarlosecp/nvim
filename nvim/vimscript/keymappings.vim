@@ -1,5 +1,5 @@
 " Map Leander
-let mapleader=" " 
+let mapleader=" "
 " Config Quick Access
 nnoremap <leader>c :e ~/.config/nvim/init.vim<CR>
 " ESC

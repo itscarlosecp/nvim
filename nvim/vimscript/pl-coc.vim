@@ -1,28 +1,29 @@
 " Extensiones
 let g:coc_global_extensions = [
-			\ 'coc-clangd',
-			\ 'coc-emmet',
-			\ 'coc-explorer',
-			\ 'coc-highlight',
-			\ 'coc-json',
-			\ 'coc-lua',
-			\ 'coc-pairs',
-			\ 'coc-prettier',
-			\ 'coc-pyright',
-			\ 'coc-tabnine',
-			\ 'coc-tailwindcss',
-			\ 'coc-tslint',
-			\ 'coc-tsserver'
-			\ ]
+      \ 'coc-clangd',
+      \ 'coc-emmet',
+      \ 'coc-explorer',
+      \ 'coc-go',
+      \ 'coc-highlight',
+      \ 'coc-json',
+      \ 'coc-lua',
+      \ 'coc-pairs',
+      \ 'coc-prettier',
+      \ 'coc-pyright',
+      \ 'coc-tabnine',
+      \ 'coc-tailwindcss',
+      \ 'coc-tslint',
+      \ 'coc-tsserver'
+      \ ]
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " Coc Explorer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == "coc-explorer")
 augroup MyCocExplorer
-	autocmd!
-	autocmd VimEnter * sil! au! FileExplorer *
-	autocmd BufEnter * let d = expand("%") | if isdirectory(d) | bd | exe "CocCommand explorer " . d | endif
+  autocmd!
+  autocmd VimEnter * sil! au! FileExplorer *
+  autocmd BufEnter * let d = expand("%") | if isdirectory(d) | bd | exe "CocCommand explorer " . d | endif
 augroup END
 
 inoremap <silent><expr> <TAB>
@@ -46,7 +47,7 @@ endif
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -128,3 +129,4 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
