@@ -138,4 +138,3 @@ export EDITOR=nvim
 export BROWSER=wslview
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export PATH=$PATH:/usr/local/go/bin
-

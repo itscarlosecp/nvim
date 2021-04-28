@@ -21,18 +21,19 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Interface
+" Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasiser/vim-code-dark'
-
 call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
 source $HOME/.config/nvim/vimscript/pl-coc.vim
 luafile $HOME/.config/nvim/lua/pl-treesitter.lua
+" luafile $HOME/.config/nvim/lua/pl-galaxyline.lua
 " luafile $HOME/.config/nvim/lua/pl-telescope.lua
 
 colorscheme nvcode
