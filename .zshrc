@@ -130,7 +130,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias dev="cd $HOME/Code"
-alias niutek="cd $HOME/Code/niutek"
+alias niutek="cd $HOME/niutek"
 alias .files="cd $HOME/.dotfiles"
 # alias rg="rg --files --hidden"
 
