@@ -2,7 +2,6 @@
 let g:coc_global_extensions = [
       \ 'coc-clangd',
       \ 'coc-emmet',
-      \ 'coc-explorer',
       \ 'coc-go',
       \ 'coc-highlight',
       \ 'coc-json',

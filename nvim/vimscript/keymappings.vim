@@ -8,7 +8,7 @@ imap jj <ESC>
 " nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>p :Files<CR>
 " Files Explorer
-noremap <leader>e :CocCommand explorer<CR>
+noremap <leader>e :NvimTreeToggle<CR>
 " Navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

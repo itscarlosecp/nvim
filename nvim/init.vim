@@ -21,26 +21,22 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Interface
-" Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasiser/vim-code-dark'
+
+" Explorer
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
 source $HOME/.config/nvim/vimscript/pl-coc.vim
+source $HOME/.config/nvim/vimscript/colorscheme.vim
+
 luafile $HOME/.config/nvim/lua/pl-treesitter.lua
-" luafile $HOME/.config/nvim/lua/pl-galaxyline.lua
 luafile $HOME/.config/nvim/lua/pl-telescope.lua
+luafile $HOME/.config/nvim/lua/pl-nvimtree.lua
 
-colorscheme nvcode
-hi Normal guibg=NONE ctermbg=NONE
-let g:airline_theme='codedark'
-
-let g:rainbow_active = 1
-
-au BufRead,BufNewFile *.jl set filetype=julia
-au BufWrite * :Autoformat
