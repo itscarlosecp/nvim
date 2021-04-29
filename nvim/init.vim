@@ -25,10 +25,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'tomasiser/vim-code-dark'
-
-" Explorer
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'preservim/nerdtree'
 call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
@@ -38,5 +34,5 @@ source $HOME/.config/nvim/vimscript/colorscheme.vim
 
 luafile $HOME/.config/nvim/lua/pl-treesitter.lua
 luafile $HOME/.config/nvim/lua/pl-telescope.lua
-luafile $HOME/.config/nvim/lua/pl-nvimtree.lua
+" luafile $HOME/.config/nvim/lua/pl-nvimtree.lua
 
