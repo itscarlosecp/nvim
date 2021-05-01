@@ -3,14 +3,16 @@ call plug#begin('~/.nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Utilities
-Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-fugitive'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'windwp/nvim-autopairs'
+Plug 'tpope/vim-surround'
 
 " Formatting
+Plug 'Chiel92/vim-autoformat'
 Plug 'Chiel92/vim-autoformat'
 
 " Fuzzy Finder
@@ -29,8 +31,9 @@ call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
-source $HOME/.config/nvim/vimscript/pl-coc.vim
+source $HOME/.config/nvim/vimscript/formatting.vim
 source $HOME/.config/nvim/vimscript/colorscheme.vim
+source $HOME/.config/nvim/vimscript/pl-coc.vim
 
 luafile $HOME/.config/nvim/lua/pl-treesitter.lua
 luafile $HOME/.config/nvim/lua/pl-telescope.lua

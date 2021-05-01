@@ -7,14 +7,10 @@ set hidden
 " set clipboard="unnamedplus"
 
 " Formatting
-set autoindent
-set smartindent
-set noexpandtab
-set tabstop=2
-set shiftwidth=2
-set wrap
-set linebreak
-set nolist
+set noexpandtab " Indent with tabs instead of spaces
+set tabstop=2 " Tab character width
+set shiftwidth=2 " Indent spaces when using > or <
+set smarttab " Use shifwidth value as tabstop value
 
 " Interface
 set number

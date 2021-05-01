@@ -16,5 +16,3 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Search in all files
 nnoremap <leader>sw :CocSearch <C-R>=expand('<cword>')<CR><CR>
-" Remove suggestions autoselection en Enter
-iunmap <CR>
