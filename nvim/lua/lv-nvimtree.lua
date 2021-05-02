@@ -1,7 +1,6 @@
 vim.g.nvim_tree_disable_netrw = 0
 vim.g.nvim_tree_hide_dotfiles = 0
 vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_follow = 1
 vim.g.nvim_tree_auto_close = true
 vim.g.nvim_tree_auto_ignore_ft = 'startify'
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
@@ -40,6 +39,7 @@ vim.g.nvim_tree_bindings = {
 	["-"]              = tree_cb("dir_up"),
 	["q"]              = tree_cb("close"),
 }
+-- vim.g.nvim_tree_show_icons = {git = 1, folders = 1, files = 1}
 vim.g.nvim_tree_icons = {
 	default = '',
 	symlink = '',

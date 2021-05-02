@@ -12,8 +12,6 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf'
 
 " User Interface
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
@@ -22,19 +20,23 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
 " Utilities
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'luochen1990/rainbow'
+Plug 'numToStr/FTerm.nvim'
+Plug 'blackCauldron7/surround.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'p00f/nvim-ts-rainbow'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
 source $HOME/.config/nvim/vimscript/formatting.vim
-source $HOME/.config/nvim/vimscript/colorscheme.vim
 
 source $HOME/.config/nvim/vimscript/lv-coc.vim
-luafile $HOME/.config/nvim/lua/lv-colorizer.lua
 luafile $HOME/.config/nvim/lua/lv-treesitter.lua
 luafile $HOME/.config/nvim/lua/lv-galaxyline.lua
-luafile $HOME/.config/nvim/lua/lv-nvimtree.lua
+luafile $HOME/.config/nvim/lua/lv-surround.lua
+luafile $HOME/.config/nvim/lua/lv-fterm.lua
+luafile $HOME/.config/nvim/lua/lv-colorizer.lua
+
+colorscheme nvcode
+hi Normal guibg=NONE ctermbg=NONE
