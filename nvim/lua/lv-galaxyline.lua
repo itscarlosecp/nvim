@@ -2,7 +2,7 @@ local gl = require('galaxyline')
 -- get my theme in galaxyline repo
 -- local colors = require('galaxyline.theme').default
 local colors = {
-	bg = '#2F2F2F',
+	bg = '#1F1F1F',
 	yellow = '#DCDCAA',
 	dark_yellow = '#D7BA7D',
 	cyan = '#4EC9B0',
@@ -12,7 +12,7 @@ local colors = {
 	orange = '#CE9178',
 	purple = '#C586C0',
 	magenta = '#D16D9E',
-	grey =	'#BCBCBC',
+	grey =	'#CCCCCC',
 	blue = '#5fafd7',
 	vivid_blue = '#4FC1FF',
 	light_blue = '#9CDCFE',

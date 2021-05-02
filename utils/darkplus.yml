@@ -1,7 +1,7 @@
 information:
   name: nvcode
   background: dark
-  author: "Christian Chiarulli <chrisatmachine@gmail.com>"
+  author: "Carlos Castillo <itscarlosecp@gmail.com>"
 
 palette:
   fg: "#DDDDDD"
@@ -51,7 +51,7 @@ highlights:
 
   Cursor: "#515052 #AEAFAD"
   ColorColumn: "- hidden"
-  CursorLineNr: "fg bg"
+  CursorLineNr: "#CCCCCC bg"
   SignColumn: "- bg"
   Conceal: "#5F5F5F"
   CursorColumn: "- #1F1F1F"
@@ -155,9 +155,9 @@ highlights:
   # -- BUFFER --
   CocExplorerBufferRoot: "#5FAFD7" # [BUFFER]
   CocExplorerBufferExpandIcon: "hidden" # Arrow
-  CocExplorerBufferNameVisible: "fg"
+  CocExplorerBufferNameVisible: "#CCCCCC"
   CocExplorerBufferBufname: "hidden"
-  CocExplorerBufferModified: "fg"
+  CocExplorerBufferModified: "#CCCCCC"
   CocExplorerBufferBufnr: "hidden"
   CocExplorerBufferReadonly: "hidden"
   CocExplorerBufferFullpath: "hidden"

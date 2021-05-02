@@ -1,4 +1,4 @@
-" Maintainer: Christian Chiarulli <chrisatmachine@gmail.com>
+" Maintainer: Carlos Castillo <itscarlosecp@gmail.com>
 
 set background=dark
 hi clear
@@ -40,7 +40,7 @@ hi Underlined guifg=#569cd6 ctermfg=74 gui=underline cterm=underline
 hi Error guifg=#d16969 ctermfg=167 guibg=NONE ctermbg=NONE gui=bold,reverse cterm=bold,reverse
 hi Cursor guifg=#515052 ctermfg=239 guibg=#aeafad ctermbg=145 gui=NONE cterm=NONE
 hi ColorColumn guifg=NONE ctermfg=NONE guibg=#585858 ctermbg=240 gui=NONE cterm=NONE
-hi CursorLineNr guifg=#dddddd ctermfg=253 guibg=#1f1f1f ctermbg=234 gui=NONE cterm=NONE
+hi CursorLineNr guifg=#cccccc ctermfg=252 guibg=#1f1f1f ctermbg=234 gui=NONE cterm=NONE
 hi SignColumn guifg=NONE ctermfg=NONE guibg=#1f1f1f ctermbg=234 gui=NONE cterm=NONE
 hi Conceal guifg=#5f5f5f ctermfg=59 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE ctermfg=NONE guibg=#1f1f1f ctermbg=234 gui=NONE cterm=NONE
@@ -131,9 +131,9 @@ hi TSTag guifg=#569cd6 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSTagDelimiter guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferRoot guifg=#5fafd7 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferExpandIcon guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi CocExplorerBufferNameVisible guifg=#dddddd ctermfg=253 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi CocExplorerBufferNameVisible guifg=#cccccc ctermfg=252 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferBufname guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi CocExplorerBufferModified guifg=#dddddd ctermfg=253 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi CocExplorerBufferModified guifg=#cccccc ctermfg=252 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferBufnr guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferReadonly guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferFullpath guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
