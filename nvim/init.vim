@@ -22,9 +22,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'luochen1990/rainbow'
 Plug 'norcalli/nvim-colorizer.lua'
+call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
+source $HOME/.config/nvim/vimscript/formatting.vim
+source $HOME/.config/nvim/vimscript/colorscheme.vim
 source $HOME/.config/nvim/vimscript/lv-coc.vim
 
 luafile $HOME/.config/nvim/lua/lv-treesitter.lua
