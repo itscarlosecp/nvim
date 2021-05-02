@@ -4,7 +4,6 @@ let g:coc_global_extensions = [
 			\ 'coc-emmet',
 			\ 'coc-explorer',
 			\ 'coc-go',
-			\ 'coc-highlight',
 			\ 'coc-json',
 			\ 'coc-lua',
 			\ 'coc-pairs',

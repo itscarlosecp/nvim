@@ -30,5 +30,8 @@ require"nvim-treesitter.configs".setup {
 			"#DA70D6",
 			"#87CEFA"
 		},
+	},
+	autotag = {
+		enable = true,
 	}
 }

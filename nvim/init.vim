@@ -25,6 +25,8 @@ Plug 'blackCauldron7/surround.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'tpope/vim-fugitive'
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 call plug#end()
 
 source $HOME/.config/nvim/vimscript/settings.vim
@@ -37,6 +39,7 @@ luafile $HOME/.config/nvim/lua/lv-galaxyline.lua
 luafile $HOME/.config/nvim/lua/lv-surround.lua
 luafile $HOME/.config/nvim/lua/lv-fterm.lua
 luafile $HOME/.config/nvim/lua/lv-colorizer.lua
+luafile $HOME/.config/nvim/lua/lv-pairs.lua
 
 colorscheme nvcode
 hi Normal guibg=NONE ctermbg=NONE
