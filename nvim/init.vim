@@ -12,6 +12,8 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 
 " User Interface
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
