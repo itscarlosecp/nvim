@@ -15,6 +15,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " User Interface
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
@@ -28,9 +29,10 @@ call plug#end()
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
 source $HOME/.config/nvim/vimscript/formatting.vim
+source $HOME/.config/nvim/vimscript/colorscheme.vim
 
 source $HOME/.config/nvim/vimscript/lv-coc.vim
 luafile $HOME/.config/nvim/lua/lv-colorizer.lua
 luafile $HOME/.config/nvim/lua/lv-treesitter.lua
 luafile $HOME/.config/nvim/lua/lv-galaxyline.lua
-source $HOME/.config/nvim/vimscript/colorscheme.vim
+luafile $HOME/.config/nvim/lua/lv-nvimtree.lua
