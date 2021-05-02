@@ -163,6 +163,7 @@ highlights:
   CocExplorerBufferFullpath: "hidden"
 
   # -- FILE --
+  CocExplorerIndentLine: "hidden"
   CocExplorerFileRoot: "#5FAFD7" # [FILE]
   CocExplorerFileRootName: "hidden" # Project Path
   CocExplorerFileExpandIcon: "hidden"
@@ -203,4 +204,3 @@ highlights:
   CocExplorerGitModified: "#CE9178"
   CocExplorerGitDeleted: "#D16969"
   CocExplorerGitIgnore: "hidden"
-

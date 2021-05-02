@@ -137,6 +137,7 @@ hi CocExplorerBufferModified guifg=#dddddd ctermfg=253 guibg=NONE ctermbg=NONE g
 hi CocExplorerBufferBufnr guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferReadonly guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerBufferFullpath guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi CocExplorerIndentLine guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerFileRoot guifg=#5fafd7 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerFileRootName guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CocExplorerFileExpandIcon guifg=#585858 ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
