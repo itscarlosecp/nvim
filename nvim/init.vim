@@ -4,6 +4,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Formatting
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/playground'
 Plug 'Chiel92/vim-autoformat'
 Plug 'JuliaEditorSupport/julia-vim'
 
@@ -27,9 +28,9 @@ call plug#end()
 source $HOME/.config/nvim/vimscript/settings.vim
 source $HOME/.config/nvim/vimscript/keymappings.vim
 source $HOME/.config/nvim/vimscript/formatting.vim
-source $HOME/.config/nvim/vimscript/colorscheme.vim
-source $HOME/.config/nvim/vimscript/lv-coc.vim
 
-luafile $HOME/.config/nvim/lua/lv-treesitter.lua
+source $HOME/.config/nvim/vimscript/lv-coc.vim
 luafile $HOME/.config/nvim/lua/lv-colorizer.lua
+luafile $HOME/.config/nvim/lua/lv-treesitter.lua
 luafile $HOME/.config/nvim/lua/lv-galaxyline.lua
+source $HOME/.config/nvim/vimscript/colorscheme.vim
