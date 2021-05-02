@@ -29,7 +29,6 @@ return require('packer').startup(function()
 	-- User Interface
 	use {'glepnir/galaxyline.nvim', branch = 'main'}
 	use 'kyazdani42/nvim-web-devicons'
-	use 'kyazdani42/nvim-tree.lua'
 
 	-- Utilities
 	use 'tpope/vim-surround'
