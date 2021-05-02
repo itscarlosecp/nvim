@@ -1,42 +1,33 @@
 {
-	"suggest.noselect": true,
-	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
-		"typescript",
-		"javascriptreact",
-		"typescriptreact",
-		"json",
-		"lua"
-	],
-
-	"tailwindCSS.emmetCompletions" : true,
-	"tailwindCSS.jsLanguages" : [ "javascript", "javascriptreact", "typescriptreact" ],
-	"tailwindCSS.trace.server": "verbose",
-
-	"prettier.semi": false,
-	"prettier.singleQuote": false,
-	"prettier.useTabs": true,
-	"prettier.jsxSingleQuote": false,
-	"prettier.tabWidth": 2,
-
-	"explorer.width": 35,
-	"explorer.icon.enableNerdfont": true,
-	"explorer.icon.enableVimDevicons": true,
-	"explorer.file.autoReveal": false,
-	"explorer.previewAction.onHover": false,
-	"explorer.keyMappings.global": {
-		"<cr>": "",
-		"<C-v>": "open:vsplit",
-		"<C-h>": "open:split"
-	},
-	"explorer.file.showHiddenFiles": true,
-
-	"Lua.diagnostics.globals": ["vim"],
-
-	"languageserver": {},
-	"clangd.path": "/home/itscarlosecp/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
-
-	"python.formatting.provider": "black",
-	"python.formatting.blackdPath": "/home/itscarlosecp/anaconda3/bin/black",
-	"diagnostic.showUnused": false
+  "suggest.noselect": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "json",
+    "lua"
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.jsLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "tailwindCSS.trace.server": "verbose",
+  "prettier.semi": false,
+  "prettier.singleQuote": false,
+  "prettier.useTabs": true,
+  "prettier.jsxSingleQuote": false,
+  "prettier.tabWidth": 2,
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
+  "languageserver": {
+    
+  },
+  "clangd.path": "/home/itscarlosecp/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
+  "python.formatting.provider": "black",
+  "python.formatting.blackdPath": "/home/itscarlosecp/anaconda3/bin/black",
+  "diagnostic.showUnused": false
 }

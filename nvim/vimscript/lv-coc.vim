@@ -17,14 +17,6 @@ let g:coc_global_extensions = [
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
-" Coc Explorer
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == "coc-explorer")
-augroup MyCocExplorer
-  autocmd!
-  autocmd VimEnter * sil! au! FileExplorer *
-  autocmd BufEnter * let d = expand("%") | if isdirectory(d) | bd | exe "CocCommand explorer " . d | endif
-augroup END
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
