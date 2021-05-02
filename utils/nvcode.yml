@@ -98,8 +98,8 @@ highlights:
   CursorLineNr: "white bg"
   SignColumn: "- bg"
   Conceal: "line_grey"
-  CursorColumn: "- cursor_grey"
-  CursorLine: "- cursor_grey"
+  CursorColumn: "- bg"
+  CursorLine: "- bg"
   Directory: "directory"
   DiffAdd: "black green"
   DiffChange: "yellow - u"
@@ -265,6 +265,9 @@ highlights:
   # ---
   CocExplorerFileLinkTarget: "hidden"
   CocExplorerFileHidden: "hidden"
+  CocExplorerFileClip: "hidden"
+  CocExplorerFileSize: "hidden"
+  CocExplorerFileReadonly: "hidden"
 
   # -- EASYMOTION --
   EasyMotionTarget: "error_red - b"
