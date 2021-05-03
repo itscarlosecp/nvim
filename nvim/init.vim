@@ -14,7 +14,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " User Interface
-Plug 'marko-cerovac/material.nvim'
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -42,5 +41,5 @@ luafile $HOME/.config/nvim/lua/lv-fterm.lua
 luafile $HOME/.config/nvim/lua/lv-colorizer.lua
 luafile $HOME/.config/nvim/lua/lv-pairs.lua
 
-colorscheme material
+colorscheme darkblue
 hi Normal guibg=NONE ctermbg=NONE
