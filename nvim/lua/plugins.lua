@@ -11,6 +11,7 @@ end
 return require('packer').startup(function()
 	-- MAIN PACKAGES --
 	use 'wbthomason/packer.nvim'
+	use 'neoclide/coc.nvim'
 
 	-- SYNTAX --
 	use 'nvim-treesitter/nvim-treesitter'
