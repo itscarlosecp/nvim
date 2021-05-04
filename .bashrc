@@ -17,5 +17,22 @@ alias rm="rm -i"
 alias dev="cd $HOME/Code"
 alias niutek="cd $HOME/niutek"
 alias .files="cd $HOME/.dotfiles"
+alias uba="cd $HOME/Code/UBA"
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/itscarlosecp/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+	eval "$__conda_setup"
+else
+	if [ -f "/home/itscarlosecp/miniconda3/etc/profile.d/conda.sh" ]; then
+		. "/home/itscarlosecp/miniconda3/etc/profile.d/conda.sh"
+	else
+		export PATH="/home/itscarlosecp/miniconda3/bin:$PATH"
+	fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+. "$HOME/.cargo/env"
 eval "$(starship init bash)"

@@ -1,0 +1,12 @@
+[git_status]
+format = '([\[$all_status $ahead_behind\]]($style) )'
+all_status = '$conflicted $stashed $deleted $renamed $modified $staged $untracked'
+conflicted = 'conflicted🚫'
+ahead = 'ahead⬆️'
+behind = 'behind⬇️'
+diverged = 'diverged↕️'
+untracked = 'untracked❔'
+modified = 'modified✏️'
+staged = 'staged✔️'
+renamed = 'renamed📝'
+deleted = 'deleted❌'

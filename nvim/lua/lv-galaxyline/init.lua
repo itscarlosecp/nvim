@@ -30,7 +30,7 @@ gls.left[1] = {
 			-- auto change color according the vim mode
 			local mode_color = {
 				n = colors.blue,
-				i = colors.green,
+				i = colors.info_yellow,
 				v = colors.purple,
 				[''] = colors.purple,
 				V = colors.purple,
