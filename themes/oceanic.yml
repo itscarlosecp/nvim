@@ -1,11 +1,11 @@
 information:
-  name: darkblue
+  name: oceanic
   background: dark
   author: "Carlos Castillo <itscarlosecp@gmail.com>"
 
 palette:
   fg: "#DDDDDD"
-  bg: "#202B41"
+  bg: "#282A36"
 
   red: "#D16969"
   error_red: "#F44747"
@@ -21,7 +21,7 @@ palette:
   purple: "#C586C0"
   cyan: "#4EC9B0"
   white: "#ABB2BF"
-  black: "#112134"
+  black: "#191A21"
   line_grey: "#5C6370"
   gutter_fg_grey: "#858585"
   cursor_grey: "#2C323C"
