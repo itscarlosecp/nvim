@@ -10,9 +10,9 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export PATH=/usr/local/go/bin:/usr/local/miniconda3/bin:$PATH
 
 alias ..="cd .."
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 alias grep="grep --color=auto"
-alias la="ls -A"
+alias la="ls -Aogh --group-directories-first"
 alias rm="rm -i"
 
 alias dev="cd $HOME/Code"

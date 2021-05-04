@@ -1,12 +1,19 @@
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+format = 'on [$symbol$branch]($style) '
+style = 'bold #CE9178'
+
 [git_status]
-format = '([\[$all_status $ahead_behind\]]($style) )'
-all_status = '$conflicted $stashed $deleted $renamed $modified $staged $untracked'
+format = '[$all_status$ahead_behind]($style) '
 conflicted = 'conflicted🚫'
-ahead = 'ahead⬆️'
-behind = 'behind⬇️'
-diverged = 'diverged↕️'
-untracked = 'untracked❔'
-modified = 'modified✏️'
-staged = 'staged✔️'
-renamed = 'renamed📝'
-deleted = 'deleted❌'
+ahead = '⬆️'
+behind = '⬇️'
+diverged = '↕️'
+untracked = '❔'
+modified = '✏️'
+staged = '✔️'
+renamed = '📝'
+deleted = '❌'
+style = 'white'
