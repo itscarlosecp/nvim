@@ -14,3 +14,4 @@ vim.wo.scrolloff = 5
 vim.o.splitright = true
 
 vim.o.termguicolors = true
+vim.o.swapfile = false
