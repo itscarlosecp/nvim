@@ -1,20 +1,5 @@
 [
 	{
-		"key": "ctrl+space",
-		"command": "whichkey.show"
-	},
-	/* {
-		"key": "shift+;",
-		"command": "vim.showQuickpickCmdLine",
-		"when": "vim.mode != 'Insert'"
-	}, */
-	{
-		"key": "ctrl+;",
-		"command": "workbench.action.showCommands",
-		"when": "vim.mode != 'Insert'"
-	},
-
-	{
 		"key": "ctrl+h",
 		"command": "workbench.action.navigateLeft",
 		"when": "vim.mode == 'Normal'"
@@ -34,35 +19,84 @@
 		"command": "workbench.action.navigateRight",
 		"when": "vim.mode == 'Normal' && !terminalFocus"
 	},
-
 	{
-		"key": "ctrl+l",
-		"command": "workbench.action.terminal.clear",
-		"when": "terminalFocus"
+		"key": "ctrl+6",
+		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+		"when": "vim.mode == 'Normal'"
 	},
 
+	// Whichkey and Terminal
 	{
-		"key": "ctrl+j",
-		"command": "selectNextSuggestion",
-		"when": "vim.mode == 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+		"key": "ctrl+;",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
 	},
 	{
-		"key": "ctrl+k",
-		"command": "selectPrevSuggestion",
-		"when": "vim.mode == 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
 	},
 
+	// File Explorer
 	{
-		"key": "ctrl+e",
+		"key": "space e",
 		"command": "workbench.view.explorer",
-		"when": "!filesExplorerFocus"
+		"when": "vim.mode == 'Normal' && !filesExplorerFocus"
 	},
 	{
-		"key": "ctrl+e",
+		"key": "space e",
 		"command": "workbench.action.toggleSidebarVisibility",
-		"when": "sideBarVisible"
+		"when": "vim.mode == 'Normal' && sideBarVisible"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
 	},
 
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpen"
+	},
+
+	// Quick Open Remapping
+	{
+		"key": "space f",
+		"command": "workbench.action.quickOpen",
+		"when": "vim.mode == 'Normal'"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpen"
+	},
+
+	// Navigate Quick Open
+	{
+		"key": "ctrl+n",
+		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+
+	// File Explorer Keybindings
 	{
 		"key": "a",
 		"command": "explorer.newFile",
@@ -98,43 +132,26 @@
 		"command": "filesExplorer.paste",
 		"when": "filesExplorerFocus && !inputFocus"
 	},
-
 	{
 		"key": "shift+h",
 		"command": "list.collapseAll",
 		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{
-		"key": "ctrl+j",
-		"command": "workbench.action.quickOpenNavigateNext",
-		"when": "inQuickOpen"
+		"key": "ctrl+v",
+		"command": "explorer.openToSide",
+		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
 	},
 	{
-		"key": "ctrl+k",
-		"command": "workbench.action.quickOpenNavigatePrevious",
-		"when": "inQuickOpen"
-	},
+		"key": "ctrl+enter",
+		"command": "-explorer.openToSide",
+		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+	}
 
+	// Coc Show Information
 	{
-		"key": "ctrl+6",
-		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-		"when": "vim.mode == 'Normal'"
-	},
-
-	{
-		"key": "ctrl+/",
+		"key": "shift+k",
 		"command": "editor.action.showHover",
 		"when": "editorTextFocus && vim.mode == 'Normal'"
 	},
-
-	{
-		"key": "ctrl+t",
-		"command": "workbench.action.terminal.focus",
-		"when": "!terminalFocus"
-	},
-	{
-		"key": "ctrl+t",
-		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "terminalFocus"
-	}
 ]
