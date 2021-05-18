@@ -1,3 +1,6 @@
+[conda]
+ignore_base = false
+
 [directory]
 format = '[$path]($style)[$read_only]($read_only_style) '
 
@@ -17,3 +20,4 @@ staged = '✔️'
 renamed = '📝'
 deleted = '❌'
 style = 'white'
+

@@ -4,8 +4,8 @@ vim.o.hidden = true
 
 vim.bo.expandtab = false
 vim.bo.smartindent = true
-vim.bo.tabstop = 2
-vim.bo.shiftwidth = 2
+vim.cmd('set tabstop=2')
+vim.cmd('set shiftwidth=2')
 vim.o.smarttab = true
 
 vim.wo.number = true

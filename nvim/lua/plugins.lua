@@ -15,7 +15,6 @@ return require('packer').startup(function()
 
 	-- SYNTAX --
 	use 'nvim-treesitter/nvim-treesitter'
-	use 'nvim-treesitter/playground'
 	use 'JuliaEditorSupport/julia-vim'
 
 	-- UTILITIES --
