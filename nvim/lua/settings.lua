@@ -3,7 +3,7 @@ vim.o.fileencoding = "utf-8"
 vim.o.hidden = true
 
 vim.bo.expandtab = false
-vim.bo.smartindent = true
+vim.bo.autoindent = true
 vim.cmd('set tabstop=2')
 vim.cmd('set shiftwidth=2')
 vim.o.smarttab = true

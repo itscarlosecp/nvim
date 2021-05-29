@@ -1,11 +1,5 @@
 require"nvim-treesitter.configs".setup {
 	ensure_installed = "all",
-	indent = {
-		enable = true
-	},
-	highlight = {
-		enable = true,
-	},
 	rainbow = {
 		enable = true,
 		extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
@@ -19,4 +13,11 @@ require"nvim-treesitter.configs".setup {
 	autotag = {
 		enable = true,
 	},
+	highlight = {
+		enable = true,
+	},
+	indent = {
+		enable = true,
+		disable = {"c", "cpp"}
+	}
 }

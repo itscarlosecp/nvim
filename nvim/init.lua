@@ -7,6 +7,7 @@ vim.cmd('source $HOME/.config/nvim/vimscript/lv-coc.vim')
 
 require('lv-colorizer')
 require('lv-fterm')
+require('lv-pairs')
 require('lv-galaxyline')
 require('lv-nvimtree')
 require('lv-surround')
