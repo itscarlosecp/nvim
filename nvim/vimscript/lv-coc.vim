@@ -11,7 +11,8 @@ let g:coc_global_extensions = [
 			\ 'coc-tabnine',
 			\ 'coc-tailwindcss',
 			\ 'coc-tslint',
-			\ 'coc-tsserver'
+			\ 'coc-tsserver',
+			\ 'coc-vetur'
 			\ ]
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

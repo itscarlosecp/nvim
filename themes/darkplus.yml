@@ -5,7 +5,7 @@ information:
 
 palette:
   fg: "#DDDDDD"
-  bg: "#1E1E1E"
+  bg: "#262626"
 
   red: "#D16969"
   error_red: "#F44747"
