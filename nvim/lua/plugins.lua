@@ -20,6 +20,7 @@ return require('packer').startup(function()
 	-- UTILITIES --
 	use 'numToStr/FTerm.nvim'
 	use 'blackCauldron7/surround.nvim'
+	use 'Chiel92/vim-autoformat'
 
 	use 'norcalli/nvim-colorizer.lua'
 	use 'p00f/nvim-ts-rainbow'
