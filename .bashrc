@@ -18,6 +18,15 @@ alias dev="cd $HOME/Code"
 alias niutek="cd $HOME/niutek"
 alias .files="cd $HOME/.dotfiles"
 alias uba="cd $HOME/Code/UBA"
+alias algo="gcc -std=c99 -Wall -Wconversion -Werror"
+
+sb() {
+	if [ ! -d "$HOME/Code/sandbox" ]
+	then
+		mkdir "$HOME/Code/sandbox"
+	fi
+	nvim "$HOME/Code/sandbox/some.$1"
+}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

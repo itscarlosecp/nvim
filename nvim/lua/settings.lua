@@ -1,6 +1,7 @@
 vim.cmd('syntax on')
 vim.o.fileencoding = "utf-8"
 vim.o.hidden = true
+vim.o.ignorecase = true
 
 vim.bo.expandtab = false
 vim.bo.autoindent = true
