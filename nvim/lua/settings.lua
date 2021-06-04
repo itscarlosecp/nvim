@@ -16,3 +16,4 @@ vim.o.splitright = true
 
 vim.o.termguicolors = true
 vim.o.swapfile = false
+

@@ -16,7 +16,6 @@ alias la="ls -Aogh --group-directories-first"
 alias rm="rm -i"
 
 alias dev="cd $HOME/Code"
-alias niutek="cd $HOME/niutek"
 alias .files="cd $HOME/.dotfiles"
 alias uba="cd $HOME/Code/UBA"
 alias algo="gcc -std=c99 -Wall -Wconversion -Werror"

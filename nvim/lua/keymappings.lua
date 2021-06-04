@@ -15,3 +15,4 @@ map('n', '<C-l>', '<C-w>l', {silent = true})
 
 map('n', 'T', '<CMD>lua require("FTerm").toggle()<CR>', defaults)
 map('t', 'T', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', defaults)
+
