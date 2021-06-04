@@ -1,9 +1,11 @@
 require('settings')
 require('plugins')
 require('keymappings')
-
-require('lv-completion')
-require('lv-lspinstall')
-require('lv-lspsaga')
+require('colorscheme')
 
 require('lv-nvimtree')
+require('lv-fterm')
+
+require('lsp')
+require('lv-autocompletion')
+require('lv-diagnostics')
