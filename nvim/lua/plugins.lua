@@ -1,4 +1,4 @@
-return require("packer").startup(function()
+return require"packer".startup(function()
 	use "wbthomason/packer.nvim"
 
 	-- LSP
@@ -17,6 +17,7 @@ return require("packer").startup(function()
 	use "numToStr/FTerm.nvim"
 	use {"kyazdani42/nvim-tree.lua", requires = {"kyazdani42/nvim-web-devicons",  "ryanoasis/vim-devicons"}}
 	use {"nvim-telescope/telescope.nvim", requires = { "nvim-lua/popup.nvim",  "nvim-lua/plenary.nvim"}}
+	use "itscarlosecp/colorschemes"
 
 	-- Lua
 	use "kikito/inspect.lua"

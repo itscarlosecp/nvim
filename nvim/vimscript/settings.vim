@@ -16,3 +16,6 @@ set splitright
 set termguicolors
 set noswapfile
 set signcolumn=yes
+
+colorscheme oceanic
+hi Normal guibg=NONE ctermbg=NONE
