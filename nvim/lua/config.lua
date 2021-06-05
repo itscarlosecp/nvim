@@ -17,7 +17,6 @@ O = {
 	treesitter = {
 		ensured_installed = "all",
 		ignore_installed = {},
-		enable_indent = {"javascriptreact"}
 	},
 	-- Available LSPs Reference: https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 	language_servers = {

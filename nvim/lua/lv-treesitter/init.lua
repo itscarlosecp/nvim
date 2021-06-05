@@ -4,7 +4,10 @@ require"nvim-treesitter.configs".setup {
 
 	autotag = { enable = true, },
 	highlight = { enable = true, },
-	indent = { enable = O.treesitter.enable_indent },
+	indent = { 
+		enabled = {"javascriptreact"},
+		disable = {"c", "cpp", "html", "python"}
+	},
 	rainbow = {
 		enable = true,
 		extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
