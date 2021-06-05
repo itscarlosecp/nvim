@@ -1,7 +1,9 @@
-require"lspconfig".sumneko_lua.setup {
+return {
 	settings = {
-		diagnostics = {
-			globals = {"vim"}
+		Lua = {
+			diagnostics = {
+				globals = {"vim"}
+			}
 		}
 	}
 }

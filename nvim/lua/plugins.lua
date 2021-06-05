@@ -1,6 +1,5 @@
 return require("packer").startup(function()
 	use "wbthomason/packer.nvim"
-	-- use "Olical/aniseed"
 
 	-- LSP
 	use "neovim/nvim-lspconfig"
@@ -12,6 +11,7 @@ return require("packer").startup(function()
 	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 	use "windwp/nvim-ts-autotag"
 	use "p00f/nvim-ts-rainbow"
+	use "norcalli/nvim-colorizer.lua"
 
 	-- Interface
 	use "numToStr/FTerm.nvim"
