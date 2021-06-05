@@ -17,5 +17,8 @@ return require("packer").startup(function()
 	use "numToStr/FTerm.nvim"
 	use {"kyazdani42/nvim-tree.lua", requires = {"kyazdani42/nvim-web-devicons",  "ryanoasis/vim-devicons"}}
 	use {"nvim-telescope/telescope.nvim", requires = { "nvim-lua/popup.nvim",  "nvim-lua/plenary.nvim"}}
+
+	-- Lua
+	use "kikito/inspect.lua"
 end)
 
