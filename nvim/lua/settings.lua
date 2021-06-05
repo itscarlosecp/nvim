@@ -1,19 +1,18 @@
 vim.cmd("syntax on")
-vim.o.fileencoding = "utf-8"
-vim.o.hidden = true
-vim.o.ignorecase = true
+vim.cmd("set fileencoding=utf-8")
+vim.cmd("set hidden")
+vim.cmd("set ignorecase")
 
-vim.bo.expandtab = false
-vim.bo.autoindent = true
+vim.cmd("set noexpandtab")
+vim.cmd("set autoindent")
 vim.cmd("set tabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.o.smarttab = true
+vim.cmd("set tabstop=2")
 
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.wo.scrolloff = 5 
-vim.o.splitright = true
+vim.cmd("set number")
+vim.cmd("set rnu")
+vim.cmd("set scrolloff=5")
+vim.cmd("set splitright")
 
-vim.o.termguicolors = true
-vim.o.swapfile = false
-vim.o.signcolumn = "yes"
+vim.cmd("set termguicolors")
+vim.cmd("set noswapfile")
+vim.cmd('set signcolumn="yes"')
