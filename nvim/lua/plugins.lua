@@ -10,16 +10,17 @@ return require"packer".startup(function()
 	-- Treesitter
 	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 	use "windwp/nvim-ts-autotag"
-	use "p00f/nvim-ts-rainbow"
 	use "norcalli/nvim-colorizer.lua"
+	use "p00f/nvim-ts-rainbow"
 
 	-- Interface
 	use "numToStr/FTerm.nvim"
 	use {"kyazdani42/nvim-tree.lua", requires = {"kyazdani42/nvim-web-devicons",  "ryanoasis/vim-devicons"}}
 	use {"nvim-telescope/telescope.nvim", requires = { "nvim-lua/popup.nvim",  "nvim-lua/plenary.nvim"}}
+	use {"glepnir/galaxyline.nvim", branch = 'main', requires = { "nvim-lua/popup.nvim" }}
 	use "itscarlosecp/colorschemes"
 
-	-- Lua
-	use "kikito/inspect.lua"
+	-- Utilities
+	use "tpope/vim-surround"
 end)
 
