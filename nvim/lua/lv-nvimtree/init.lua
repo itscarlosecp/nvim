@@ -1,4 +1,4 @@
-local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+local tree_cb = require"nvim-tree.config".nvim_tree_callback
 vim.g.nvim_tree_bindings = {
 	["<CR>"]           = tree_cb("edit"),
 	["l"]              = tree_cb("edit"),
@@ -18,9 +18,11 @@ vim.g.nvim_tree_bindings = {
 	["p"]              = tree_cb("paste"),
 }
 
+vim.g.nvim_tree_ignore = O.nvimtree.ignored_patterns
+
 vim.g.nvim_tree_icons = {
-	default = '',
-	symlink = '',
+	default = "",
+	symlink = "",
 	git = {unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = ""},
 	folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
 }

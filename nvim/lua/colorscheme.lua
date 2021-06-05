@@ -1,2 +1,6 @@
-vim.cmd('colorscheme oceanic')
-vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+vim.cmd("colorscheme " ..O.colorscheme)
+
+if O.transparency then
+	vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+end
+
