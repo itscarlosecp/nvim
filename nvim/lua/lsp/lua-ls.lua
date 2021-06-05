@@ -1,9 +1,12 @@
-local lspconfig = require"lspconfig"
+local on_attach = require"lsp.on_attach"
 
-lspconfig.sumneko_lua.setup = {
+require"lspconfig".sumneko_lua.setup {
+	on_attach = on_attach,
 	settings = {
-		diagnostics = {
-			globals = {"vim"}
-		}
-	}
+        Lua = {
+            diagnostics = {
+                globals = { "vim" }
+            }
+        }
+    }
 }

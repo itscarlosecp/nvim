@@ -12,6 +12,7 @@ return require"packer".startup(function()
 	use "windwp/nvim-ts-autotag"
 	use "norcalli/nvim-colorizer.lua"
 	use "p00f/nvim-ts-rainbow"
+	use "nvim-treesitter/playground"
 
 	-- Interface
 	use "numToStr/FTerm.nvim"
