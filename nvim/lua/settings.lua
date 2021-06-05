@@ -11,8 +11,9 @@ vim.o.smarttab = true
 
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.scrolloff = O.settings.scrolloff
+vim.wo.scrolloff = 5 
 vim.o.splitright = true
 
 vim.o.termguicolors = true
 vim.o.swapfile = false
+vim.o.signcolumn = "yes"

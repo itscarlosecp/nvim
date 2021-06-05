@@ -1,18 +1,9 @@
-require"config"
-require"settings"
 require"plugins"
+require"settings"
 require"keymappings"
-require"colorscheme"
 
-require"lv-nvimtree"
 require"lv-fterm"
-require"lv-autopairs"
-require"lv-galaxyline"
-require"lv-colorizer"
-require"lv-treesitter"
-
-require"lv-autocompletion"
-require"lv-diagnostics"
+require"lv-trouble"
 
 require"lsp"
-require"lsp.tailwindcss-ls"
+require"lsp.lua-ls"
