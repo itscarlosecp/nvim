@@ -1,21 +1,6 @@
 local packer = require"packer"
 local use = packer.use
 
--- Plugins:
--- Packer (Plugin manager)
--- Coc.nvim (LSP IntelliSense)
--- Trouble (Better diagnostics)
--- LSPInstall (Easy LS installation)
--- TreeSitter (Buggy but better syntax highlight)
--- Galaxyline (Statusbar)
--- FTerm (Floating terminal)
--- NvimTree (File explorer)
--- Telescope (Fuzzy finder)
--- EasyAlign (Custom alignment)
--- EasyMotion (Better and faster movement)
--- VimSurround (Surround)
--- Nvim-Colorizer (Color color codes)
-
 local plugins = function()
 	use "wbthomason/packer.nvim"
 	use {"neoclide/coc.nvim", branch = "release"}
@@ -25,14 +10,15 @@ local plugins = function()
 		"kabouzeid/nvim-lspinstall",
 		requires = {"neovim/nvim-lspconfig"}
 	}
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		requires = {
-			"nvim-treesitter/playground",
-			"p00f/nvim-ts-rainbow"
-		}
-	}
-	use "folke/trouble.nvim"
+	-- use {
+		-- "nvim-treesitter/nvim-treesitter",
+		-- requires = {
+			-- "nvim-treesitter/playground",
+			-- "p00f/nvim-ts-rainbow",
+			-- "windwp/nvim-ts-autotag"
+		-- }
+	-- }
+	use "sheerun/vim-polyglot"
 
 	-- Interface
 	use {
@@ -58,10 +44,13 @@ local plugins = function()
 	}
 
 	-- Utilities
-	use "junegunn/vim-easy-align"
+	use "windwp/nvim-autopairs"
+	use "norcalli/nvim-colorizer.lua"
 	use "easymotion/vim-easymotion"
 	use "tpope/vim-surround"
-	use "norcalli/nvim-colorizer.lua"
+	use "f-person/git-blame.nvim"
+	use "luochen1990/rainbow"
+	use "Chiel92/vim-autoformat"
 end
 
 packer.startup(plugins)

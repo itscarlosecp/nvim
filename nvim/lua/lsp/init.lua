@@ -14,44 +14,13 @@ vim.g.coc_global_extensions = {
 	"coc-pyright",
 	"coc-rust-analyzer",
 	"coc-vetur",
-	"coc-graphql",
 	"coc-yaml",
 	"coc-vimlsp",
 
 	-- Extensions
 	"coc-emmet",
-	"coc-tabnine",
 	"coc-html-css-support",
 	"coc-prettier",
 	"coc-stylelintplus",
 	"coc-svg",
-	"coc-pairs"
-}
-
-vim.lsp.protocol.CompletionItemKind = {
-    "   (Text) ",
-    "   (Method)",
-    "   (Function)",
-    "   (Constructor)",
-    " ﴲ  (Field)",
-    "[] (Variable)",
-    "   (Class)",
-    " ﰮ  (Interface)",
-    "   (Module)",
-    " 襁 (Property)",
-    "   (Unit)",
-    "   (Value)",
-    " 練 (Enum)",
-    "   (Keyword)",
-    "   (Snippet)",
-    "   (Color)",
-    "   (File)",
-    "   (Reference)",
-    "   (Folder)",
-    "   (EnumMember)",
-    " ﲀ  (Constant)",
-    " ﳤ  (Struct)",
-    "   (Event)",
-    "   (Operator)",
-    "   (TypeParameter)"
 }

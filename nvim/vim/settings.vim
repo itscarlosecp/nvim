@@ -19,3 +19,6 @@ set signcolumn=yes
 
 colorscheme oceanic
 hi Normal guibg=NONE ctermbg=NONE
+hi pythonSpaceError guibg=NONE ctermbg=NONE 
+
+let g:rainbow_active = 1
