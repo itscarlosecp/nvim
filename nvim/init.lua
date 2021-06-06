@@ -1,8 +1,11 @@
-require"settings"
-require"plug"
-require"utils"
+require"plug" -- Packer and plugins installs
+require"vimscript" -- Importing vimscript config
+require"lsp" -- Conquer of Completion plugins
 
-require"lsp"
+-- Plugins configs
+require"plug._treesitter"
+require"plug._galaxyline"
 require"plug._fterm"
+require"plug._nvimtree"
 require"plug._telescope"
-
+require"plug._colorizer"
