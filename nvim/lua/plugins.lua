@@ -4,12 +4,12 @@ return require"packer".startup(function()
 	-- LSP
 	use "neovim/nvim-lspconfig"
 	use "kabouzeid/nvim-lspinstall"
-	use "nvim-lua/completion-nvim"
 	use {"folke/trouble.nvim", requires = {"folke/lsp-colors.nvim"}}
+	use "hrsh7th/nvim-compe"
+	-- use "tzachar/compe-tabnine"
 
 	-- Treesitter
 	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-	use "windwp/nvim-ts-autotag"
 	use "norcalli/nvim-colorizer.lua"
 	use "p00f/nvim-ts-rainbow"
 	use "nvim-treesitter/playground"
@@ -23,5 +23,7 @@ return require"packer".startup(function()
 
 	-- Utilities
 	use "tpope/vim-surround"
+	use "windwp/nvim-autopairs"
+	use "windwp/nvim-ts-autotag"
 end)
 
