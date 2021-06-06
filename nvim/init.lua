@@ -1,2 +1,9 @@
-require"module._settings"
-require"moduel._mappings"
+require"settings"
+require"plugins"
+require"utils"
+
+require"module._fterm"
+require"module._telescope"
+
+require"lsp"
+
