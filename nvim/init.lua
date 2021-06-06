@@ -1,6 +1,6 @@
 require"plug" -- Packer and plugins installs
-require"vimscript" -- Importing vimscript config
 require"lsp" -- Conquer of Completion plugins
+require"vscript" -- Importing vimscript configs
 
 -- Plugins configs
 require"plug._treesitter"

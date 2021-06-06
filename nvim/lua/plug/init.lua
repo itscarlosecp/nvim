@@ -29,6 +29,7 @@ local plugins = function()
 		"kyazdani42/nvim-tree.lua",
 		requires = {"kyazdani42/nvim-web-devicons"}
 	}
+	use "itscarlosecp/colorschemes"
 
 	-- Fuzzy Finder
 	use {

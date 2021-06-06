@@ -17,6 +17,5 @@ set termguicolors
 set noswapfile
 set signcolumn=yes
 
-" colorscheme oceanic
+colorscheme oceanic
 hi Normal guibg=NONE ctermbg=NONE
-

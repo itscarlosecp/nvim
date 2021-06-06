@@ -8,6 +8,7 @@ export HISTCONTROL=ignoreboth
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export PATH=/usr/local/go/bin:/usr/local/miniconda3/bin:$PATH
+export LSPINSTALL_DIR=$HOME/.local/share/nvim/lspinstall
 
 alias ..="cd .."
 alias ls="ls --color=auto --group-directories-first"
