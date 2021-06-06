@@ -1,0 +1,16 @@
+{
+	"suggest.noselect": true,
+
+	"Lua.diagnostics.globals": ["vim", "use"],
+
+	"python.formatting.provider": "black",
+	"python.formatting.blackdPath": "/home/itscarlosecp/anaconda3/bin/black",
+
+	"languageserver": {
+		"tailwindls": {
+			"module": "$LSPINSTALL_DIR/tailwindcss/tailwindcss-intellisense/extension/dist/server/tailwindServer.js",
+			"filetypes": ["html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact"],
+			"rootPatterns": ["tailwind.config.js", "package.json", ".git"]
+		}
+	}
+}

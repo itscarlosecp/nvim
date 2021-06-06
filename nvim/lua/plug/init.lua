@@ -3,6 +3,7 @@ local use = packer.use
 
 local plugins = function()
 	use "wbthomason/packer.nvim"
+	use {"neoclide/coc.nvim", branch = "release"}
 
 	-- Language Server Provider
 	use {

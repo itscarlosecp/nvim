@@ -1,9 +1,8 @@
 require"settings"
-require"plugins"
+require"plug"
 require"utils"
 
-require"module._fterm"
-require"module._telescope"
-
 require"lsp"
+require"plug._fterm"
+require"plug._telescope"
 
