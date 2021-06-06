@@ -4,7 +4,6 @@ vim.g.nvim_tree_ignore = {".git", "node_modules", ".next"} -- Ignored files/dirs
 vim.g.nvim_tree_auto_open = 0 -- Open on enter Neovim
 vim.g.nvim_tree_auto_close = 1 -- Close when there is no buffer
 vim.g.nvim_tree_indent_markers = 0 -- Directory indicator icon
-vim.g.nvim_tree_hide_dotfiles = 0 -- Hiden dotfiles
 vim.g.nvim_tree_special_files = {"README.md", "Makefile", "MAKEFILE"} -- Special files
 
 local tree_cb = require"nvim-tree.config".nvim_tree_callback

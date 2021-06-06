@@ -1,6 +1,21 @@
 local packer = require"packer"
 local use = packer.use
 
+-- Plugins:
+-- Packer (Plugin manager)
+-- Coc.nvim (LSP IntelliSense)
+-- Trouble (Better diagnostics)
+-- LSPInstall (Easy LS installation)
+-- TreeSitter (Buggy but better syntax highlight)
+-- Galaxyline (Statusbar)
+-- FTerm (Floating terminal)
+-- NvimTree (File explorer)
+-- Telescope (Fuzzy finder)
+-- EasyAlign (Custom alignment)
+-- EasyMotion (Better and faster movement)
+-- VimSurround (Surround)
+-- Nvim-Colorizer (Color color codes)
+
 local plugins = function()
 	use "wbthomason/packer.nvim"
 	use {"neoclide/coc.nvim", branch = "release"}
@@ -14,9 +29,10 @@ local plugins = function()
 		"nvim-treesitter/nvim-treesitter",
 		requires = {
 			"nvim-treesitter/playground",
-			"p00f/nvim-ts-rainbow" -- Bracker colorizer
+			"p00f/nvim-ts-rainbow"
 		}
 	}
+	use "folke/trouble.nvim"
 
 	-- Interface
 	use {
@@ -42,10 +58,10 @@ local plugins = function()
 	}
 
 	-- Utilities
-	use "junegunn/vim-easy-align" -- Start comments in a single column
-	use "easymotion/vim-easymotion" -- Easymotion
-	use "tpope/vim-surround" -- vim-surround
-	use "norcalli/nvim-colorizer.lua" -- Color codes colorizer
+	use "junegunn/vim-easy-align"
+	use "easymotion/vim-easymotion"
+	use "tpope/vim-surround"
+	use "norcalli/nvim-colorizer.lua"
 end
 
 packer.startup(plugins)
