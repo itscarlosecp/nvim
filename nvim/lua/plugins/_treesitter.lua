@@ -1,18 +1,15 @@
-local languages = {
-	"bash", "c", "clojure", "cpp", "css", "dockerfile",
-	"fish", "go", "graphql", "haskell", "html", "javascript", "jsdoc",
-	"json", "jsonc", "julia", "latex", "lua", "python",
-	"regex", "ruby", "rust", "scala", "scss", "svelte",
-	"toml", "typescript", "vue", "yaml"
-}
-
 require"nvim-treesitter.configs".setup {
-	ensure_installed = languages,
+	ensure_installed = "all",
 	highlight = { enable = true },
-	indent = {
-		enable = {
-			"javascript", "javascriptreact",
-			"typescript", "tsx"
-		}
+	indent = { enable = true },
+	rainbow = {
+		enable = true,
+		extended_mode = false, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
+		max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
+		colors = {
+			"#D4AF37",
+			"#DA70D6",
+			"#87CEFA"
+		},
 	},
 }

@@ -18,7 +18,7 @@ local plugins = function()
 			"windwp/nvim-ts-autotag"
 		}
 	}
-	use "sheerun/vim-polyglot"
+	-- use "sheerun/vim-polyglot"
 
 	-- Interface
 	use {
@@ -49,7 +49,6 @@ local plugins = function()
 	use "easymotion/vim-easymotion"
 	use "tpope/vim-surround"
 	use "f-person/git-blame.nvim"
-	use "luochen1990/rainbow"
 	use "Chiel92/vim-autoformat"
 end
 
