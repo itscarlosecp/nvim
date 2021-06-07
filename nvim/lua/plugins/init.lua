@@ -10,14 +10,14 @@ local plugins = function()
 		"kabouzeid/nvim-lspinstall",
 		requires = {"neovim/nvim-lspconfig"}
 	}
-	-- use {
-		-- "nvim-treesitter/nvim-treesitter",
-		-- requires = {
-			-- "nvim-treesitter/playground",
-			-- "p00f/nvim-ts-rainbow",
-			-- "windwp/nvim-ts-autotag"
-		-- }
-	-- }
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		requires = {
+			"nvim-treesitter/playground",
+			"p00f/nvim-ts-rainbow",
+			"windwp/nvim-ts-autotag"
+		}
+	}
 	use "sheerun/vim-polyglot"
 
 	-- Interface
