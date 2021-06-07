@@ -20,5 +20,6 @@ set signcolumn=yes
 colorscheme oceanic
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE 
+hi CocHintFloat gui=underline
 
-let g:rainbow_active = 1
+set pumheight=10

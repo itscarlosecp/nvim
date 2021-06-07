@@ -7,6 +7,8 @@
 		"json"
 	],
 
+	"pairs.disableLanguages": ["json"],
+
 	"prettier.semi": false,
 	"prettier.singleQuote": false,
 	"prettier.useTabs": true,
@@ -53,9 +55,16 @@
 	"languageserver": {
 		"tailwindls": {
 			"module": "$LSPINSTALL_DIR/tailwindcss/tailwindcss-intellisense/extension/dist/server/tailwindServer.js",
-			"filetypes": ["html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact"],
+			"filetypes": [
+				"html",
+				"css",
+				"javascript",
+				"typescript",
+				"javascriptreact",
+				"typescriptreact"
+			],
 			"rootPatterns": ["tailwind.config.js", "package.json", ".git"]
 		}
-  },
-  "clangd.path": "/home/itscarlosecp/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
+	},
+	"clangd.path": "/home/itscarlosecp/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 }
