@@ -2,8 +2,8 @@
 let mapleader = ' '
 nnoremap <silent> <leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <leader>ff :Telescope find_files<CR>
-nnoremap <silent> ;; <CMD>lua require('FTerm').toggle()<CR>
-tnoremap <silent> ;; <CMD>lua require('FTerm').toggle()<CR>
+nnoremap <silent> <C-x> <CMD>lua require('FTerm').toggle()<CR>
+tnoremap <silent> <C-x> <CMD>lua require('FTerm').toggle()<CR>
 
 " Panes Movement
 nnoremap <C-J> <C-W><C-J>

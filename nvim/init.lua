@@ -1,6 +1,6 @@
 require"plugins" -- Packer and plugins installs
 require"lsp" -- Conquer of Completion plugins
-require"import" -- Importing vimscript configs
+require"vimscript" -- Importing vimscript configs
 
 -- Plugins configs
 require"plugins._autopairs"
