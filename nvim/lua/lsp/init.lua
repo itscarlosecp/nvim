@@ -23,5 +23,4 @@ vim.g.coc_global_extensions = {
 	"coc-prettier",
 	"coc-stylelintplus",
 	"coc-svg",
-	"coc-snippets"
 }
