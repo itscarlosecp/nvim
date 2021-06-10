@@ -10,8 +10,8 @@
 	},
 	//========================================
 	{
-		"key": "ctrl+h",
-		"command": "workbench.action.navigateLeft",
+		"key": "ctrl+k",
+		"command": "workbench.action.navigateUp",
 		"when": "vim.mode == 'Normal'"
 	},
 	{
@@ -20,32 +20,14 @@
 		"when": "vim.mode == 'Normal'"
 	},
 	{
-		"key": "ctrl+k",
-		"command": "workbench.action.navigateUp",
-		"when": "vim.mode == 'Normal'"
-	},
-	{
 		"key": "ctrl+l",
 		"command": "workbench.action.navigateRight",
 		"when": "vim.mode == 'Normal'"
 	},
 	{
-		"key": "ctrl+6",
-		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-	},
-	{
-		"key": "ctrl+tab",
-		"command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-	},
-	{
-		"key": "ctrl+6",
-		"command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-		"when": "inEditorsPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+tab",
-		"command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
-		"when": "inEditorsPicker && inQuickOpen"
+		"key": "ctrl+h",
+		"command": "workbench.action.navigateLeft",
+		"when": "vim.mode == 'Normal'"
 	},
 	//========================================
 	{
@@ -151,6 +133,36 @@
 		"key": "ctrl+`",
 		"command": "-workbench.action.terminal.toggleTerminal",
 		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+x",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+shift+5",
+		"command": "-workbench.action.terminal.split",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.terminal.focusPreviousPane",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+left",
+		"command": "-workbench.action.terminal.focusPreviousPane",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.terminal.focusNextPane",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+right",
+		"command": "-workbench.action.terminal.focusNextPane",
+		"when": "terminalFocus && terminalProcessSupported"
 	},
 	{
 		"key": "ctrl+shift+l",
