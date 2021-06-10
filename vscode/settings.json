@@ -1,5 +1,4 @@
 {
-	// Colorscheme
 	"workbench.colorCustomizations": {
 		"activityBar.background": "#0f0f0f",
 		"activityBar.activeBackground": "#0f0f0f",
@@ -282,14 +281,13 @@
 		"list.focusBackground": "#222"
 	},
 
-	// Fonts
-	"editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-	"editor.fontLigatures": true,
+	"editor.fontFamily": "JetBrainsMono NF",
 	"terminal.integrated.fontFamily": "JetBrainsMono NF",
+	"editor.fontLigatures": true,
 	"terminal.integrated.fontSize": 14,
 
 	// Formatting
-	"editor.detectIndentation": false,
+	"editor.detectIndentation": true,
 	"editor.formatOnSave": true,
 	"editor.lineNumbers": "relative",
 	"editor.tabCompletion": "off",
@@ -317,23 +315,7 @@
 	"editor.rename.enablePreview": false,
 
 	// Icons
-	"workbench.iconTheme": "helium-icon-theme",
-	"helium-icon-theme.languages.associations": {
-		"json": "json"
-	},
-	"helium-icon-theme.folders.associations": {
-		"context": "react-components",
-		"reducers": "redux-reducer",
-		"actions": "redux-actions",
-		"store": "redux-store",
-		"interfaces": "typescript",
-		"types": "typescript"
-	},
-	"helium-icon-theme.files.associations": {
-		"*.json": "nodejs_alt",
-		"**.json": "nodejs_alt"
-	},
-	"helium-icon-theme.folders.color": "#eeb4c5", // Default color for un-recognized files.
+	"workbench.iconTheme": "material-icon-theme",
 
 	// Vim Extension Settings
 	"vim.autoindent": true,
@@ -341,168 +323,21 @@
 	"vim.hlsearch": true,
 	"vim.incsearch": true,
 	"vim.useCtrlKeys": true,
-	"vim.useSystemClipboard": true,
-	"vim.visualstar": true, // This is for scrolling before file end.
-	"vim.leader": "<space>",
-	"vim.sneak": true,
-	// "vim.statusBarColorControl": true,
-	// "vim.statusBarColors.normal": ["#161616", "#dddddd"],
-	// "vim.statusBarColors.insert": ["#161616", "#978771"],
+	"vim.useSystemClipboard": false,
+	"vim.visualstar": true,
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false,
+		"<C-q>": false
+	},
 
 	// WSL Settings
 	"terminal.integrated.inheritEnv": false,
-	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+	// "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
 
 	// Git Lens
 	"git.enableSmartCommit": true,
 	"gitlens.menus": false,
-
-	// Which Keys
-	// "whichkey.sortOrder": "alphabetically",
-	// "whichkey.delay": 0,
-	"whichkey.bindings": [
-		{
-			"key": "d",
-			"name": "Debugger",
-			"type": "command",
-			"command": "workbench.view.debug"
-		},
-		{
-			"key": "P",
-			"name": "Panes",
-			"type": "bindings",
-			"bindings": [
-				{
-					"key": "v",
-					"name": "Vertical Split",
-					"type": "command",
-					"command": "workbench.action.splitEditorRight"
-				},
-				{
-					"key": "h",
-					"name": "Horizontal Split",
-					"type": "command",
-					"command": "workbench.action.splitEditorDown"
-				}
-			]
-		},
-		{
-			"key": "N",
-			"name": "Navigation ⬎",
-			"type": "bindings",
-			"bindings": [
-				{
-					"key": "u",
-					"name": "Mode Up 🠕",
-					"type": "command",
-					"command": "workbench.action.navigateUp",
-					"when": "vim.mode == 'Normal'"
-				},
-				{
-					"key": "d",
-					"name": "Mode Down 🠕",
-					"type": "command",
-					"command": "workbench.action.navigateDown",
-					"when": "vim.mode == 'Normal'"
-				},
-				{
-					"key": "r",
-					"name": "Mode Right 🠖",
-					"type": "command",
-					"command": "workbench.action.navigateRight",
-					"when": "vim.mode == 'Normal'"
-				},
-				{
-					"key": "l",
-					"name": "Mode Left 🠔",
-					"type": "command",
-					"command": "workbench.action.navigateLeft",
-					"when": "vim.mode == 'Normal'"
-				}
-			]
-		},
-		{
-			"key": "U",
-			"name": "Toggle UI ⬎",
-			"type": "bindings",
-			"bindings": [
-				{
-					"key": "e",
-					"name": "File Explorer",
-					"type": "command",
-					"command": "workbench.action.toggleSidebarVisibility"
-				},
-				{
-					"key": "p",
-					"name": "Project Manager",
-					"type": "command",
-					"command": "workbench.view.extension.project-manager"
-				},
-				{
-					"key": "t",
-					"name": "Terminal",
-					"type": "command",
-					"command": "workbench.action.terminal.toggleTerminal"
-				},
-				{
-					"key": "x",
-					"name": "Extensions",
-					"type": "command",
-					"command": "workbench.view.extensions"
-				}
-			]
-		},
-		{
-			"key": "S",
-			"name": "Search ⬎",
-			"type": "bindings",
-			"bindings": [
-				{
-					"key": "f",
-					"name": "Search in Current File",
-					"type": "command",
-					"command": "actions.find"
-				},
-				{
-					"key": "F",
-					"name": "Search in All Files",
-					"type": "command",
-					"command": "workbench.action.findInFiles"
-				},
-				{
-					"key": "r",
-					"name": "Replace in Current File",
-					"type": "command",
-					"command": "editor.action.startFindReplaceAction"
-				},
-				{
-					"key": "R",
-					"name": "Replace in All Files",
-					"type": "command",
-					"command": "workbench.action.replaceInFiles"
-				}
-			]
-		},
-		{
-			"key": "/",
-			"name": "Settings",
-			"type": "bindings",
-			"bindings": [
-				{
-					"key": "s",
-					"name": "settings.json",
-					"type": "command",
-					"command": "workbench.action.openSettingsJson"
-				},
-				{
-					"key": "k",
-					"name": "keybindings.json",
-					"type": "command",
-					"command": "workbench.action.openGlobalKeybindingsFile"
-				}
-			]
-		}
-	],
 
 	// Languages
 	"emmet.includeLanguages": {
@@ -512,6 +347,7 @@
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"python.showStartPage": false,
+	"python.condaPath": "/home/itscarlosecp/anaconda3/bin/python",
 	"python.pythonPath": "/usr/bin/python3",
 
 	"[html]": {
@@ -543,7 +379,8 @@
 	},
 	"[python]": {
 		"editor.insertSpaces": true,
-		"editor.defaultFormatter": "ms-python.python"
+		"editor.defaultFormatter": "ms-python.python",
+		"editor.tabSize": 4
 	},
 	"[cpp]": {
 		"editor.tabSize": 4
@@ -557,5 +394,8 @@
 			"viewType": "jupyter.notebook.ipynb",
 			"filenamePattern": "*.ipynb"
 		}
-	]
+	],
+	"terminal.integrated.defaultProfile.linux": "zsh",
+
+	"C_Cpp.updateChannel": "Insiders"
 }

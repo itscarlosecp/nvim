@@ -1,4 +1,14 @@
 [
+	//========================================
+	{
+		"key": "ctrl+,",
+		"command": "workbench.action.openSettingsJson"
+	},
+	{
+		"key": "ctrl+shift+,",
+		"command": "workbench.action.openGlobalKeybindingsFile"
+	},
+	//========================================
 	{
 		"key": "ctrl+h",
 		"command": "workbench.action.navigateLeft",
@@ -17,38 +27,40 @@
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.navigateRight",
-		"when": "vim.mode == 'Normal' && !terminalFocus"
+		"when": "vim.mode == 'Normal'"
 	},
 	{
 		"key": "ctrl+6",
-		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-		"when": "vim.mode == 'Normal'"
-	},
-
-	// Whichkey and Terminal
-	{
-		"key": "ctrl+;",
-		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "terminal.active"
+		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
 	},
 	{
-		"key": "ctrl+`",
-		"command": "-workbench.action.terminal.toggleTerminal",
-		"when": "terminal.active"
+		"key": "ctrl+tab",
+		"command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
 	},
 	{
-		"key": "ctrl+n",
-		"command": "-workbench.action.files.newUntitledFile"
+		"key": "ctrl+6",
+		"command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+		"when": "inEditorsPicker && inQuickOpen"
 	},
-
-	// File Explorer
 	{
-		"key": "space e",
+		"key": "ctrl+tab",
+		"command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+		"when": "inEditorsPicker && inQuickOpen"
+	},
+	//========================================
+	{
+		"key": "shift+k",
+		"command": "editor.action.showHover",
+		"when": "editorTextFocus && vim.mode == 'Normal'"
+	},
+	//========================================
+	{
+		"key": "ctrl+e",
 		"command": "workbench.view.explorer",
 		"when": "vim.mode == 'Normal' && !filesExplorerFocus"
 	},
 	{
-		"key": "space e",
+		"key": "ctrl+e",
 		"command": "workbench.action.toggleSidebarVisibility",
 		"when": "vim.mode == 'Normal' && sideBarVisible"
 	},
@@ -57,46 +69,7 @@
 		"command": "-workbench.view.explorer",
 		"when": "viewContainer.workbench.view.explorer.enabled"
 	},
-
-	{
-		"key": "ctrl+p",
-		"command": "-workbench.action.quickOpen"
-	},
-
-	// Quick Open Remapping
-	{
-		"key": "space f",
-		"command": "workbench.action.quickOpen",
-		"when": "vim.mode == 'Normal'"
-	},
-	{
-		"key": "ctrl+p",
-		"command": "-workbench.action.quickOpen"
-	},
-
-	// Navigate Quick Open
-	{
-		"key": "ctrl+n",
-		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+p",
-		"command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+p",
-		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+shift+p",
-		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-
-	// File Explorer Keybindings
+	//========================================
 	{
 		"key": "a",
 		"command": "explorer.newFile",
@@ -144,14 +117,43 @@
 	},
 	{
 		"key": "ctrl+enter",
-		"command": "-explorer.openToSide",
+		"command": "explorer.openToSide",
 		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-	}
-
-	// Coc Show Information
-	{
-		"key": "shift+k",
-		"command": "editor.action.showHover",
-		"when": "editorTextFocus && vim.mode == 'Normal'"
 	},
+	//========================================
+	{
+		"key": "ctrl+n",
+		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	//========================================
+	{
+		"key": "ctrl+x",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "workbench.action.terminal.clear"
+	}
 ]
