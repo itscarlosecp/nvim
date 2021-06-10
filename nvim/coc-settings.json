@@ -7,8 +7,6 @@
 		"json"
 	],
 
-	"pairs.disableLanguages": ["json"],
-
 	"prettier.semi": false,
 	"prettier.singleQuote": false,
 	"prettier.useTabs": true,
