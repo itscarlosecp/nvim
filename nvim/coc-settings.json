@@ -50,6 +50,9 @@
 	"python.formatting.provider": "black",
 	"python.formatting.blackdPath": "/home/itscarlosecp/anaconda3/bin/black",
 
+	"clangd.disableSnippetCompletion": true,
+	"clangd.path": "/home/itscarlosecp/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
+
 	"languageserver": {
 		"tailwindls": {
 			"module": "$LSPINSTALL_DIR/tailwindcss/tailwindcss-intellisense/extension/dist/server/tailwindServer.js",
@@ -63,6 +66,5 @@
 			],
 			"rootPatterns": ["tailwind.config.js", "package.json", ".git"]
 		}
-	},
-	"clangd.path": "/home/itscarlosecp/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
+	}
 }

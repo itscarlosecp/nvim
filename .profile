@@ -23,3 +23,7 @@ sb() {
 	fi
 	nvim "$HOME/Code/sandbox/some.$1"
 }
+
+count() {
+	find . -name "*.$1" | xargs wc -l
+}

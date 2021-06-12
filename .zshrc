@@ -5,3 +5,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 eval "$(starship init zsh)"
 
+count() {
+	find . -name "*.$1" | xargs wc -l
+}
