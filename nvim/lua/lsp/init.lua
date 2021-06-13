@@ -1,7 +1,6 @@
 vim.g.coc_global_extensions = {
 	-- Language Servers
 	"coc-sh",
-	"coc-clangd",
 	"coc-cmake",
 	"coc-go",
 	"coc-html",

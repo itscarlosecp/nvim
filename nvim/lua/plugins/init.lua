@@ -10,14 +10,7 @@ local plugins = function()
 		"kabouzeid/nvim-lspinstall",
 		requires = {"neovim/nvim-lspconfig"}
 	}
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		requires = {
-			"nvim-treesitter/playground",
-			"p00f/nvim-ts-rainbow",
-			"windwp/nvim-ts-autotag"
-		}
-	}
+
 	-- use "sheerun/vim-polyglot"
 
 	-- Interface
@@ -50,6 +43,7 @@ local plugins = function()
 	use "tpope/vim-surround"
 	use "f-person/git-blame.nvim"
 	use "Chiel92/vim-autoformat"
+	use "sheerun/vim-polyglot"
 end
 
 packer.startup(plugins)
