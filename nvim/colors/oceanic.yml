@@ -259,4 +259,4 @@ highlights:
   NvimTreeSpecialFile: "fg"
 
   # -- COC --
-  CocFloating: "bg_inactive"
+  CocFloating: "fg bg"

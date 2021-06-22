@@ -187,4 +187,4 @@ hi NvimTreeFolderIcon guifg=#5fafd7 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE 
 hi NvimTreeRootFolder guifg=#dddddd ctermfg=253 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi NvimTreeExecFile guifg=#23d18b ctermfg=42 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi NvimTreeSpecialFile guifg=#dddddd ctermfg=253 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi CocFloating guifg=#2e2e2e ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi CocFloating guifg=#dddddd ctermfg=253 guibg=#282a36 ctermbg=236 gui=NONE cterm=NONE

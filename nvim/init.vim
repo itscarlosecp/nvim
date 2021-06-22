@@ -44,6 +44,7 @@ Plug 'numtostr/FTerm.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'glepnir/galaxyline.nvim'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
@@ -52,9 +53,10 @@ call plug#end()
 
 " Plug Config
 source $HOME/.config/nvim/plug/_coc.vim
-source $HOME/.config/nvim/plug/_nvimtree.vim
 luafile $HOME/.config/nvim/plug/_colorizer.lua
 luafile $HOME/.config/nvim/plug/_fterm.lua
+luafile $HOME/.config/nvim/plug/_galaxyline.lua
+luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
 luafile $HOME/.config/nvim/plug/_treesitter.lua
 
