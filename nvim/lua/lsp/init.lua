@@ -12,14 +12,10 @@ vim.g.coc_global_extensions = {
 	"coc-markdownlint",
 	"coc-pyright",
 	"coc-rust-analyzer",
-	"coc-vetur",
 	"coc-yaml",
 	"coc-vimlsp",
 
 	-- Extensions
 	"coc-emmet",
-	"coc-html-css-support",
 	"coc-prettier",
-	"coc-stylelintplus",
-	"coc-svg",
 }

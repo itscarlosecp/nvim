@@ -6,12 +6,15 @@ local plugins = function()
 	use {"neoclide/coc.nvim", branch = "release"}
 
 	-- LSP && TreeSitter
+	-- use {
+	-- "kabouzeid/nvim-lspinstall",
+	-- requires = {"neovim/nvim-lspconfig"}
+	-- }
 	use {
-		"kabouzeid/nvim-lspinstall",
-		requires = {"neovim/nvim-lspconfig"}
+		"nvim-treesitter/nvim-treesitter"
 	}
 
-	-- use "sheerun/vim-polyglot"
+	use "sheerun/vim-polyglot"
 
 	-- Interface
 	use {
@@ -43,7 +46,6 @@ local plugins = function()
 	use "tpope/vim-surround"
 	use "f-person/git-blame.nvim"
 	use "Chiel92/vim-autoformat"
-	use "sheerun/vim-polyglot"
 end
 
 packer.startup(plugins)
