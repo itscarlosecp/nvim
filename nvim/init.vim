@@ -23,24 +23,25 @@ set timeoutlen=500     " Listening time for a sequence
 
 " Plug Install
 call plug#begin(stdpath('data') . '/plugged')
-	" LSP & Autocompletion
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" LSP & Autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-	" Syntax
-	Plug 'nvim-treesitter/nvim-treesitter'
-	Plug 'norcalli/nvim-colorizer.lua'
-	Plug 'sheerun/vim-polyglot'
+" Syntax
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'sheerun/vim-polyglot'
 
-	" Interface
-	Plug 'kyazdani42/nvim-web-devicons'
-	Plug 'kyazdani42/nvim-tree.lua'
-	Plug 'numtostr/FTerm.nvim'
-	Plug 'nvim-telescope/telescope.nvim'
-	Plug 'nvim-lua/popup.nvim'
-	Plug 'nvim-lua/plenary.nvim'
+" Interface
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'numtostr/FTerm.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
 
-	" Formatting
-	Plug 'junegunn/vim-easy-align'
+" Formatting
+Plug 'Chiel92/vim-autoformat'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 " Plug Config
@@ -53,6 +54,7 @@ luafile $HOME/.config/nvim/plug/_treesitter.lua
 colorscheme oceanic
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
+au BufWrite * :Autoformat
 
 " Keymappings
 let mapleader=' '
@@ -62,8 +64,8 @@ nnoremap <silent> <leader>ff :Telescope find_files<CR>
 nnoremap <silent> <C-x> <CMD>lua require('FTerm').toggle()<CR>
 tnoremap <silent> <C-x> <CMD>lua require('FTerm').toggle()<CR>
 
-" Move between panes 
-nnoremap <C-J> <C-W><C-J> 
+" Move between panes
+nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>

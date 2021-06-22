@@ -42,6 +42,8 @@
     "method": "   (Method)",
     "module": "   (Module)"
   },
+  "list.height": 10,
+  "hover.floatMaxHeight": 20,
   "Lua.diagnostics.globals": [
     "vim",
     "use"
