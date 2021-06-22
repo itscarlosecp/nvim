@@ -4,6 +4,7 @@ set hidden             " Dont unload buffer when its abandoned
 set nowrap             " Doot wrap long lines
 set encoding=utf-8     " The encoding displayed
 set fileencoding=utf-8 " The encoding written to file
+set ignorecase         " Case insensitive search
 
 " Interface
 set number             " Show line numbers
