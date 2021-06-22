@@ -4,7 +4,8 @@ local gls = gl.section
 gl.short_line_list = {"NvimTree", "vista", "dbui", "packer"}
 
 local colors = {
-	bg = "#282A36",
+	-- bg = "#282A36",
+	bg = "#282828",
 	yellow = "#DCDCAA",
 	dark_yellow = "#D7BA7D",
 	cyan = "#4EC9B0",

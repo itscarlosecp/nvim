@@ -46,6 +46,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'glepnir/galaxyline.nvim'
+Plug 'morhetz/gruvbox'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
@@ -61,6 +62,7 @@ luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
 luafile $HOME/.config/nvim/plug/_treesitter.lua
 
+" colorscheme oceanic
 colorscheme oceanic
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
