@@ -31,9 +31,6 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'norcalli/nvim-colorizer.lua'
 	Plug 'sheerun/vim-polyglot'
 
-	" Theme
-	Plug 'itscarlosecp/colorschemes'
-
 	" Interface
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'kyazdani42/nvim-tree.lua'
@@ -53,7 +50,7 @@ luafile $HOME/.config/nvim/plug/_fterm.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
 luafile $HOME/.config/nvim/plug/_treesitter.lua
 
-colorscheme darkplus
+colorscheme oceanic
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
 
