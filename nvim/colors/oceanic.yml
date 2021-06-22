@@ -124,10 +124,10 @@ highlights:
   SpellCap: "dark_yellow"
   SpellLocal: "dark_yellow"
   SpellRare: "dark_yellow"
-  StatusLine: "white cursor_grey"
-  StatusLineNC: "line_grey"
-  StatusLineTerm: "white cursor_grey"
-  StatusLineTermNC: "cursor_grey"
+  StatusLine: "white bg"
+  StatusLineNC: "hidden bg"
+  StatusLineTerm: "white bg"
+  StatusLineTermNC: "bg"
   TabLine: "line_grey"
   TabLineSel: "white"
   TabLineFill: "- tabfill"
@@ -243,60 +243,7 @@ highlights:
   markdownRule: "line_grey"
   markdownUrl: "cyan - u"
 
-  # -- COC EXPLORER --
-  CocExplorerBufferRoot: "directory" # [BUFFER]
-  CocExplorerBufferExpandIcon: "hidden" # Arrow
-  CocExplorerBufferNameVisible: "fg"
-  CocExplorerBufferBufname: "hidden"
-  CocExplorerBufferModified: "fg"
-  CocExplorerBufferBufnr: "hidden"
-  CocExplorerBufferReadonly: "hidden"
-  CocExplorerBufferFullpath: "hidden"
-
-  CocExplorerIndentLine: "hidden"
-  CocExplorerFileRoot: "directory" # [FILE]
-  CocExplorerFileRootName: "hidden" # Project Path
-  CocExplorerFileExpandIcon: "hidden"
-  CocExplorerFileFullpath: "hidden"
-  CocExplorerFileFilename: "fg"
-  CocExplorerFileDirectory: "directory"
-  # CocExplorerFileDirectoryExpanded: "directory"
-  # CocExplorerFileDirectoryCollapsed: "directory"
-  # ---
-  CocExplorerFileLinkTarget: "hidden"
-  CocExplorerFileHidden: "hidden"
-  CocExplorerFileClip: "hidden"
-  CocExplorerFileSize: "hidden"
-  CocExplorerFileReadonly: "hidden"
-
-  # -- EASYMOTION --
-  EasyMotionTarget: "error_red - b"
-  EasyMotionTarget2First: "error_red - b"
-  EasyMotionTarget2Second: "error_red - b"
-  EasyMotionShade: ""
-
-  # -- DEPRECATED --
-  diffAdded: "green"
-  diffRemoved: "red"
-  diffFileId: "blue - br"
-  diffFile: "special_grey"
-  diffNewFile: "green"
-  diffOldFile: "red"
-  debugPc: "- cyan"
-  debugBreakpoint: "red - r"
-
-  GitSignsAdd: "#587C0C"
-  GitSignsChange: "#0C7D9D"
-  GitSignsDelete: "#94151B"
-
-  QuickScopePrimary: "#00C7DF - u"
-  QuickScopeSecondary: "#eF5F70 - u"
-
-  MatchWord: "- - u"
-  MatchParen: "- - u"
-  MatchWordCur: "- - u"
-  MatchParenCur: "- - u"
-
+  # -- NVIMTREE --
   NvimTreeImageFile: "purple"
   NvimTreeGitDirty: "git_green"
   NvimTreeGitDeleted: "git_green"
@@ -311,23 +258,5 @@ highlights:
   NvimTreeExecFile: "executable"
   NvimTreeSpecialFile: "fg"
 
-  BufferCurrent: "fg bg"
-  BufferCurrentIndex: "blue bg"
-  BufferCurrentMod: "fg bg"
-  BufferCurrentSign: "blue bg"
-  BufferCurrentTarget: "red bg b"
-
-  BufferVisible: "fg bg"
-  BufferVisibleIndex: "fg bg"
-  BufferVisibleMod: "fg bg"
-  BufferVisibleSign: "fg bg"
-  BufferVisibleTarget: "red bg b"
-
-  BufferInactive: "gutter_fg_grey bg_inactive"
-  BufferInactiveIndex: "gutter_fg_grey bg_inactive"
-  BufferInactiveMod: "gutter_fg_grey bg_inactive"
-  BufferInactiveSign: "gutter_fg_grey bg_inactive"
-  BufferInactiveTarget: "red bg_inactive b"
-
-  CodiVirtualText: "#6395EC"
-  IndentBlanklineContextChar: "indentlinehighlight"
+  # -- COC --
+  CocFloating: "bg_inactive"
