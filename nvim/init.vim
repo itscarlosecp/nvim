@@ -60,7 +60,7 @@ luafile $HOME/.config/nvim/plug/_fterm.lua
 luafile $HOME/.config/nvim/plug/_galaxyline.lua
 luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
-luafile $HOME/.config/nvim/plug/_treesitter.lua
+" luafile $HOME/.config/nvim/plug/_treesitter.lua
 
 " colorscheme oceanic
 colorscheme oceanic

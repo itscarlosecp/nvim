@@ -2,7 +2,7 @@ vim.g.nvim_tree_side = "left" -- Explorer position
 vim.g.nvim_tree_width = 30 -- Explorer width
 vim.g.nvim_tree_ignore = {".git", "node_modules", ".next", "*.o", "*.out"} -- Ignored files/dirs
 vim.g.nvim_tree_auto_open = 0 -- Open on enter Neovim
-vim.g.nvim_tree_auto_close = 1 -- Close when there is no buffer
+vim.g.nvim_tree_auto_close = 0 -- Close when there is no buffer
 vim.g.nvim_tree_indent_markers = 0 -- Directory indicator icon
 vim.g.nvim_tree_special_files = {"README.md", "Makefile", "MAKEFILE"} -- Special files
 
