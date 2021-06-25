@@ -36,9 +36,10 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Formatting
+" Utilities
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let &t_ut=''
@@ -48,6 +49,7 @@ autocmd FileType yaml,yml let b:autoformat_autoindent=0
 
 let mapleader=' '
 nnoremap <leader>e :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 nnoremap <leader>ff :Files<CR>
 
 nnoremap <C-J> <C-W><C-J>

@@ -1,7 +1,7 @@
 " Settings
 syntax enable          " Enables syntax highlighting
 set hidden             " Dont unload buffer when its abandoned
-set nowrap             " Doot wrap long lines
+set wrap               " Wrap long lines
 set encoding=utf-8     " The encoding displayed
 set fileencoding=utf-8 " The encoding written to file
 set ignorecase         " Case insensitive search
@@ -48,9 +48,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'glepnir/galaxyline.nvim'
 Plug 'morhetz/gruvbox'
 
-" Formatting
+" Utilities
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " Plug Config
@@ -60,10 +61,9 @@ luafile $HOME/.config/nvim/plug/_fterm.lua
 luafile $HOME/.config/nvim/plug/_galaxyline.lua
 luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
-" luafile $HOME/.config/nvim/plug/_treesitter.lua
+luafile $HOME/.config/nvim/plug/_treesitter.lua
 
-" colorscheme oceanic
-colorscheme oceanic
+colorscheme darkgray
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
 autocmd FileType yaml,yml let b:autoformat_autoindent=0
@@ -71,6 +71,7 @@ au BufWrite * :Autoformat
 
 " Keymappings
 let mapleader=' '
+nnoremap <leader>c :e $HOME/.dotfiles/nvim/init.vim<CR>
 
 nnoremap <leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <leader>ff :Telescope find_files<CR>

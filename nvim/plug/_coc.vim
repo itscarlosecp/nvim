@@ -1,21 +1,18 @@
 let g:coc_global_extensions = [
-        \'coc-sh',
-        \'coc-cmake',
-        \'coc-go',
-        \'coc-html',
-        \'coc-tsserver',
-        \'coc-json',
-        \'coc-julia',
-        \'coc-texlab',
-        \'coc-lua',
-        \'coc-markdownlint',
-        \'coc-pyright',
-        \'coc-rust-analyzer',
-        \'coc-yaml',
-        \'coc-vimlsp',
-        \'coc-emmet',
-        \'coc-prettier',
-        \]
+      \'coc-sh',
+      \'coc-clangd',
+      \'coc-go',
+      \'coc-html',
+      \'coc-tsserver',
+      \'coc-json',
+      \'coc-lua',
+      \'coc-pyright',
+      \'coc-yaml',
+      \'coc-vimlsp',
+      \'coc-emmet',
+      \'coc-pairs',
+      \'coc-prettier',
+      \]
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -57,7 +54,7 @@ endif
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
