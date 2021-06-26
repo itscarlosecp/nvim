@@ -40,26 +40,29 @@ Plug 'hrsh7th/nvim-compe'
 " Syntax
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'windwp/nvim-autopairs'
 Plug 'sheerun/vim-polyglot'
 
 " Interface
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'numtostr/FTerm.nvim'
+Plug 'morhetz/gruvbox'
+
+" Fuzzy Finder
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'glepnir/galaxyline.nvim'
-Plug 'morhetz/gruvbox'
 
 " Utilities
-Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
+" Plug 'mattn/emmet-vim'
+" Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
 
 " Plug Config
-luafile $HOME/.config/nvim/plug/_colorizer.lua
 luafile $HOME/.config/nvim/plug/_compe.lua
 luafile $HOME/.config/nvim/plug/_fterm.lua
 luafile $HOME/.config/nvim/plug/_galaxyline.lua
@@ -69,11 +72,14 @@ luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
 luafile $HOME/.config/nvim/plug/_treesitter.lua
 
+lua <<EOF
+require'colorizer'.setup()
+require'nvim-autopairs'.setup()
+EOF
+
 colorscheme darkgray
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
-autocmd FileType yaml,yml let b:autoformat_autoindent=0
-au BufWrite * :Autoformat
 
 " Keymappings
 let mapleader=' '
@@ -90,3 +96,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" LSP & Autocompletion
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K  <cmd>Lspsaga hover_doc<CR>
+nnoremap <silent> ]g <cmd>Lspsaga diagnostic_jump_prev<CR>
+nnoremap <silent> [g <cmd>Lspsaga diagnostic_jump_next<CR>
