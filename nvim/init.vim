@@ -5,6 +5,7 @@ set wrap               " Wrap long lines
 set encoding=utf-8     " The encoding displayed
 set fileencoding=utf-8 " The encoding written to file
 set ignorecase         " Case insensitive search
+set completeopt=menuone,noselect
 
 " Interface
 set number             " Show line numbers
@@ -31,7 +32,10 @@ set noswapfile         " No swap file
 " Plug Install
 call plug#begin(stdpath('data') . '/plugged')
 " LSP & Autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'hrsh7th/nvim-compe'
 
 " Syntax
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -55,10 +59,12 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 " Plug Config
-source $HOME/.config/nvim/plug/_coc.vim
 luafile $HOME/.config/nvim/plug/_colorizer.lua
+luafile $HOME/.config/nvim/plug/_compe.lua
 luafile $HOME/.config/nvim/plug/_fterm.lua
 luafile $HOME/.config/nvim/plug/_galaxyline.lua
+luafile $HOME/.config/nvim/plug/_lsp.lua
+luafile $HOME/.config/nvim/plug/_lspinstall.lua
 luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
 luafile $HOME/.config/nvim/plug/_treesitter.lua
