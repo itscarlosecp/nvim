@@ -5,34 +5,36 @@ set wrap               " Wrap long lines
 set encoding=utf-8     " The encoding displayed
 set fileencoding=utf-8 " The encoding written to file
 set ignorecase         " Case insensitive search
-set completeopt=menuone,noselect
 
-" Interface
-set number             " Show line numbers
-set relativenumber     " Show line relative numbers
+" Completion
+set completeopt=menuone,noselect
 set pumheight=10       " Popup max height
 set cmdheight=2        " Gives more space to show messages
+
+" Indentation
+set tabstop=2          " Insert 2 spaces for a <TAB> press
+set shiftwidth=2       " Change the number of space characters inserted for indentation
+set noexpandtab        " Converts spaces to tabs
+set autoindent         " Good auto indent
+set noswapfile         " No swap file
+
+" Mobility
+set number             " Show line numbers
+set relativenumber     " Show line relative numbers
 set iskeyword+=-       " Treat dash separated words as a word text object
+set scrolloff=5        " Scroll before last visible line
+
+" Interface
 set formatoptions-=cro " Stop newline continution of comments
 set signcolumn=yes     " Always show column sign
 set splitbelow         " Horizontal splits will automatically be below
 set splitright         " Vertical splits will automatically be to the right
 set termguicolors      " 256 color for terminal nvim
 
-" Others
-set tabstop=2          " Insert 2 spaces for a <TAB> press
-set shiftwidth=2       " Change the number of space characters inserted for indentation
-set noexpandtab        " Converts spaces to tabs
-set autoindent         " Good auto indent
-set scrolloff=5        " Scroll before last visible line
-set updatetime=300     " Faster completion
-set timeoutlen=500     " Listening time for a sequence
-set noswapfile         " No swap file
-
 " Plug Install
 call plug#begin(stdpath('data') . '/plugged')
 " LSP & Autocompletion
-Plug 'neovim/nvim-lspconfig'
+Plug 'neovim/nvim-lspconfig' 
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'hrsh7th/nvim-compe'
@@ -40,7 +42,6 @@ Plug 'hrsh7th/nvim-compe'
 " Syntax
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'windwp/nvim-autopairs'
 Plug 'sheerun/vim-polyglot'
 
 " Interface
@@ -56,10 +57,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'glepnir/galaxyline.nvim'
 
 " Utilities
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
-" Plug 'mattn/emmet-vim'
-" Plug 'p00f/nvim-ts-rainbow'
+Plug 'mattn/emmet-vim'
+Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
 
 " Plug Config
@@ -74,7 +76,6 @@ luafile $HOME/.config/nvim/plug/_treesitter.lua
 
 lua <<EOF
 require'colorizer'.setup()
-require'nvim-autopairs'.setup()
 EOF
 
 colorscheme darkgray
