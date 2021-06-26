@@ -1,7 +1,7 @@
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = 'all',
 	highlight = { enable = true },
-	indent = { enable = false },
+	indent = { enable = true, disable = {'cpp'} },
 	rainbow = {
 		enable = true,
 		extended_mode = false, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
