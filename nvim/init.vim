@@ -34,7 +34,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntax
-Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'sheerun/vim-polyglot'
 
@@ -61,7 +61,7 @@ luafile $HOME/.config/nvim/plug/_fterm.lua
 luafile $HOME/.config/nvim/plug/_galaxyline.lua
 luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
-luafile $HOME/.config/nvim/plug/_treesitter.lua
+" luafile $HOME/.config/nvim/plug/_treesitter.lua
 
 colorscheme darkgray
 hi Normal guibg=NONE ctermbg=NONE
