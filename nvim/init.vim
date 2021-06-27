@@ -40,7 +40,6 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'hrsh7th/nvim-compe'
 
 " Syntax
-Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'sheerun/vim-polyglot'
 
@@ -71,7 +70,6 @@ luafile $HOME/.config/nvim/plug/_lsp.lua
 luafile $HOME/.config/nvim/plug/_lspinstall.lua
 luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
-luafile $HOME/.config/nvim/plug/_treesitter.lua
 
 lua <<EOF
 require'colorizer'.setup()
