@@ -57,12 +57,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'glepnir/galaxyline.nvim'
 
 " Utilities
-Plug 'jiangmiao/auto-pairs'
 Plug 'windwp/nvim-ts-autotag'
+Plug 'p00f/nvim-ts-rainbow'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
-Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
 
 " Plug Config

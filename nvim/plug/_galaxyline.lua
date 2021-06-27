@@ -89,14 +89,27 @@ gls.left[4] = {
 }
 
 gls.right[1] = {
-	DiagnosticError = {
-		provider = "DiagnosticError",
-		icon = "  ",
-		highlight = {colors.error_red, colors.bg}
+	ShowLspClient = {
+					provider = "GetLspClient",
+					condition = function()
+							local tbl = {['dashboard'] = true, [' '] = true}
+							if tbl[vim.bo.filetype] then return false end
+							return true
+					end,
+					icon = " ",
+					highlight = {colors.grey, colors.bg},
 	}
 }
 
 gls.right[2] = {
+	DiagnosticError = {
+		provider = "DiagnosticError",
+		icon = "  ",
+		highlight = {colors.error_red, colors.bg},
+	}
+}
+
+gls.right[3] = {
 	DiagnosticWarn = {
 		provider = "DiagnosticWarn",
 		icon = "  ",
@@ -104,7 +117,7 @@ gls.right[2] = {
 	}
 }
 
-gls.right[3] = {
+gls.right[4] = {
 	DiagnosticHint = {
 		provider = "DiagnosticHint",
 		icon = "  ",
@@ -112,7 +125,7 @@ gls.right[3] = {
 	}
 }
 
-gls.right[4] = {
+gls.right[5] = {
 	DiagnosticInfo = {
 		provider = "DiagnosticInfo",
 		icon = "  ",
@@ -120,7 +133,7 @@ gls.right[4] = {
 	}
 }
 
-gls.right[5] = {
+gls.right[6] = {
 	LineInfo = {
 		provider = "LineColumn",
 		separator = "  ",
@@ -129,7 +142,7 @@ gls.right[5] = {
 	}
 }
 
-gls.right[6] = {
+gls.right[7] = {
 	PerCent = {
 		provider = "LinePercent",
 		separator = " ",
@@ -138,7 +151,7 @@ gls.right[6] = {
 	}
 }
 
-gls.right[7] = {
+gls.right[8] = {
 	Tabstop = {
 		provider = function()
 			return "Indentation: " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. " "
@@ -150,7 +163,7 @@ gls.right[7] = {
 	}
 }
 
-gls.right[8] = {
+gls.right[9] = {
 	BufferType = {
 		provider = "FileTypeName",
 		condition = condition.hide_in_width,
@@ -160,7 +173,7 @@ gls.right[8] = {
 	}
 }
 
-gls.right[9] = {
+gls.right[10] = {
 	FileEncode = {
 		provider = "FileEncode",
 		condition = condition.hide_in_width,
@@ -170,7 +183,7 @@ gls.right[9] = {
 	}
 }
 
-gls.right[10] = {
+gls.right[11] = {
 	Space = {
 		provider = function()
 			return " "
