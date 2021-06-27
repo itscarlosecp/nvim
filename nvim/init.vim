@@ -48,7 +48,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'numtostr/FTerm.nvim'
-Plug 'morhetz/gruvbox'
 
 " Fuzzy Finder
 Plug 'nvim-telescope/telescope.nvim'
@@ -57,11 +56,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'glepnir/galaxyline.nvim'
 
 " Utilities
+Plug 'jiangmiao/auto-pairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Plug Config
