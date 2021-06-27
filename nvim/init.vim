@@ -7,7 +7,7 @@ set fileencoding=utf-8 " The encoding written to file
 set ignorecase         " Case insensitive search
 
 " Completion
-set completeopt=menuone,noselect
+set completeopt=menuone,noselect " How autocomplete options menu
 set pumheight=10       " Popup max height
 set cmdheight=2        " Gives more space to show messages
 
@@ -58,6 +58,7 @@ Plug 'glepnir/galaxyline.nvim'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
@@ -98,6 +99,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " LSP & Autocompletion
+inoremap <silent><expr> <C-.> compe#complete()
+inoremap <silent><expr> <CR> compe#confirm('<CR>')
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
