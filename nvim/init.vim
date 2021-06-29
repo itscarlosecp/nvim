@@ -41,12 +41,14 @@ Plug 'hrsh7th/nvim-compe'
 
 " Syntax
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'sheerun/vim-polyglot'
 
 " Interface
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'numtostr/FTerm.nvim'
+Plug 'tomasiser/vim-code-dark'
 
 " Fuzzy Finder
 Plug 'nvim-telescope/telescope.nvim'
@@ -60,6 +62,7 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " Plug Config
@@ -70,6 +73,7 @@ luafile $HOME/.config/nvim/plug/_lsp.lua
 luafile $HOME/.config/nvim/plug/_lspinstall.lua
 luafile $HOME/.config/nvim/plug/_nvimtree.lua
 luafile $HOME/.config/nvim/plug/_telescope.lua
+luafile $HOME/.config/nvim/plug/_treesitter.lua
 
 lua <<EOF
 require'colorizer'.setup()
@@ -78,6 +82,9 @@ EOF
 colorscheme darkgray
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
+
+autocmd FileType yaml,yml let b:autoformat_autoindent=0
+au BufWrite * :Autoformat
 
 " Keymappings
 let mapleader=' '
