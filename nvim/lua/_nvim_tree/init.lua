@@ -1,3 +1,7 @@
+vim.g.nvim_tree_ignore = {'node_modules', '.cache'}
+vim.g.nvim_tree_follow = 1   -- Updates cursor position when entering a file
+vim.g.nvim_tree_tab_open = 1 -- Keep explorer open when switching tabs
+
 vim.g.nvim_tree_icons = {
 	default = '',
 	symlink = '',

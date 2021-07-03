@@ -74,7 +74,6 @@ if has('nvim-0.5')
 	lua require'_fterm'
 	lua require'_galaxyline'
 	lua require'_lsp'
-	lua require'_lspsaga'
 	lua require'_nvim_compe'
 	lua require'_nvim_tree'
 	lua require'_telescope'
