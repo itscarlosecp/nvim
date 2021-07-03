@@ -64,18 +64,19 @@ Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
-" SOURCE CONFIG 
+" SOURCE CONFIGS
 source $HOME/.config/nvim/maps.vim
-lua require'_autopairs'
-lua require'_colorizer'
-lua require'_fterm'
-lua require'_galaxyline'
-lua require'_lsp'
-lua require'_lsp_saga'
-lua require'_nvim_compe'
-lua require'_nvim_tree'
-lua require'_treesitter'
+if has('nvim-0.5')
+	lua require'_autopairs'
+	lua require'_colorizer'
+	lua require'_fterm'
+	lua require'_galaxyline'
+	lua require'_lsp'
+	lua require'_lsp_saga'
+	lua require'_nvim_compe'
+	lua require'_nvim_tree'
+	lua require'_telescope'
+	lua require'_treesitter'
+endif
 
 colo oceanic
-" hi Normal guibg=NONE ctermbg=NONE
-hi pythonSpaceError guibg=NONE ctermbg=NONE

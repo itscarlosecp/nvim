@@ -101,6 +101,7 @@ local theme = lush(function()
     MoreMsg      { fg = vim_secondary }, -- More -- sign when in scrollable buffer. :highlight (see the bottom -- MORE --)
     NonText      { fg = vim_hidden }, -- Characters that dont really exists (not selectable)
     Normal       { fg = vim_fg, bg = (transparent_bg and "NONE" or vim_bg)}, -- Vim foreground and background
+    pythonSpaceError { fg = "NONE", bg = "NONE" }, -- Python spacing errors
     Pmenu        { fg = menu_fg, bg = menu_bg }, -- Pum/dropdown menu background
     PmenuSel     { fg = menu_fg, bg = menu_selection }, -- Pum/dropdown menu selection
     PmenuSbar    { fg = menu_scrollbar_fg, bg = menu_scrollbar_bg }, -- Pum/dropdown scrollbar container
