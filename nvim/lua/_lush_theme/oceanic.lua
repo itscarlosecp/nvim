@@ -234,7 +234,10 @@ local theme = lush(function()
     NvimTreeFileDirty { fg = nvimtree_dirty },
     NvimTreeGitDirty { fg = nvimtree_dirty },
     NvimTreeFileDeleted { fg = nvimtree_deleted },
-    NvimTreeGitDeleted { fg = nvimtree_deleted }
+    NvimTreeGitDeleted { fg = nvimtree_deleted },
+
+    -- GALAXYLINE --
+    GalaxyFileName { fg = vim_error }
   }
 end)
 

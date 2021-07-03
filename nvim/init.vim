@@ -41,8 +41,6 @@ Plug 'glepnir/lspsaga.nvim'
  
 " SYNTAX 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'windwp/nvim-autopairs'
 Plug 'sheerun/vim-polyglot'
 
 " FUZZY FINDER 
@@ -54,10 +52,14 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'numtostr/FTerm.nvim'
-Plug 'glepnir/galaxyline.nvim'
+Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
 Plug 'rktjmp/lush.nvim'
 
-" UTILITIES
+" ACTIVE UTLITIES
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'windwp/nvim-autopairs'
+
+" PASIVE UTILITIES
 Plug 'junegunn/vim-easy-align'
 
 call plug#end()
@@ -67,6 +69,7 @@ source $HOME/.config/nvim/maps.vim
 lua require'_autopairs'
 lua require'_colorizer'
 lua require'_fterm'
+lua require'_galaxyline'
 lua require'_lsp'
 lua require'_lsp_saga'
 lua require'_nvim_compe'
