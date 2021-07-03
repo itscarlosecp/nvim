@@ -70,6 +70,7 @@ lua require'_fterm'
 lua require'_lsp'
 lua require'_lsp_saga'
 lua require'_nvim_compe'
+lua require'_nvim_tree'
 lua require'_treesitter'
 
 colo oceanic

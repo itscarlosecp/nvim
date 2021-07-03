@@ -7,14 +7,12 @@ local transparent_bg = true
 local vim_fg = hsl("#EAEAEA")
 local vim_bg = hsl("#282A36")
 local vim_accent = hsl("#5FAFD7")
-local vim_primary = hsl("#ABB2BF")
 local vim_secondary = hsl("#8D8DA8")
 local vim_hidden = hsl("#5F5F7D")
 local vim_error = hsl("#F44747")
 
 -- VISUAL/SELECTION/SEARCH
-local visual_fg = vim_bg
-local visual_bg = vim_primary
+local visual = vim_hidden.darken(10)
 
 -- PMENU SUGESTIONS PUM/DROPDOWN
 local menu_fg = vim_fg
@@ -44,6 +42,15 @@ local lsp_saga_border = vim_fg
 local todo_fg = vim_bg
 local todo_bg = hsl("#B5CEA8")
 
+-- NVIMTREE
+local nvimtree_indent_marker = vim_hidden
+local nvimtree_directory = vim_accent
+local nvimtree_window_picker_fg = vim_bg
+local nvimtree_window_picker_bg = vim_accent
+
+local nvimtree_dirty = hsl("#EE8147") 
+local nvimtree_deleted = vim_error
+
 -- SYNTAX
 local vim_comment  = hsl("#8D8DA8")
 local vim_variable = hsl("#9CDCFE")
@@ -70,7 +77,7 @@ local theme = lush(function()
     -- CursorIM     { },
     CursorColumn { fg = vim_hidden, bg = vim_bg }, -- Highlight current cursor column :set cursorcolumn
     CursorLine   { fg = vim_hidden, bg = vim_bg }, -- Highlight current cursor line :set cursorline
-    Directory    { fg = vim_accent }, -- File explorer directories
+    Directory    { fg = nvimtree_directory }, -- File explorer directories
     -- DiffAdd      { },
     -- DiffChange   { },
     -- DiffDelete   { },
@@ -83,8 +90,8 @@ local theme = lush(function()
     -- Folded       { },
     -- FoldColumn   { },
     SignColumn   { fg = vim_hidden, bg = vim_bg }, -- Left errors column
-    IncSearch    { fg = visual_fg, bg = visual_bg }, -- Incremental search highlight :s///
-    Substitute   { fg = visual_fg, bg = visual_bg }, -- Substitute command highlight :s/
+    IncSearch    { bg = visual }, -- Incremental search highlight :s///
+    Substitute   { bg = visual }, -- Substitute command highlight :s/
     LineNr       { fg = vim_hidden }, -- Not current line numbers
     CursorLineNr { fg = vim_fg, bg = vim_bg }, -- Current line number
     -- MatchParen   { }, -- Matching pairs color
@@ -102,7 +109,7 @@ local theme = lush(function()
     -- NormalNC     { }, -- Normal text in not current floating windows. Links to Pmenu
     -- Question     { }, -- Yes or No prompt
     -- QuickFixLine { }, -- Links to Search
-    Search       { fg = visual_fg, bg = visual_bg }, -- Search highlight /
+    Search       { bg = visual }, -- Search highlight /
     -- SpecialKey   { },
     -- SpellBad     { },
     -- SpellCap     { },
@@ -114,7 +121,7 @@ local theme = lush(function()
     TabLineFill  { bg = vim_bg }, -- Tabline empty space (with no tabs)
     TabLineSel   { fg = tab_inactive_fg, bg = tab_inactive_bg }, -- Tabline non-active tabs
     Title        { fg = vim_accent }, -- Title for output from :set all, etc...
-    Visual       { bg = visual_bg },
+    Visual       { bg = visual },
     -- VisualNOS    { }, -- Weird selection ownership case
     WarningMsg   { fg = vim_error }, -- Warning messages
     -- Whitespace   { }, -- Whitespace rendering :set list
@@ -216,6 +223,18 @@ local theme = lush(function()
     TSVariable           { fg = vim_variable },
     TSVariableBuiltin    { fg = vim_keyword },
     TSURI                { gui = "underline" },
+
+    -- NVIMTREE --
+    NvimTreeIndentMarker { fg = nvimtree_indent_marker },
+    NvimTreeFolderIcon { fg = nvimtree_directory },
+    NvimTreeRootFolder { fg = vim_hidden },
+
+    NvimTreeWindowPicker { fg = nvimtree_window_picker_fg, bg = nvimtree_window_picker_bg },
+
+    NvimTreeFileDirty { fg = nvimtree_dirty },
+    NvimTreeGitDirty { fg = nvimtree_dirty },
+    NvimTreeFileDeleted { fg = nvimtree_deleted },
+    NvimTreeGitDeleted { fg = nvimtree_deleted }
   }
 end)
 
