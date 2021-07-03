@@ -1,11 +1,34 @@
-set nu
-set rnu
-set tabstop=2
-set shiftwidth=2
-set noexpandtab
-set autoindent
-set completeopt=menuone,noselect
-set termguicolors
+" Settings
+syntax enable          " Enables syntax highlighting
+set hidden             " Dont unload buffer when its abandoned
+set wrap               " Wrap long lines
+set encoding=utf-8     " The encoding displayed
+set fileencoding=utf-8 " The encoding written to file
+set ignorecase         " Case insensitive search
+
+" Completion
+set completeopt=menuone,noselect " How autocomplete options menu
+set pumheight=10       " Popup max height
+set cmdheight=2        " Gives more space to show messages
+
+" Indentation
+set tabstop=2          " Insert 2 spaces for a <TAB> press
+set shiftwidth=2       " Change the number of space characters inserted for indentation
+set noexpandtab        " Converts spaces to tabs
+set autoindent         " Good auto indent
+set noswapfile         " No swap file
+
+" Mobility
+set number             " Show line numbers
+set relativenumber     " Show line relative numbers
+set iskeyword+=-       " Treat dash separated words as a word text object
+set scrolloff=5        " Scroll before last visible line
+
+" Interface
+set formatoptions-=cro " Stop newline continution of comments
+set splitbelow         " Horizontal splits will automatically be below
+set splitright         " Vertical splits will automatically be to the right
+set termguicolors      " 256 color for terminal nvim
 
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -41,6 +64,8 @@ lua require'_nvim_compe'
 lua require'_telescope'
 lua require'_treesitter'
 
-" colorscheme oceanic
+colo oceanic
+command GenerateColo lua require'lush'.export_to_buffer(require'_lush_theme.oceanic')
+
 hi Normal guibg=NONE ctermbg=NONE
 hi pythonSpaceError guibg=NONE ctermbg=NONE
