@@ -4,12 +4,12 @@ local hsl = lush.hsl
 -- COLORS DEFINITIONS
 -- GLOBAL
 local transparent_bg = true
-local vim_fg = hsl("#EAEAEA")
-local vim_bg = hsl("#282A36")
-local vim_accent = hsl("#5FAFD7")
-local vim_secondary = hsl("#8D8DA8")
-local vim_hidden = hsl("#5F5F7D")
-local vim_error = hsl("#F44747")
+local vim_fg = hsl('#EAEAEA')
+local vim_bg = hsl('#282A36')
+local vim_accent = hsl('#5FAFD7')
+local vim_secondary = hsl('#8D8DA8')
+local vim_hidden = hsl('#5F5F7D')
+local vim_error = hsl('#F44747')
 
 -- VISUAL/SELECTION/SEARCH
 local visual = vim_hidden.darken(10)
@@ -40,7 +40,7 @@ local lsp_saga_border = vim_fg
 
 -- VIM TODOS
 local todo_fg = vim_bg
-local todo_bg = hsl("#B5CEA8")
+local todo_bg = hsl('#B5CEA8')
 
 -- NVIMTREE
 local nvimtree_indent_marker = vim_hidden
@@ -48,23 +48,23 @@ local nvimtree_directory = vim_accent
 local nvimtree_window_picker_fg = vim_bg
 local nvimtree_window_picker_bg = vim_accent
 
-local nvimtree_dirty = hsl("#EE8147") 
+local nvimtree_dirty = hsl('#EE8147') 
 local nvimtree_deleted = vim_error
 
 -- SYNTAX
-local vim_comment  = hsl("#8D8DA8")
-local vim_variable = hsl("#9CDCFE")
-local vim_string = hsl("#CE9178")
-local vim_number = hsl("#B5CEA8")
-local vim_boolean = hsl("#569CD6")
-local vim_identifier = hsl("#4FC1FF")
-local vim_function = hsl("#DCDCAA")
-local vim_statement = hsl("#C586C0")
-local vim_keyword = hsl("#569CD6")
-local vim_type = hsl("#4EC9B0")
+local vim_comment  = hsl('#8D8DA8')
+local vim_variable = hsl('#9CDCFE')
+local vim_string = hsl('#CE9178')
+local vim_number = hsl('#B5CEA8')
+local vim_boolean = hsl('#569CD6')
+local vim_identifier = hsl('#4FC1FF')
+local vim_function = hsl('#DCDCAA')
+local vim_statement = hsl('#C586C0')
+local vim_keyword = hsl('#569CD6')
+local vim_type = hsl('#4EC9B0')
 
 -- TREESITTER
-local ts_string_scape = hsl("#D7BA7D")
+local ts_string_scape = hsl('#D7BA7D')
 
 local theme = lush(function()
   return {
@@ -100,8 +100,8 @@ local theme = lush(function()
     -- MsgSeparator { }, -- Links to StatusLine
     MoreMsg      { fg = vim_secondary }, -- More -- sign when in scrollable buffer. :highlight (see the bottom -- MORE --)
     NonText      { fg = vim_hidden }, -- Characters that dont really exists (not selectable)
-    Normal       { fg = vim_fg, bg = (transparent_bg and "NONE" or vim_bg)}, -- Vim foreground and background
-    pythonSpaceError { fg = "NONE", bg = "NONE" }, -- Python spacing errors
+    Normal       { fg = vim_fg, bg = (transparent_bg and 'NONE' or vim_bg)}, -- Vim foreground and background
+    pythonSpaceError { fg = 'NONE', bg = 'NONE' }, -- Python spacing errors
     Pmenu        { fg = menu_fg, bg = menu_bg }, -- Pum/dropdown menu background
     PmenuSel     { fg = menu_fg, bg = menu_selection }, -- Pum/dropdown menu selection
     PmenuSbar    { fg = menu_scrollbar_fg, bg = menu_scrollbar_bg }, -- Pum/dropdown scrollbar container
@@ -168,9 +168,9 @@ local theme = lush(function()
     -- SpecialComment { },
     -- Debug          { },
 
-    Underlined   { gui = "underline" },
-    Bold         { gui = "bold" },
-    Italic       { gui = "italic" },
+    Underlined   { gui = 'underline' },
+    Bold         { gui = 'bold' },
+    Italic       { gui = 'italic' },
 
     Error        { bg = vim_error },
 
@@ -223,7 +223,7 @@ local theme = lush(function()
     TSTypeBuiltin        { fg = vim_type },
     TSVariable           { fg = vim_variable },
     TSVariableBuiltin    { fg = vim_keyword },
-    TSURI                { gui = "underline" },
+    TSURI                { gui = 'underline' },
 
     -- NVIMTREE --
     NvimTreeIndentMarker { fg = nvimtree_indent_marker },
@@ -236,9 +236,6 @@ local theme = lush(function()
     NvimTreeGitDirty { fg = nvimtree_dirty },
     NvimTreeFileDeleted { fg = nvimtree_deleted },
     NvimTreeGitDeleted { fg = nvimtree_deleted },
-
-    -- GALAXYLINE --
-    GalaxyFileName { fg = vim_error }
   }
 end)
 
