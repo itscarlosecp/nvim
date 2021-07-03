@@ -57,6 +57,9 @@ Plug 'numtostr/FTerm.nvim'
 Plug 'glepnir/galaxyline.nvim'
 Plug 'rktjmp/lush.nvim'
 
+" UTILITIES
+Plug 'junegunn/vim-easy-align'
+
 call plug#end()
 
 " SOURCE CONFIG 
