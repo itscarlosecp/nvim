@@ -64,6 +64,7 @@ Plug 'mattn/emmet-vim'
 " PASIVE UTILITIES
 Plug 'junegunn/vim-easy-align'
 Plug 'mhartington/formatter.nvim'
+Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 

@@ -1,45 +1,50 @@
+local indent_level = vim.api.nvim_buf_get_option(0, "tabstop")
+
 local prettier = function()
-	return {
-		exe = 'prettier',
-		args = {
-			'--stdin-filepath', vim.api.nvim_buf_get_name(0),
-			'--single-quote',
-			'--tab-width', vim.api.nvim_buf_get_option(0, 'tabstop'),
-			'--no-semi',
-			'--jsx-single-quote',
-			'--trailing-comma none',
-
-		},
-		stdin = true
-	}
+    -- npm i -g prettier
+    return {
+        exe = "prettier",
+        args = {
+            "--stdin-filepath",
+            vim.api.nvim_buf_get_name(0),
+            "--single-quote",
+            "--tab-width",
+            vim.api.nvim_buf_get_option(0, "tabstop"),
+            "--no-semi",
+            "--jsx-single-quote",
+            "--trailing-comma none"
+        },
+        stdin = true
+    }
 end
 
-local luafmt = function()
-	return {
-		exe = "luafmt",
-		args = {"--indent-count", 2, "--stdin"},
-		stdin = true
-	}
-end
-
-require'formatter'.setup {
-	logging = false,
-	filetype = {
-		-- Wev Develop
-		javascript = { prettier },
-		javascriptreact = { prettier },
-		typescript = { prettier },
-		typescriptreact = { prettier },
-
-		-- Linux
-		lua = { luafmt }
-	}
+require "formatter".setup {
+    logging = false,
+    filetype = {
+        -- Wev Develop
+        javascript = {prettier},
+        javascriptreact = {prettier},
+        typescript = {prettier},
+        typescriptreact = {prettier}
+    }
 }
 
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+    [[
+  autocmd FileType js,ts,jsx,tsx let b:autoformat_autoindent = 0
+  autocmd FileType js,ts,jsx,tsx let b:autoformat_retab = 0
+  autocmd FileType js,ts,jsx,tsx let b:autoformat_remove_trailing_spaces = 0
+  au BufWrite * :Autoformat
+]],
+    true
+)
+
+vim.api.nvim_exec(
+    [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost * FormatWrite
+  autocmd BufWritePost *.js,*.ts,*.jsx,*.tsx FormatWrite
 augroup END
-]], true)
-
+]],
+    true
+)
