@@ -36,7 +36,6 @@ local diagnostic_error = vim_error
 local diagnostic_warning = vim_fg
 local diagnostic_information = vim_fg
 local diagnostic_hint = vim_fg
-local lsp_saga_border = vim_fg
 
 -- VIM TODOS
 local todo_fg = vim_bg
@@ -175,13 +174,6 @@ local theme = lush(function()
     Error        { bg = vim_error },
 
     Todo         { fg = todo_fg, bg = todo_bg },
-
-    -- LSP DIAGNOSTICS --
-    LspDiagnosticsDefaultError       { fg = diagnostic_error }, -- Error messages
-    LspDiagnosticsDefaultWarning     { fg = diagnostic_warning },
-    LspDiagnosticsDefaultInformation { fg = diagnostic_information },
-    LspDiagnosticsDefaultHint        { fg = diagnostic_hint },
-    LspSagaDiagnosticBorder          { fg = lsp_saga_border }, -- LSPSaga floating window borders
 
     -- TREESITTER --
     -- TSAnnotation         { },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.

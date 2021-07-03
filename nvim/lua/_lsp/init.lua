@@ -26,23 +26,6 @@ vim.lsp.protocol.CompletionItemKind = {
 	'   (TypeParameter)'
 }
 
-vim.fn.sign_define(
-    'LspDiagnosticsSignError',
-    { texthl = 'LspDiagnosticsSignError', text = '', numhl = 'LspDiagnosticsSignError' }
-)
-vim.fn.sign_define(
-    'LspDiagnosticsSignWarning',
-    { texthl = 'LspDiagnosticsSignWarning', text = '', numhl = 'LspDiagnosticsSignWarning' }
-)
-vim.fn.sign_define(
-    'LspDiagnosticsSignHint',
-    { texthl = 'LspDiagnosticsSignHint', text = '', numhl = 'LspDiagnosticsSignHint' }
-)
-vim.fn.sign_define(
-    'LspDiagnosticsSignInformation',
-    { texthl = 'LspDiagnosticsSignInformation', text = '', numhl = 'LspDiagnosticsSignInformation' }
-)
-
 local configs = {
 	lua = {
 		Lua = {
@@ -58,11 +41,11 @@ local function setup_servers()
 	local servers = require'lspinstall'.installed_servers()
 	for _, server in pairs(servers) do
 		if configs[server] then
-			require'lspconfig'[server].setup{
+			require'lspconfig'[server].setup {
 				settings = configs[server]
 			}
 		else
-			require'lspconfig'[server].setup{}
+			require'lspconfig'[server].setup {}
 		end
 	end
 end

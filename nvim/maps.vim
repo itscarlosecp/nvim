@@ -20,6 +20,6 @@ if has('nvim-0.5')
 	nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 	nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 	nnoremap <silent> K  <cmd>Lspsaga hover_doc<CR>
-	nnoremap <silent> ]g <cmd>Lspsaga diagnostic_jump_prev<CR>
+	nnoremap <silent> g] <cmd>Lspsaga diagnostic_jump_prev<CR>
 	nnoremap <silent> [g <cmd>Lspsaga diagnostic_jump_next<CR>
 endif

@@ -58,6 +58,8 @@ Plug 'rktjmp/lush.nvim'
 " ACTIVE UTLITIES
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
+Plug 'mattn/emmet-vim'
 
 " PASIVE UTILITIES
 Plug 'junegunn/vim-easy-align'
@@ -72,7 +74,7 @@ if has('nvim-0.5')
 	lua require'_fterm'
 	lua require'_galaxyline'
 	lua require'_lsp'
-	lua require'_lsp_saga'
+	lua require'_lspsaga'
 	lua require'_nvim_compe'
 	lua require'_nvim_tree'
 	lua require'_telescope'
