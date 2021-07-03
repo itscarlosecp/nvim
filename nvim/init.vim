@@ -63,6 +63,7 @@ Plug 'mattn/emmet-vim'
 
 " PASIVE UTILITIES
 Plug 'junegunn/vim-easy-align'
+Plug 'mhartington/formatter.nvim'
 
 call plug#end()
 
@@ -71,6 +72,7 @@ source $HOME/.config/nvim/maps.vim
 if has('nvim-0.5')
 	lua require'_autopairs'
 	lua require'_colorizer'
+	lua require'_formatter'
 	lua require'_fterm'
 	lua require'_galaxyline'
 	lua require'_lsp'

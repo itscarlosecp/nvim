@@ -1,5 +1,5 @@
 require'FTerm'.setup {
-	dimensions  = {
+		dimensions  = {
 		height = 0.8,
 		width = 0.8,
 		x = 0.5,
