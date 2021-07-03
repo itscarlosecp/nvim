@@ -83,4 +83,3 @@ if has('nvim-0.5')
 endif
 
 colo oceanic
-
