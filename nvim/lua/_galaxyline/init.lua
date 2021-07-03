@@ -1,5 +1,6 @@
 local gl = require'galaxyline'
 local condition = require'galaxyline.condition'
+local icons = require'galaxyline.provider_fileinfo'
 
 local colors = {
 	fg = '#EAEAEA',
@@ -10,9 +11,12 @@ local colors = {
 	command = '#8D8DA8'
 }
 
-gl.section.left[1] = {
+gl.short_line_list = {'NvimTree'}
+
+table.insert(gl.section.left, {
 	ViMode = {
 		provider = function()
+			-- Reference: https://vi.stackexchange.com/questions/19247/how-to-get-the-current-mode-in-vim
 			local mode_colors = {
 				n = colors.normal,
 				no = colors.normal,
@@ -43,9 +47,9 @@ gl.section.left[1] = {
 		separator_highlight = { 'NONE', colors.bg },
 		highlight = { colors.fg, colors.bg },
 	}
-}
+})
 
-gl.section.left[2] = {
+table.insert(gl.section.left, {
 	GitBranch = {
 		condition = condition.check_git_workspace,
 		provider = 'GitBranch',
@@ -54,9 +58,9 @@ gl.section.left[2] = {
 		separator_highlight = { 'NONE', colors.bg },
 		highlight = { colors.fg, colors.bg },
 	}
-}
+})
 
-gl.section.left[3] = {
+table.insert(gl.section.left, {
 	FileName = {
 		condition = condition.buffer_not_empty,
 		provider = 'FileName',
@@ -65,4 +69,44 @@ gl.section.left[3] = {
 		separator_highlight = { 'NONE', colors.bg },
 		highlight = { colors.fg, colors.bg },
 	}
-}
+})
+
+table.insert(gl.section.right, {
+	LspClient = {
+		provider = 'GetLspClient',
+		icon = icons.get_file_icon,
+		separator = ' ',
+		separator_highlight = { 'NONE', colors.bg },
+		highlight = { colors.fg, colors.bg },
+	}
+})
+
+table.insert(gl.section.right, {
+	LineColumn = {
+		provider = 'LineColumn',
+		separator = ' ',
+		separator_highlight = { 'NONE', colors.bg },
+		highlight = { colors.fg, colors.bg },
+	}
+})
+
+table.insert(gl.section.right, {
+	LinePercent = {
+		provider = 'LinePercent',
+		separator = ' ',
+		separator_highlight = { 'NONE', colors.bg },
+		highlight = { colors.fg, colors.bg },
+	}
+})
+
+table.insert(gl.section.right, {
+	Space = {
+		provider = function()
+			return ' '
+		end,
+		separator = ' ',
+		separator_highlight = { 'NONE', colors.bg },
+		highlight = { colors.fg, colors.bg },
+	}
+})
+
