@@ -1,13 +1,11 @@
 local lush = require'lush'
 local hsl = lush.hsl
 
--- Vim itself
+-- VIM INTERFACE 
 local vim_foreground = hsl("#EAEAEA")
 local vim_background = hsl("#282A36")
 
-local error_foreground = hsl("#F44747")
-
--- Syntax
+-- SYNTAX
 local std_comment  = hsl("#8D8DA8")
 local std_variable = hsl("#9CDCFE")
 local std_string = hsl("#CE9178")
@@ -19,51 +17,47 @@ local std_statement = hsl("#C586C0")
 local std_keyword = hsl("#569CD6")
 local std_type = hsl("#4EC9B0")
 
--- TreeSitter
+-- TREESITTER
 local ts_string_scape = hsl("#D7BA7D")
 
--- VertSplit
--- local gui_foreground = hsl("#ABB2BF")
-local gui_foreground = hsl("#EAEAEA")
-local gui_secondary = hsl("#5F5F7D")
-
-local visual_background = hsl("#5C6370")
+local error = hsl("#F44747")
+local gui_hidden = hsl("#5F5F7D")
 
 local theme = lush(function()
   return {
     -- INTERFACE --
-    Comment      { fg = std_comment };
-    -- ColorColumn  { };
-    -- Conceal      { };
-    -- Cursor       { fg = vim_background, bg = vim_foreground }
+    Comment      { fg = std_comment }; -- Comments
+    ColorColumn  { bg = vim_background }; -- Show textwidth limit :set colorcolumn=80
+    -- Conceal      { }; 
+    -- Cursor       { }
     -- lCursor      { };
     -- CursorIM     { };
-    -- CursorColumn { };
-    -- CursorLine   { };
-    -- Directory    { };
+    CursorColumn { bg = vim_background }; -- Highlight current cursor column :set cursorcolumn
+    CursorLine   { bg = vim_background }; -- Highlight current cursor line :set cursorline
+    -- Directory    { }; -- File explorer directories
     -- DiffAdd      { };
     -- DiffChange   { };
     -- DiffDelete   { };
     -- DiffText     { };
-    -- EndOfBuffer  { };
+    EndOfBuffer  { fg = gui_hidden }; -- Empty lines
     -- TermCursor   { };
     -- TermCursorNC { };
-    -- ErrorMsg     { };
-    VertSplit    { fg = gui_secondary, bg = vim_background };
+    ErrorMsg     { fg = vim_foreground, bg = error }; -- Error messages when command fails
+    VertSplit    { fg = gui_hidden, bg = vim_background }; -- Vertical split separators :vsplit
     -- Folded       { };
     -- FoldColumn   { };
-    SignColumn   { fg = gui_foreground, bg = vim_background };
+    SignColumn   { fg = gui_hidden, bg = vim_background }; -- Left errors column
     -- IncSearch    { };
-    -- Substitute   { };
-    LineNr       { fg = gui_secondary };
-    CursorLineNr { fg = gui_foreground, bg = vim_background };
+    Substitute   { fg = vim_background, bg = vim_foreground }; -- Substitute command highlight :s/
+    LineNr       { fg = gui_hidden }; -- Not current line numbers
+    CursorLineNr { fg = vim_foreground, bg = vim_background }; -- Current line number
     -- MatchParen   { };
     -- ModeMsg      { };
     -- MsgArea      { };
     -- MsgSeparator { };
     -- MoreMsg      { };
     -- NonText      { };
-    Normal       { fg = vim_foreground };
+    Normal       { fg = vim_foreground, bg = "NONE"}; -- Vim foreground and background
     -- NormalFloat  { };
     -- NormalNC     { };
     -- Pmenu        { };
@@ -72,21 +66,21 @@ local theme = lush(function()
     -- PmenuThumb   { };
     -- Question     { };
     -- QuickFixLine { };
-    -- Search       { };
+    Search       { fg = vim_foreground, bg = gui_hidden }; -- Search highlight /
     -- SpecialKey   { };
     -- SpellBad     { };
     -- SpellCap     { };
     -- SpellLocal   { };
     -- SpellRare    { };
-    StatusLine   { fg = gui_foreground, bg = vim_background };
-    StatusLineNC { fg = gui_foreground, bg = vim_background };
+    StatusLine   { fg = gui_hidden, bg = vim_background }; -- Active buffer statusline
+    StatusLineNC { fg = gui_hidden, bg = vim_background }; -- Inactive buffers statusline
     -- TabLine      { };
     -- TabLineFill  { };
     -- TabLineSel   { };
     -- Title        { };
-    Visual       { bg = visual_background };
-    VisualNOS    { bg = visual_background };
-    -- WarningMsg   { };
+    -- Visual       { bg = visual_background };
+    -- VisualNOS    { bg = visual_background };
+    WarningMsg   { fg = error }; -- Warning messages
     -- Whitespace   { };
     -- WildMenu     { };
 
@@ -136,18 +130,15 @@ local theme = lush(function()
 
     -- Error          { };
 
-    Todo           { fg = vim_foreground, bg = gui_secondary };
+    -- Todo           { fg = vim_foreground, bg = gui_secondary };
 
-    -- These groups are for the native LSP client. Some other LSP clients may
-    -- use these groups, or use their own. Consult your LSP client's
-    -- documentation.
-
+    -- NATIVE LSP --
     -- LspReferenceText                     { };
     -- LspReferenceRead                     { };
     -- LspReferenceWrite                    { };
 
-    -- LspDiagnosticsDefaultError           { };
-    -- LspDiagnosticsDefaultWarning         { };
+    LspDiagnosticsDefaultError           { fg = error };
+    -- LspDiagnosticsDefaultWarning         { fg = error };
     -- LspDiagnosticsDefaultInformation     { };
     -- LspDiagnosticsDefaultHint            { };
 
@@ -182,7 +173,7 @@ local theme = lush(function()
     TSConstant           { fg = std_variable };
     TSConstBuiltin       { fg = std_keyword };
     TSConstMacro         { fg = std_statement };
-    TSError              { fg = error_foreground };
+    TSError              { fg = error };
     TSException          { fg = std_statement };
     TSField              { fg = std_variable };
     TSFloat              { fg = std_number };
