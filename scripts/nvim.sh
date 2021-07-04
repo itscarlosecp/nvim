@@ -5,6 +5,8 @@ get_config() {
 	mv ./git_temp/nvim $HOME/.config/
 	rm -rf git_temp
 	echo " ➜ Download successful ✔️"
+	nvim -c ":PackerInstall | quit"
+	echo " ➜ Neovim setup successful ✔️"
 	echo " ➜ Post-install instructions:"
 	echo "   https://github.com/itscarlosecp/.dotfiles/blob/main/README.md#post-install-setup 📜"
 }
