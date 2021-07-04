@@ -1,6 +1,6 @@
 #!/bin/bash
 # Shell
-ln -sf $HOME/.dotfiles/.bashrc $HOME/.bashrc
+ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/.dotfiles/.profile $HOME/.profile
 
 # Applications
