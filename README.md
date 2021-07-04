@@ -1,3 +1,3 @@
 # .dotfiles
 
-`sh < (curl -s https://github.com/itscarlosecp/.dotfiles/blob/main/scripts/nvim.sh)`
+`sh <(curl -s https://raw.githubusercontent.com/itscarlosecp/.dotfiles/main/scripts/nvim.sh)`
