@@ -9,7 +9,7 @@ Welcome to my dotfiles, a repo where I store my development environment configur
 These files are designed to work in UNIX-based operating systems such as Linux and MacOS. If you are using Windows as your desktop OS you can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) as well. If you are using my Neovim config, version `0.5` or superior is required.
 
 ## Neovim
-### Install
+### Installation
 
 My Neovim config is what makes me proud of this repo, and I bet you are here looking for it. You can either clone this entire repo or just run the following install command:
 
