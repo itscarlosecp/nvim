@@ -6,7 +6,7 @@ get_config() {
 	rm -rf temp
 	echo " ➜ Download successful ✔️"
 	echo " ➜ Post-install instructions:"
-	echo "   https://github.com/itscarlosecp/.dotfiles 📜"
+	echo "   https://github.com/itscarlosecp/.dotfiles/blob/main/README.md 📜"
 }
 
 # Neovim
@@ -19,13 +19,22 @@ get_neovim() {
 
 # Dependencies
 get_dependencies() {
-	# GCC - (TreeSitter)
 	echo " ➜ Getting dependencies... 🛒"
+
+	# GCC - (TreeSitter)
 	if ! gcc_loc="$(type -p "gcc")" || [[ -z "gcc_loc" ]]; then 
 		echo " ➜ Installing GCC... 💾"
 		sudo apt-get -qq install build-essential -y
 	else
 		echo " ➜ GCC is already installed ✔️"
+	fi
+
+	# Unzip - (LSPInstall)
+	if ! gcc_loc="$(type -p "gcc")" || [[ -z "gcc_loc" ]]; then 
+		echo " ➜ Installing Unzip... 📚"
+		sudo apt-get -qq install build-essential -y
+	else
+		echo " ➜ Unzip is already installed ✔️"
 	fi
 }
 
