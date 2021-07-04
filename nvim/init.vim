@@ -48,9 +48,12 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
-" INTERFACE
+" EXPLORER
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'ahmedkhalf/lsp-rooter.nvim'
+
+" INTERFACE
 Plug 'numtostr/FTerm.nvim'
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
 Plug 'rktjmp/lush.nvim'
@@ -77,6 +80,7 @@ if has('nvim-0.5')
 	lua require'_fterm'
 	lua require'_galaxyline'
 	lua require'_lsp'
+	lua require'_lsp_rooter'
 	lua require'_nvim_compe'
 	lua require'_nvim_tree'
 	lua require'_telescope'

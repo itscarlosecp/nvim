@@ -1,5 +1,11 @@
 local tabstop = vim.api.nvim_buf_get_option(0, "tabstop")
 
+-- FORMATTERS INSTALLATION
+-- prettier: npm i -g prettier
+-- luafmt: npm i -g @appguru/luafmt
+-- black: pip3 install black / sudo-apt install black
+-- gofmt: included with go standard install
+
 local prettier = function()
   return {
     exe = "prettier",
@@ -33,6 +39,22 @@ local black = function()
   }
 end
 
+local clang_format = function()
+  return {
+    exe = "clang-format",
+    args = {"-"},
+    stdin = true
+  }
+end
+
+local gofmt = function()
+  return {
+    exe = "gofmt",
+    args = {vim.api.nvim_buf_get_name(0)},
+    stdin = true
+  }
+end
+
 require "formatter".setup {
   logging = false,
   filetype = {
@@ -44,7 +66,12 @@ require "formatter".setup {
     -- Lua
     lua = {luafmt},
     -- Python
-    python = {black}
+    python = {black},
+    -- C/C++
+    c = {clang_format},
+    cpp = {clang_format},
+    -- Golang
+    go = {gofmt}
   }
 }
 
@@ -55,6 +82,8 @@ augroup FormatAutogroup
   autocmd BufWritePost *.js,*.ts,*.jsx,*.tsx FormatWrite
   autocmd BufWritePost *.lua FormatWrite
   autocmd BufWritePost *.py FormatWrite
+  autocmd BufWritePost *.c,*.cpp FormatWrite
+  autocmd BufWritePost *.go FormatWrite
 augroup END
 ]],
   true
