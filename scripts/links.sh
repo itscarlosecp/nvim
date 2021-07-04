@@ -1,11 +1,9 @@
-#!bin/sh
+#!/bin/bash
+# Shell
+ln -sf $HOME/.dotfiles/.bashrc $HOME/.bashrc
+ln -sf $HOME/.dotfiles/.profile $HOME/.profile
 
-#Create Symlinks
-ln -sf $HOME/.dotfiles/nvim ~/.config/nvim
-ln -sf $HOME/.dotfiles/alacritty ~/.config/alacritty
-ln -sf $HOME/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
-ln -sf $HOME/.dotfiles/.bashrc ~/.bashrc
-ln -sf $HOME/.dotfiles/.zshrc ~/.zshrc
-ln -sf $HOME/.dotfiles/.gitconfig ~/.gitconfig
-ln -sf $HOME/.dotfiles/starship/starship.toml ~/.config/starship.toml
-
+# Applications
+ln -sTf $HOME/.dotfiles/nvim $HOME/.config/nvim
+ln -sf $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
+ln -sf $HOME/.dotfiles/starship/starship.toml $HOME/.config/starship.toml

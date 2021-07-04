@@ -73,19 +73,17 @@ call plug#end()
 
 " SOURCE CONFIGS
 source $HOME/.config/nvim/maps.vim
-if has('nvim-0.5')
-	lua require'_autopairs'
-	lua require'_colorizer'
-	lua require'_formatter'
-	lua require'_fterm'
-	lua require'_galaxyline'
-	lua require'_lsp'
-	lua require'_lsp_rooter'
-	lua require'_nvim_compe'
-	lua require'_nvim_tree'
-	lua require'_telescope'
-	lua require'_treesitter'
-endif
+lua require'_autopairs'
+lua require'_colorizer'
+lua require'_formatter'
+lua require'_fterm'
+lua require'_galaxyline'
+lua require'_lsp'
+lua require'_lsp_rooter'
+lua require'_nvim_compe'
+lua require'_nvim_tree'
+lua require'_telescope'
+" lua require'_treesitter'
 
 colo oceanic
 
