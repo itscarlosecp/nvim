@@ -8,10 +8,13 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute "packadd packer.nvim"
 end
 
-return require("packer").startup(function()
+local packer = require "packer"
+local use = packer.use
+
+local plugins = function()
   -- LSP
   use {
-    "neovim/nvim-lspconfig", 
+    "neovim/nvim-lspconfig",
     requires = {
       "kabouzeid/nvim-lspinstall",
       "hrsh7th/nvim-compe",
@@ -64,5 +67,7 @@ return require("packer").startup(function()
 
   -- PACKER
   use "wbthomason/packer.nvim"
-end)
+end
+
+packer.startup(plugins)
 

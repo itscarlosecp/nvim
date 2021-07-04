@@ -31,12 +31,6 @@ local tab_inactive_bg = vim_bg.lighten(5)
 local statusline_fg = vim_fg
 local statusline_bg = vim_bg
 
--- LSP DIAGNOSTICS
-local diagnostic_error = vim_error
-local diagnostic_warning = vim_fg
-local diagnostic_information = vim_fg
-local diagnostic_hint = vim_fg
-
 -- VIM TODOS
 local todo_fg = vim_bg
 local todo_bg = hsl("#B5CEA8")

@@ -6,7 +6,7 @@ get_config() {
 	rm -rf temp
 	echo " ➜ Download successful ✔️"
 	echo " ➜ Post-install instructions:"
-	echo "   https://github.com/itscarlosecp/.dotfiles/blob/main/README.md 📜"
+	echo "   https://github.com/itscarlosecp/.dotfiles/blob/main/README.md#post-install-setup 📜"
 }
 
 # Neovim
