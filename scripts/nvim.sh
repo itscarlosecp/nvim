@@ -1,9 +1,9 @@
 # Download config from my repo
 get_config() {
 	echo " ➜ Cloning neovim configuration... ✏️"
-	git clone https://github.com/itscarlosecp/.dotfiles temp
-	mv -f ./temp/nvim $HOME/.config/
-	rm -rf temp
+	git clone https://github.com/itscarlosecp/.dotfiles git_temp
+	mv ./git_temp/nvim $HOME/.config/
+	rm -rf git_temp
 	echo " ➜ Download successful ✔️"
 	echo " ➜ Post-install instructions:"
 	echo "   https://github.com/itscarlosecp/.dotfiles/blob/main/README.md#post-install-setup 📜"
