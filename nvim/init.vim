@@ -33,22 +33,22 @@ set termguicolors      " 256 color for terminal nvim
 " PLUG INSTALL
 call plug#begin(stdpath('data') . '/plugged')
 
-" LSP 
+" LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/lspsaga.nvim'
- 
-" SYNTAX 
+
+" SYNTAX
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sheerun/vim-polyglot'
 
-" FUZZY FINDER 
+" FUZZY FINDER
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
-" INTERFACE 
+" INTERFACE
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'numtostr/FTerm.nvim'
@@ -84,3 +84,4 @@ if has('nvim-0.5')
 endif
 
 colo oceanic
+

@@ -2,7 +2,7 @@ export EDITOR=nvim
 export BROWSER=wslview
 export HISTCONTROL=ignoreboth
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
-export LSPINSTALL_DIR=$HOME/.local/share/nvim/lspinstall
+export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
 alias ..="cd .."
