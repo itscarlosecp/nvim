@@ -1,0 +1,108 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "vertical",
+                "splitMode": "duplicate"
+            },
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "horizontal",
+                "splitMode": "duplicate"
+            },
+            "keys": "ctrl+shift+h"
+        },
+        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+j" }, 
+        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+h" }, 
+        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+l" }, 
+        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+k" }
+    ],
+    "alwaysShowTabs": true,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "keybindings": null,
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "acrylicOpacity": 0.70,
+            "fontFace": "JetBrainsMono NF",
+            "fontSize": 10,
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "commandline": "powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "\\\\wsl.localhost\\Ubuntu\\home\\itscarlosecp"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Testbench",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\testbench"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#012456",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell Powershell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        }
+    ]
+}
