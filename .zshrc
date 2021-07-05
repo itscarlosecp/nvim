@@ -1,6 +1,5 @@
 # Global shell config
 source "$HOME/.profile"
-export PATH="$PATH:`yarn global bin`"
 
 # This load NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

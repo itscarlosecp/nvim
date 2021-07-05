@@ -12,6 +12,7 @@ alias grep="grep --color=auto"
 alias la="ls -Aogh --group-directories-first"
 
 alias .files="cd $HOME/.dotfiles"
+alias uba="cd $HOME/uba"
 
 count() {
 	find . -name "*.$1" | xargs wc -l
