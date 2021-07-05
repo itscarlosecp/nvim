@@ -165,6 +165,9 @@ local theme =
       Italic {gui = "italic"},
       Error {bg = vim_error},
       Todo {fg = todo_fg, bg = todo_bg},
+      -- LSP DIAGNOSTICS --
+      LspSagaDiagnosticBorder {fg = vim_secondary},
+      LspSagaDiagnosticTruncateLine {fg = vim_secondary},
       -- TREESITTER --
       -- TSAnnotation         { },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
       TSAttribute {fg = vim_variable},

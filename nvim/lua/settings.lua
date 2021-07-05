@@ -5,7 +5,7 @@ vim.cmd("set encoding=utf-8")
 vim.cmd("set fileencoding=utf-8")
 vim.o.ignorecase = true
 
-vim.cmd("set completeopt=menuone,noselect")
+vim.o.completeopt = "menuone,noselect"
 vim.o.pumheight = 10
 vim.o.cmdheight = 2
 
