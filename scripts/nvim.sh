@@ -2,7 +2,8 @@
 get_config() {
 	echo " ➜ Cloning neovim configuration... ✏️"
 	git clone https://github.com/itscarlosecp/.dotfiles git_temp
-	mv ./git_temp/nvim ~/.config/ && rm -rf ./git_temp
+	mkdir -p $HOME/.config/nvim
+	mv ./git_temp/nvim $HOME/.config/nvim && rm -rf ./git_temp
 	echo " ➜ Download successful ✔️"
 	nvim -u $HOME/.config/nvim/init.lua +PackerInstall
 	echo " ➜ Neovim setup successful ✔️"
