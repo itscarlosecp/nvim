@@ -85,10 +85,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
-  ["lsp-rooter.nvim"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lsp-rooter.nvim"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"

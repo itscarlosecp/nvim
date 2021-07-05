@@ -55,8 +55,8 @@ local configs = {
 
 local function setup_servers()
   require "lspinstall".setup()
-  local servers = require "lspinstall".installed_servers()
-  for _, server in pairs(servers) do
+  local installed_servers = require "lspinstall".installed_servers()
+  for _, server in pairs(installed_servers) do
     if configs[server] then
       require "lspconfig"[server].setup {
         settings = configs[server]

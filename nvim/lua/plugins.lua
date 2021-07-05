@@ -39,7 +39,6 @@ local plugins = function()
     "kyazdani42/nvim-tree.lua",
     requires = {
       "kyazdani42/nvim-web-devicons",
-      "ahmedkhalf/lsp-rooter.nvim"
     }
   }
 
@@ -71,3 +70,4 @@ end
 
 packer.startup(plugins)
 
+vim.cmd("autocmd BufWritePost plugins.lua PackerCompile")
