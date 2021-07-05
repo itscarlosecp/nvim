@@ -2,7 +2,6 @@ require "telescope".setup {
   defaults = {
     vimgrep_arguments = {
       "rg",
-      "--color=never",
       "--no-heading",
       "--with-filename",
       "--line-number",
@@ -24,8 +23,8 @@ require "telescope".setup {
         mirror = false
       }
     },
-    file_sorter = require "telescope.sorters".get_fuzzy_file,
-    file_ignore_patterns = {},
+    file_sorter = require "telescope.sorters".get_fzy_sorter,
+    file_ignore_patterns = {"node_modules/*"},
     generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
     shorten_path = true,
     winblend = 0,

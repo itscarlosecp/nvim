@@ -4,7 +4,6 @@ export HISTCONTROL=ignoreboth
 
 # PATH exports
 export PATH=$HOME/.local/bin:$PATH
-export PATH="$(yarn global bin):$PATH"
 export PATH=/usr/local/go/bin:$PATH
 
 alias ..="cd .."
