@@ -2,12 +2,15 @@
 get_config() {
 	echo " ➜ Cloning neovim configuration... ✏️"
 	git clone https://github.com/itscarlosecp/.dotfiles git_temp
-	mkdir $HOME/.config/nvim
-	mv ./git_temp/nvim/ ~/.config/ && rm -rf ./git_temp
+	mv ./git_temp/nvim ~/.config/ && rm -rf ./git_temp
 	echo " ➜ Download successful ✔️"
 	nvim -u $HOME/.config/nvim/init.lua +PackerInstall
 	echo " ➜ Neovim setup successful ✔️"
 	echo " ➜ Post-install instructions:"
+	echo "   • Install plugins with :PackerInstall"
+	echo "   • Enable autocompletion with :LspInstall <language-name>"
+	echo "   • Install formatters from lua/_formatter/init.lua file"
+	echo "   Read more at:"
 	echo "   https://github.com/itscarlosecp/.dotfiles/blob/main/README.md#post-install-setup 📜"
 }
 
