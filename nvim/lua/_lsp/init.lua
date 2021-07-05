@@ -43,6 +43,19 @@ vim.fn.sign_define(
   {texthl = "LspDiagnosticsSignInformation", text = "", numhl = "LspDiagnosticsSignInformation"}
 )
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+  vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    virtual_text = {
+      prefix = "",
+      spacing = 0
+    },
+    signs = true,
+    underline = true
+  }
+)
+
 local settings = {
   lua = {
     Lua = {
@@ -60,10 +73,6 @@ local function setup_servers()
     if settings[server] then
       require "lspconfig"[server].setup {
         settings = settings[server]
-      }
-    elseif server == "json" then
-      require "lspconfig"[server].setup {
-        filetypes = {"json", "jsonc"}
       }
     else
       require "lspconfig"[server].setup {}
