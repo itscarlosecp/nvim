@@ -12,6 +12,7 @@ alias grep="grep --color=auto"
 alias la="ls -Aogh --group-directories-first"
 
 alias .files="cd $HOME/.dotfiles"
+alias dev="cd $HOME/dev"
 alias uba="cd $HOME/uba"
 
 count() {
