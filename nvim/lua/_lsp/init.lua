@@ -29,21 +29,21 @@ vim.lsp.protocol.CompletionItemKind = {
 vim.fn.sign_define(
   "LspDiagnosticsSignError",
   {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"}
-  )
+)
 vim.fn.sign_define(
   "LspDiagnosticsSignWarning",
   {texthl = "LspDiagnosticsSignWarning", text = "", numhl = "LspDiagnosticsSignWarning"}
-  )
+)
 vim.fn.sign_define(
   "LspDiagnosticsSignHint",
   {texthl = "LspDiagnosticsSignHint", text = "", numhl = "LspDiagnosticsSignHint"}
-  )
+)
 vim.fn.sign_define(
   "LspDiagnosticsSignInformation",
   {texthl = "LspDiagnosticsSignInformation", text = "", numhl = "LspDiagnosticsSignInformation"}
-  )
+)
 
-local configs = {
+local settings = {
   lua = {
     Lua = {
       diagnostics = {
@@ -57,9 +57,13 @@ local function setup_servers()
   require "lspinstall".setup()
   local installed_servers = require "lspinstall".installed_servers()
   for _, server in pairs(installed_servers) do
-    if configs[server] then
+    if settings[server] then
       require "lspconfig"[server].setup {
-        settings = configs[server]
+        settings = settings[server]
+      }
+    elseif server == "json" then
+      require "lspconfig"[server].setup {
+        filetypes = {"json", "jsonc"}
       }
     else
       require "lspconfig"[server].setup {}

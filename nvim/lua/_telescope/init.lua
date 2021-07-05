@@ -24,7 +24,7 @@ require "telescope".setup {
       }
     },
     file_sorter = require "telescope.sorters".get_fzy_sorter,
-    file_ignore_patterns = {"node_modules/*", ".git/*"},
+    file_ignore_patterns = {"node_modules/*", ".git/*", ".next/*"},
     generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
     shorten_path = true,
     winblend = 0,
