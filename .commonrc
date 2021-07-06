@@ -13,7 +13,7 @@ alias la="ls -Aogh --group-directories-first"
 
 alias .files="cd $HOME/.dotfiles"
 alias dev="cd $HOME/dev"
-alias uba="cd $HOME/uba"
+alias uba="cd $HOME/UBA"
 
 count() {
 	find . -name "*.$1" | xargs wc -l

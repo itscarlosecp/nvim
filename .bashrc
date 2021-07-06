@@ -7,9 +7,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # This loads starship
 if starship_loc="$(type -p "starship")" || [[ -z "starship_loc" ]]; then 
-	eval "$(starship init zsh)"
+	eval "$(starship init bash)"
 else
 	echo "Starship not installed"
 fi
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
