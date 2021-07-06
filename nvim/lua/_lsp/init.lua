@@ -56,26 +56,73 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   }
 )
 
-local settings = {
+local configs = {
+  json = {
+    filetypes = {"json", "jsonc"},
+    settings = {
+      json = {
+        schemas = {
+          {
+            fileMatch = {"package.json"},
+            url = "https://json.schemastore.org/package.json"
+          },
+          {
+            fileMatch = {"jsconfig*.json"},
+            url = "https://json.schemastore.org/jsconfig.json"
+          },
+          {
+            fileMatch = {"tsconfig*.json"},
+            url = "https://json.schemastore.org/tsconfig.json"
+          },
+          {
+            fileMatch = {
+              ".prettierrc",
+              ".prettierrc.json",
+              "prettier.config.json"
+            },
+            url = "https://json.schemastore.org/prettierrc.json"
+          },
+          {
+            fileMatch = {".eslintrc", ".eslintrc.json"},
+            url = "https://json.schemastore.org/eslintrc.json"
+          }
+        }
+      }
+    }
+  },
   lua = {
-    Lua = {
-      diagnostics = {
-        globals = {"vim"}
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = {"vim"}
+        }
       }
     }
   }
 }
 
+local function add_config_safe(custom_config, config_key, fallback)
+  local safe_config = fallback
+  if custom_config[config_key] ~= nil then
+    safe_config = custom_config[config_key]
+  end
+  return safe_config
+end
+
+local installed_servers = require "lspinstall".installed_servers()
 local function setup_servers()
   require "lspinstall".setup()
-  local installed_servers = require "lspinstall".installed_servers()
-  for _, server in pairs(installed_servers) do
-    if settings[server] then
-      require "lspconfig"[server].setup {
-        settings = settings[server]
+
+  for _, lang in pairs(installed_servers) do
+    local server = require "lspconfig"[lang]
+    if configs[lang] ~= nil then
+      server.setup {
+        filetypes = add_config_safe(configs[lang], "filetypes", server.filetypes),
+        root_dir = add_config_safe(configs[lang], "root_dir", server.root_dir),
+        settings = add_config_safe(configs[lang], "settings", {})
       }
     else
-      require "lspconfig"[server].setup {}
+      server.setup {}
     end
   end
 end
