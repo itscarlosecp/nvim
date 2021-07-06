@@ -98,6 +98,31 @@ local configs = {
         }
       }
     }
+  },
+  typescript = {
+    on_attach = function(client, bufnr)
+      local ts_utils = require "nvim-lsp-ts-utils"
+      ts_utils.setup {
+        debug = false,
+        disable_commands = false,
+        enable_import_on_completion = false,
+        import_all_timeout = 5000, -- ms
+        -- parentheses completion
+        signature_help_in_parens = true,
+        -- update imports on file move
+        update_imports_on_move = false,
+        require_confirmation_on_move = false,
+        watch_dir = nil
+      }
+
+      ts_utils.setup_client(client)
+
+      -- no default maps, so you may want to define some here
+      vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", {silent = true})
+      vim.api.nvim_buf_set_keymap(bufnr, "n", "qq", ":TSLspFixCurrent<CR>", {silent = true})
+      vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", {silent = true})
+      vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", {silent = true})
+    end
   }
 }
 
@@ -118,6 +143,7 @@ local function setup_servers()
     if configs[lang] ~= nil then
       server.setup {
         filetypes = add_config_safe(configs[lang], "filetypes", server.filetypes),
+        on_attach = add_config_safe(configs[lang], "on_attach", server.on_attach),
         root_dir = add_config_safe(configs[lang], "root_dir", server.root_dir),
         settings = add_config_safe(configs[lang], "settings", {})
       }

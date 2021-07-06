@@ -18,7 +18,8 @@ local plugins = function()
     requires = {
       "kabouzeid/nvim-lspinstall",
       "hrsh7th/nvim-compe",
-      "glepnir/lspsaga.nvim"
+      "glepnir/lspsaga.nvim",
+      "kosayoda/nvim-lightbulb"
     }
   }
 
@@ -27,10 +28,15 @@ local plugins = function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
     requires = {
-      "norcalli/nvim-colorizer.lua",
       "windwp/nvim-autopairs",
       "windwp/nvim-ts-autotag"
     }
+  }
+  use {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require "colorizer".setup()
+    end
   }
   use "sheerun/vim-polyglot"
 
@@ -38,7 +44,8 @@ local plugins = function()
   use {
     "kyazdani42/nvim-tree.lua",
     requires = {
-      "kyazdani42/nvim-web-devicons"
+      "kyazdani42/nvim-web-devicons",
+      "ahmedkhalf/lsp-rooter.nvim"
     }
   }
 
@@ -59,10 +66,14 @@ local plugins = function()
     branch = "main"
   }
 
-  -- UTILITIES
+  -- ACTIVE UTILITIES
   use "junegunn/vim-easy-align"
   use "mhartington/formatter.nvim"
   use "mattn/emmet-vim"
+  use "tpope/vim-surround"
+
+  -- PASIVE UTILITIES
+  use "f-person/git-blame.nvim"
 
   -- PACKER
   use "wbthomason/packer.nvim"
