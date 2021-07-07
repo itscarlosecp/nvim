@@ -16,22 +16,20 @@ local plugins = function()
   use {
     "neovim/nvim-lspconfig",
     requires = {
-      "kabouzeid/nvim-lspinstall"
+      "kabouzeid/nvim-lspinstall",
+      "hrsh7th/nvim-compe",
+      "glepnir/lspsaga.nvim"
     }
   }
-  use {
-    "hrsh7th/nvim-compe",
-    event = "InsertEnter",
-    config = function()
-      require "_nvim_compe"
-    end
-  }
-  use "glepnir/lspsaga.nvim"
 
   -- SYNTAX HIGHLIGHT
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate"
+    run = ":TSUpdate",
+    requires = {
+      "windwp/nvim-autopairs"
+      -- "windwp/nvim-ts-autotag"
+    }
   }
   use {
     "norcalli/nvim-colorizer.lua",
@@ -44,9 +42,6 @@ local plugins = function()
   -- NVIMTREE
   use {
     "kyazdani42/nvim-tree.lua",
-    config = function()
-      require "_nvim_tree"
-    end,
     requires = {
       "kyazdani42/nvim-web-devicons"
     }
@@ -62,13 +57,7 @@ local plugins = function()
   }
 
   -- INTERFACE
-  use {
-    "numtostr/FTerm.nvim",
-    event = "BufWinEnter",
-    config = function()
-      require "_fterm"
-    end
-  }
+  use "numtostr/FTerm.nvim"
   use "rktjmp/lush.nvim"
   use {
     "glepnir/galaxyline.nvim",
@@ -83,13 +72,6 @@ local plugins = function()
 
   -- PASIVE UTILITIES
   use "f-person/git-blame.nvim"
-  use {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function()
-      require "_autopairs"
-    end
-  }
 
   -- PACKER
   use "wbthomason/packer.nvim"
