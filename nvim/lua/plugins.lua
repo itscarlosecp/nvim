@@ -18,8 +18,7 @@ local plugins = function()
     requires = {
       "kabouzeid/nvim-lspinstall",
       "hrsh7th/nvim-compe",
-      "glepnir/lspsaga.nvim",
-      "kosayoda/nvim-lightbulb"
+      "glepnir/lspsaga.nvim"
     }
   }
 
@@ -28,8 +27,8 @@ local plugins = function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
     requires = {
-      "windwp/nvim-autopairs",
-      "windwp/nvim-ts-autotag"
+      "windwp/nvim-autopairs"
+      -- "windwp/nvim-ts-autotag"
     }
   }
   use {
@@ -44,8 +43,7 @@ local plugins = function()
   use {
     "kyazdani42/nvim-tree.lua",
     requires = {
-      "kyazdani42/nvim-web-devicons",
-      "ahmedkhalf/lsp-rooter.nvim"
+      "kyazdani42/nvim-web-devicons"
     }
   }
 

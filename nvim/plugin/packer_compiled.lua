@@ -89,10 +89,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/git-blame.nvim"
   },
-  ["lsp-rooter.nvim"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lsp-rooter.nvim"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
@@ -100,11 +96,6 @@ _G.packer_plugins = {
   ["lush.nvim"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim"
-  },
-  ["neoscroll.nvim"] = {
-    config = { "\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0" },
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/neoscroll.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -118,10 +109,6 @@ _G.packer_plugins = {
   ["nvim-compe"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-compe"
-  },
-  ["nvim-lightbulb"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -138,10 +125,6 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -178,10 +161,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: neoscroll.nvim
-time([[Config for neoscroll.nvim]], true)
-try_loadstring("\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0", "config", "neoscroll.nvim")
-time([[Config for neoscroll.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
