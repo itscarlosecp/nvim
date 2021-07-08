@@ -42,6 +42,9 @@ local plugins = function()
   -- NVIMTREE
   use {
     "kyazdani42/nvim-tree.lua",
+    config = function()
+      require "_nvim_tree"
+    end,
     requires = {
       "kyazdani42/nvim-web-devicons"
     }
@@ -57,7 +60,13 @@ local plugins = function()
   }
 
   -- INTERFACE
-  use "numtostr/FTerm.nvim"
+  use {
+    "numtostr/FTerm.nvim",
+    event = "BufRead",
+    config = function()
+      require "_fterm"
+    end
+  }
   use "rktjmp/lush.nvim"
   use {
     "glepnir/galaxyline.nvim",
@@ -66,12 +75,16 @@ local plugins = function()
 
   -- ACTIVE UTILITIES
   use "junegunn/vim-easy-align"
-  use "mhartington/formatter.nvim"
   use "mattn/emmet-vim"
   use "tpope/vim-surround"
 
   -- PASIVE UTILITIES
-  use "f-person/git-blame.nvim"
+  use {
+    "Chiel92/vim-autoformat",
+    config = function()
+      require "_formatter"
+    end
+  }
 
   -- PACKER
   use "wbthomason/packer.nvim"

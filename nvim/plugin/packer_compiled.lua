@@ -7,7 +7,7 @@ end
 
 vim.api.nvim_command('packadd packer.nvim')
 
-local no_errors = pcall(function()
+local no_errors, error_msg = pcall(function()
 
   local time
   local profile_info
@@ -70,24 +70,18 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["FTerm.nvim"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
+    config = { "\27LJ\2\2&\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\v_fterm\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/FTerm.nvim"
   },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/emmet-vim"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/formatter.nvim"
-  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
-  },
-  ["git-blame.nvim"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/git-blame.nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
@@ -119,6 +113,7 @@ _G.packer_plugins = {
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
+    config = { "\27LJ\2\2*\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\15_nvim_tree\frequire\0" },
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
@@ -146,6 +141,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["vim-autoformat"] = {
+    config = { "\27LJ\2\2*\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\15_formatter\frequire\0" },
+    loaded = true,
+    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-autoformat"
+  },
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-easy-align"
@@ -161,14 +161,29 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\2*\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\15_nvim_tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: vim-autoformat
+time([[Config for vim-autoformat]], true)
+try_loadstring("\27LJ\2\2*\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\15_formatter\frequire\0", "config", "vim-autoformat")
+time([[Config for vim-autoformat]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'FTerm.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)
 
 if not no_errors then
-  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: ".v:exception | echom "Please check your config for correctness" | echohl None')
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
