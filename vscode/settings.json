@@ -350,6 +350,24 @@
 	"vim.useSystemClipboard": false,
 	"vim.visualstar": true,
 	"vim.leader": "<space>",
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<leader>", "e"],
+			"commands": ["workbench.view.explorer"]
+		},
+		{
+			"before": ["<leader>", "f", "f"],
+			"commands": ["workbench.action.quickOpen"]
+		},
+		{
+			"before": ["<leader>", "f", "s"],
+			"commands": ["workbench.action.gotoSymbol"]
+		},
+		{
+			"before": ["/"],
+			"commands": ["actions.find"]
+		}
+	],
 	"vim.visualModeKeyBindings": [
 		{
 			"before": [">"],
