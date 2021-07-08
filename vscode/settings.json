@@ -1,5 +1,6 @@
 {
-	"workbench.colorTheme": "Dracula",
+	// COLORSCHEME
+	// "workbench.colorTheme": "Dracula",
 	"workbench.colorCustomizations": {
 		"[Default Dark+]": {
 			"activityBar.background": "#0f0f0f",
@@ -233,9 +234,9 @@
 			"terminalCursor.foreground": "#f2f2f2",
 			"titleBar.activeForeground": "#dddddd",
 			"titleBar.border": "#000000",
-			"titleBar.inactiveBackground": "#161616",
+			"titleBar.inactiveBackground": "#0F0F0F",
 			"titleBar.inactiveForeground": "#666666",
-			"titleBar.activeBackground": "#161616",
+			"titleBar.activeBackground": "#0F0F0F",
 			"textBlockQuote.background": "#363636",
 			"textBlockQuote.border": "#666666",
 			"textCodeBlock.background": "#161616",
@@ -280,7 +281,7 @@
 		},
 		"[Dracula]": {
 			"activityBar.background": "#101015",
-			"activityBar.activeBackground": "#191a21",
+			"activityBar.activeBackground": "#101015",
 			"editor.background": "#21222C",
 			"titleBar.activeBackground": "#101015",
 			"titleBar.inactiveBackground": "#101015",
@@ -289,12 +290,19 @@
 		}
 	},
 
+	// GENERAL SETTINGS
+	"files.defaultLanguage": "python",
 	"editor.fontFamily": "JetBrainsMono NF",
-	"editor.fontLigatures": true,
+	"editor.fontLigatures": false,
 	"terminal.integrated.fontFamily": "JetBrainsMono NF",
 	"terminal.integrated.fontSize": 14,
 	"workbench.iconTheme": "material-icon-theme",
+	"workbench.startupEditor": "gettingStartedInEmptyWorkbench",
+	"security.workspace.trust.untrustedFiles": "open",
+	"security.workspace.trust.startupPrompt": "never",
+	"security.workspace.trust.enabled": false,
 
+	// EDITOR (BEHAVIOUR)
 	"editor.detectIndentation": true,
 	"editor.formatOnSave": true,
 	"editor.lineNumbers": "relative",
@@ -303,12 +311,7 @@
 	"editor.tabSize": 2,
 	"editor.wordWrap": "on",
 
-	"prettier.jsxSingleQuote": false,
-	"prettier.useTabs": true,
-	"prettier.tabWidth": 2,
-	"prettier.semi": false,
-	"prettier.singleQuote": false,
-
+	// EDITOR (INTERFACE)
 	"editor.cursorSurroundingLines": 5, // Scrolloff
 	"editor.minimap.enabled": false,
 	"editor.rename.enablePreview": false,
@@ -318,6 +321,8 @@
 	"workbench.editor.limit.value": 2,
 	"workbench.editor.showTabs": false,
 
+	// FILE EXPLORER
+	"explorer.openEditors.visible": 0,
 	"explorer.compactFolders": false,
 	"files.exclude": {
 		"**/.git": true,
@@ -325,25 +330,38 @@
 		"**/.hg": true,
 		"**/CVS": true,
 		"**/.DS_Store": true,
-		"node_modules": true,
 		"*.out": true,
 		"*.o": true
 	},
 
+	// VIM
 	"vim.autoindent": true,
 	"vim.easymotion": true,
 	"vim.hlsearch": true,
 	"vim.incsearch": true,
 	"vim.useCtrlKeys": true,
+	"vim.handleKeys": {
+		"<C-a>": false, // Select all
+		"<C-c>": false, // Copy selected
+		"<C-f>": false, // Search
+		"<C-h>": false, // Replace
+		"<C-q>": false // Navigate
+	},
 	"vim.useSystemClipboard": false,
 	"vim.visualstar": true,
-	"vim.handleKeys": {
-		"<C-a>": false,
-		"<C-c>": false,
-		"<C-f>": false,
-		"<C-q>": false
-	},
+	"vim.leader": "<space>",
+	"vim.visualModeKeyBindings": [
+		{
+			"before": [">"],
+			"commands": ["editor.action.indentLines"]
+		},
+		{
+			"before": ["<"],
+			"commands": ["editor.action.outdentLines"]
+		}
+	],
 
+	// LANGUAGE SPECIFICS
 	"emmet.includeLanguages": { "javascript": "javascriptreact" },
 	"html.format.wrapLineLength": 80,
 	"javascript.updateImportsOnFileMove.enabled": "always",
@@ -365,5 +383,21 @@
 		"editor.defaultFormatter": "ms-python.python",
 		"editor.tabSize": 4
 	},
-	"terminal.integrated.defaultProfile.linux": "zsh"
+	"[go]": {
+		"editor.tabSize": 4
+	},
+
+	// PRETTIER
+	"prettier.jsxSingleQuote": false,
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 2,
+	"prettier.semi": false,
+	"prettier.singleQuote": false,
+
+	// OTHERS
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter.notebook.ipynb"
+	},
+	"tabnine.experimentalAutoImports": true
 }
