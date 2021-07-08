@@ -1,5 +1,5 @@
 [
-	//========================================
+	// SETTINGS
 	{
 		"key": "ctrl+,",
 		"command": "workbench.action.openSettingsJson"
@@ -8,7 +8,7 @@
 		"key": "ctrl+shift+,",
 		"command": "workbench.action.openGlobalKeybindingsFile"
 	},
-	//========================================
+	// PANES MOVEMENT
 	{
 		"key": "ctrl+k",
 		"command": "workbench.action.navigateUp",
@@ -22,20 +22,20 @@
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.navigateRight",
-		"when": "vim.mode == 'Normal'"
+		"when": "vim.mode == 'Normal' && !terminalFocus"
 	},
 	{
 		"key": "ctrl+h",
 		"command": "workbench.action.navigateLeft",
 		"when": "vim.mode == 'Normal'"
 	},
-	//========================================
+	// HOVER ACTION
 	{
 		"key": "shift+k",
 		"command": "editor.action.showHover",
-		"when": "editorTextFocus && vim.mode == 'Normal'"
+		"when": "vim.mode == 'Normal' && editorTextFocus"
 	},
-	//========================================
+	// FILE EXPLORER
 	{
 		"key": "ctrl+e",
 		"command": "workbench.view.explorer",
@@ -51,7 +51,7 @@
 		"command": "-workbench.view.explorer",
 		"when": "viewContainer.workbench.view.explorer.enabled"
 	},
-	//========================================
+	// WORKSPACE FILES
 	{
 		"key": "a",
 		"command": "explorer.newFile",
@@ -102,7 +102,7 @@
 		"command": "explorer.openToSide",
 		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
 	},
-	//========================================
+	// FUZZY FINDER
 	{
 		"key": "ctrl+n",
 		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
@@ -123,7 +123,7 @@
 		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
 		"when": "inFilesPicker && inQuickOpen"
 	},
-	//========================================
+	// TERMINAL
 	{
 		"key": "ctrl+x",
 		"command": "workbench.action.terminal.toggleTerminal",
@@ -136,36 +136,58 @@
 	},
 	{
 		"key": "ctrl+shift+x",
-		"command": "workbench.action.terminal.split",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+shift+`",
+		"command": "-workbench.action.terminal.new",
+		"when": "terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+tab",
+		"command": "workbench.action.terminal.focusNext",
 		"when": "terminalFocus && terminalProcessSupported"
 	},
 	{
-		"key": "ctrl+shift+5",
-		"command": "-workbench.action.terminal.split",
+		"key": "ctrl+pagedown",
+		"command": "-workbench.action.terminal.focusNext",
 		"when": "terminalFocus && terminalProcessSupported"
 	},
 	{
-		"key": "ctrl+h",
-		"command": "workbench.action.terminal.focusPreviousPane",
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.terminal.focusPrevious",
 		"when": "terminalFocus && terminalProcessSupported"
 	},
 	{
-		"key": "alt+left",
-		"command": "-workbench.action.terminal.focusPreviousPane",
+		"key": "ctrl+pageup",
+		"command": "-workbench.action.terminal.focusPrevious",
 		"when": "terminalFocus && terminalProcessSupported"
 	},
+	// DIAGNOSTICS
 	{
-		"key": "ctrl+l",
-		"command": "workbench.action.terminal.focusNextPane",
-		"when": "terminalFocus && terminalProcessSupported"
+		"key": "[g",
+		"command": "editor.action.marker.next",
+		"when": "vim.mode == 'Normal' && editorFocus"
 	},
 	{
-		"key": "alt+right",
-		"command": "-workbench.action.terminal.focusNextPane",
-		"when": "terminalFocus && terminalProcessSupported"
+		"key": "alt+f8",
+		"command": "-editor.action.marker.next",
+		"when": "editorFocus"
 	},
 	{
-		"key": "ctrl+shift+l",
-		"command": "workbench.action.terminal.clear"
+		"key": "g]",
+		"command": "editor.action.marker.prev",
+		"when": "vim.mode == 'Normal' && editorFocus"
+	},
+	{
+		"key": "shift+alt+f8",
+		"command": "-editor.action.marker.prev",
+		"when": "editorFocus"
+	},
+	// CLOSE WINDOW
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
 	}
 ]
