@@ -69,15 +69,14 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["galaxyline.nvim"] = {
-    config = { "\27LJ\2\2+\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\16_galaxyline\frequire\0" },
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
-  },
   ["lspsaga.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim"
+    loaded = true,
+    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    config = { "\27LJ\2\2(\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\r_lualine\frequire\0" },
+    loaded = true,
+    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["lush.nvim"] = {
     loaded = true,
@@ -116,6 +115,7 @@ _G.packer_plugins = {
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
+    config = { "\27LJ\2\2+\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\16_treesitter\frequire\0" },
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
@@ -149,10 +149,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align"
   },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot"
-  },
   ["vim-surround"] = {
     loaded = false,
     needs_bufread = false,
@@ -161,10 +157,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: galaxyline.nvim
-time([[Config for galaxyline.nvim]], true)
-try_loadstring("\27LJ\2\2+\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\16_galaxyline\frequire\0", "config", "galaxyline.nvim")
-time([[Config for galaxyline.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\2+\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\16_treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\2(\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\r_lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\2)\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\14_nvimtree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\2*\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\15_telescope\frequire\0", "config", "telescope.nvim")
@@ -173,15 +177,11 @@ time([[Config for telescope.nvim]], false)
 time([[Config for nvim-lspinstall]], true)
 try_loadstring("\27LJ\2\2$\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\t_lsp\frequire\0", "config", "nvim-lspinstall")
 time([[Config for nvim-lspinstall]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\2)\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\14_nvimtree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'vim-easy-align', 'lspsaga.nvim', 'nvim-colorizer.lua', 'vim-surround'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'vim-easy-align', 'vim-surround', 'nvim-colorizer.lua'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")

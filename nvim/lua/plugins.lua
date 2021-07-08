@@ -15,9 +15,11 @@ local plugins = function()
 	-- TREESITTER & POLYGLOT
 	use {
     "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require "_treesitter"
+		end,
 		run = ":TSUpdate"
   }
-	use "sheerun/vim-polyglot"
 
 	-- LSP
 	use "neovim/nvim-lspconfig"
@@ -80,9 +82,9 @@ local plugins = function()
 
 	-- STATUSLINE
 	use {
-    "glepnir/galaxyline.nvim",
+    "hoob3rt/lualine.nvim",
     config = function()
-      require "_galaxyline"
+      require "_lualine"
     end,
   }
 
