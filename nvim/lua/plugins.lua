@@ -29,10 +29,7 @@ local plugins = function()
 	}
 
 	-- DIAGNOSTICS
-	use {
-		"glepnir/lspsaga.nvim",
-    event = "BufWinEnter"
-	}
+	use "glepnir/lspsaga.nvim"
 
 	-- AUTOCOMPLETION
 	use {

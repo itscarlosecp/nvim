@@ -1,0 +1,1548 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.647  000.638: locale set
+001.113  000.466: inits 1
+001.134  000.020: window checked
+001.139  000.005: parsing arguments
+001.333  000.194: expanding arguments
+001.429  000.096: inits 2
+002.364  000.935: init highlight
+002.369  000.004: waiting for UI
+004.098  001.730: done waiting for UI
+004.167  000.068: initialized screen early for UI
+010.827  000.618  000.618: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.425  001.306  000.688: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+021.001  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+021.047  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+021.089  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+021.727  000.012  000.012: sourcing /usr/share/nvim/runtime/filetype.vim
+021.884  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+022.262  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+022.292  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+022.328  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+022.356  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+037.471  016.176  016.091: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+037.487  016.378  000.202: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+037.888  026.388  009.951: sourcing /usr/share/nvim/runtime/filetype.vim
+038.006  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+038.630  000.243  000.243: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+039.492  000.394  000.394: sourcing /usr/share/nvim/runtime/scripts.vim
+039.795  029.784  001.443: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+157.070  000.127  000.127: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+162.505  000.140  000.140: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+163.011  000.115  000.115: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+164.328  007.533  007.151: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+164.336  160.011  122.694: sourcing /home/itscarlosecp/.config/nvim/init.lua
+164.348  000.171: sourcing vimrc file(s)
+164.456  000.041  000.041: sourcing /usr/share/nvim/runtime/ftplugin.vim
+164.684  000.025  000.025: sourcing /usr/share/nvim/runtime/indent.vim
+166.198  000.799  000.799: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+166.846  000.461  000.461: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+166.899  000.031  000.031: sourcing /usr/share/nvim/runtime/plugin/health.vim
+167.167  000.221  000.221: sourcing /usr/share/nvim/runtime/plugin/man.vim
+167.677  000.194  000.194: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+167.767  000.582  000.388: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+167.954  000.174  000.174: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+168.542  000.570  000.570: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+168.820  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+168.827  000.257  000.228: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+168.969  000.127  000.127: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+169.014  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+169.212  000.159  000.159: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+169.313  000.077  000.077: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+169.348  000.017  000.017: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+169.554  000.189  000.189: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+198.258  028.621  028.621: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+198.429  001.708: loading plugins
+198.932  000.348  000.348: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+199.089  000.041  000.041: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+199.267  000.082  000.082: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+199.414  000.044  000.044: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+199.713  000.169  000.169: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+200.726  000.894  000.894: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+200.837  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+200.864  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+200.894  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+200.986  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+201.133  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+201.496  000.251  000.251: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+201.723  000.108  000.108: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+201.798  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+202.189  001.716: loading packages
+202.632  000.443: loading after plugins
+202.647  000.015: inits 3
+204.211  001.564: reading ShaDa
+205.362  000.157  000.157: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+205.683  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+209.232  000.441  000.441: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+209.634  004.791: opening buffers
+211.356  000.548  000.548: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+220.927  010.746: BufEnter autocommands
+220.933  000.006: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.656  000.647: locale set
+001.108  000.452: inits 1
+001.135  000.026: window checked
+001.141  000.006: parsing arguments
+001.295  000.155: expanding arguments
+001.358  000.063: inits 2
+002.310  000.952: init highlight
+002.315  000.004: waiting for UI
+004.014  001.700: done waiting for UI
+004.075  000.061: initialized screen early for UI
+010.934  000.623  000.623: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.537  001.310  000.687: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.448  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.488  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.532  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.186  000.012  000.012: sourcing /usr/share/nvim/runtime/filetype.vim
+024.346  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+024.727  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+024.757  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+024.793  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.822  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+039.455  015.698  015.613: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+039.475  015.923  000.225: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+040.230  028.618  012.637: sourcing /usr/share/nvim/runtime/filetype.vim
+040.443  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+041.468  000.244  000.244: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+042.365  000.406  000.406: sourcing /usr/share/nvim/runtime/scripts.vim
+042.583  032.457  001.864: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+157.758  000.192  000.192: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+165.613  000.205  000.205: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+166.414  000.168  000.168: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+167.798  010.387  009.821: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+167.807  163.586  120.742: sourcing /home/itscarlosecp/.config/nvim/init.lua
+167.822  000.160: sourcing vimrc file(s)
+167.903  000.043  000.043: sourcing /usr/share/nvim/runtime/ftplugin.vim
+168.155  000.031  000.031: sourcing /usr/share/nvim/runtime/indent.vim
+169.684  000.683  000.683: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+170.208  000.331  000.331: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+170.235  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/health.vim
+170.342  000.095  000.095: sourcing /usr/share/nvim/runtime/plugin/man.vim
+170.824  000.195  000.195: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+170.901  000.545  000.351: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+171.067  000.153  000.153: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+171.542  000.460  000.460: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+171.727  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+171.733  000.164  000.155: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+171.906  000.159  000.159: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+171.950  000.022  000.022: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+172.153  000.155  000.155: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+172.251  000.076  000.076: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+172.285  000.016  000.016: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+172.561  000.260  000.260: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+200.046  027.370  027.370: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+200.218  001.822: loading plugins
+200.636  000.260  000.260: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+200.793  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+200.953  000.070  000.070: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+201.081  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+201.256  000.088  000.088: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+202.042  000.696  000.696: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+202.136  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+202.163  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+202.193  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+202.285  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+202.437  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+202.802  000.252  000.252: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+203.024  000.105  000.105: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+203.099  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+203.185  001.312: loading packages
+203.365  000.180: loading after plugins
+203.375  000.010: inits 3
+204.528  001.153: reading ShaDa
+205.354  000.147  000.147: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+205.671  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+209.188  000.341  000.341: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+209.549  004.500: opening buffers
+210.733  000.572  000.572: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+218.567  008.446: BufEnter autocommands
+218.571  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.636  000.627: locale set
+001.096  000.459: inits 1
+001.116  000.020: window checked
+001.121  000.005: parsing arguments
+001.265  000.144: expanding arguments
+001.333  000.068: inits 2
+002.090  000.756: init highlight
+002.092  000.002: waiting for UI
+003.895  001.803: done waiting for UI
+003.956  000.061: initialized screen early for UI
+011.674  000.983  000.983: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+012.219  001.688  000.705: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.226  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.276  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.331  000.031  000.031: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.131  000.015  000.015: sourcing /usr/share/nvim/runtime/filetype.vim
+024.319  000.019  000.019: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+024.770  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+024.805  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+024.848  000.024  000.024: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.883  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+040.879  017.275  017.170: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+040.896  017.531  000.256: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+041.763  029.471  011.854: sourcing /usr/share/nvim/runtime/filetype.vim
+041.884  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+042.542  000.242  000.242: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+043.729  000.555  000.555: sourcing /usr/share/nvim/runtime/scripts.vim
+043.971  033.625  001.658: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+146.530  000.143  000.143: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+152.995  000.157  000.157: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+153.545  000.118  000.118: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+154.753  008.488  008.071: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+154.761  150.660  108.547: sourcing /home/itscarlosecp/.config/nvim/init.lua
+154.775  000.159: sourcing vimrc file(s)
+154.888  000.044  000.044: sourcing /usr/share/nvim/runtime/ftplugin.vim
+155.162  000.056  000.056: sourcing /usr/share/nvim/runtime/indent.vim
+157.227  000.917  000.917: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+157.728  000.316  000.316: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+157.752  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/health.vim
+157.921  000.156  000.156: sourcing /usr/share/nvim/runtime/plugin/man.vim
+158.423  000.188  000.188: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+158.500  000.558  000.369: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+158.660  000.146  000.146: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+159.117  000.443  000.443: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+159.276  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+159.282  000.137  000.127: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+159.422  000.125  000.125: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+159.469  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+159.673  000.164  000.164: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+159.774  000.080  000.080: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+159.811  000.017  000.017: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+160.028  000.198  000.198: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+185.216  025.110  025.110: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+185.386  002.111: loading plugins
+185.795  000.256  000.256: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+185.925  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+186.080  000.067  000.067: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+186.208  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+186.380  000.084  000.084: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+187.294  000.821  000.821: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+187.405  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+187.431  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+187.462  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+187.553  000.027  000.027: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+187.703  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+188.145  000.303  000.303: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+188.431  000.150  000.150: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+188.554  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+188.683  001.433: loading packages
+188.864  000.181: loading after plugins
+188.874  000.010: inits 3
+189.887  001.012: reading ShaDa
+190.783  000.129  000.129: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+191.057  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+194.162  000.355  000.355: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+194.452  004.053: opening buffers
+195.573  000.518  000.518: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+203.739  008.769: BufEnter autocommands
+203.743  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.526  000.515: locale set
+000.892  000.367: inits 1
+000.914  000.021: window checked
+000.918  000.004: parsing arguments
+001.036  000.117: expanding arguments
+001.083  000.048: inits 2
+001.701  000.618: init highlight
+001.703  000.002: waiting for UI
+003.097  001.395: done waiting for UI
+003.147  000.050: initialized screen early for UI
+008.612  000.563  000.563: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+009.118  001.212  000.649: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+017.412  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+017.446  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+017.484  000.023  000.023: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+018.236  000.011  000.011: sourcing /usr/share/nvim/runtime/filetype.vim
+018.390  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+018.746  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+018.776  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+018.808  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+018.833  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+034.296  016.636  016.556: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+034.313  016.812  000.176: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+034.727  025.548  008.686: sourcing /usr/share/nvim/runtime/filetype.vim
+034.861  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+035.628  000.322  000.322: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+036.605  000.415  000.415: sourcing /usr/share/nvim/runtime/scripts.vim
+036.819  028.994  001.485: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+142.507  000.164  000.164: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+149.064  000.161  000.161: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+149.725  000.133  000.133: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+151.528  009.369  008.911: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+151.540  148.272  109.910: sourcing /home/itscarlosecp/.config/nvim/init.lua
+151.556  000.137: sourcing vimrc file(s)
+151.663  000.059  000.059: sourcing /usr/share/nvim/runtime/ftplugin.vim
+151.995  000.053  000.053: sourcing /usr/share/nvim/runtime/indent.vim
+153.879  000.777  000.777: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+154.488  000.371  000.371: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+154.520  000.013  000.013: sourcing /usr/share/nvim/runtime/plugin/health.vim
+154.657  000.117  000.117: sourcing /usr/share/nvim/runtime/plugin/man.vim
+155.255  000.238  000.238: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+155.352  000.679  000.440: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+155.562  000.190  000.190: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+156.149  000.569  000.569: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+156.386  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+156.394  000.179  000.168: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+156.558  000.147  000.147: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+156.612  000.026  000.026: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+156.837  000.184  000.184: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+156.952  000.090  000.090: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+156.993  000.019  000.019: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+157.234  000.221  000.221: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+182.944  025.623  025.623: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+183.112  002.239: loading plugins
+183.574  000.304  000.304: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+183.728  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+183.881  000.068  000.068: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+184.011  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+184.183  000.087  000.087: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+184.889  000.617  000.617: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+184.999  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+185.027  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+185.057  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+185.150  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+185.300  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+185.659  000.246  000.246: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+185.882  000.104  000.104: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+185.957  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+186.044  001.320: loading packages
+186.224  000.180: loading after plugins
+186.234  000.010: inits 3
+187.243  001.009: reading ShaDa
+188.131  000.220  000.220: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+188.408  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+191.194  000.329  000.329: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+191.492  003.671: opening buffers
+192.704  000.605  000.605: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+201.378  009.281: BufEnter autocommands
+201.383  000.005: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.012  000.012: --- NVIM STARTING ---
+000.633  000.621: locale set
+001.092  000.459: inits 1
+001.115  000.022: window checked
+001.120  000.005: parsing arguments
+001.334  000.214: expanding arguments
+001.398  000.064: inits 2
+002.205  000.807: init highlight
+002.210  000.004: waiting for UI
+003.877  001.667: done waiting for UI
+003.938  000.061: initialized screen early for UI
+011.185  000.923  000.923: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.717  001.554  000.630: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+020.343  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+020.380  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+020.421  000.025  000.025: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+021.056  000.013  000.013: sourcing /usr/share/nvim/runtime/filetype.vim
+021.215  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+021.599  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+021.625  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+021.656  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+021.680  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+036.383  015.763  015.684: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+036.403  015.962  000.199: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+036.948  025.171  009.153: sourcing /usr/share/nvim/runtime/filetype.vim
+037.112  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+037.874  000.299  000.299: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+039.131  000.670  000.670: sourcing /usr/share/nvim/runtime/scripts.vim
+039.391  029.355  001.646: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+146.102  000.187  000.187: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+153.834  000.223  000.223: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+154.688  000.183  000.183: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+156.341  010.581  009.988: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+156.352  152.271  112.335: sourcing /home/itscarlosecp/.config/nvim/init.lua
+156.367  000.159: sourcing vimrc file(s)
+156.469  000.053  000.053: sourcing /usr/share/nvim/runtime/ftplugin.vim
+156.811  000.041  000.041: sourcing /usr/share/nvim/runtime/indent.vim
+158.685  000.819  000.819: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+159.430  000.504  000.504: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+159.468  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/health.vim
+159.635  000.151  000.151: sourcing /usr/share/nvim/runtime/plugin/man.vim
+160.274  000.276  000.276: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+160.380  000.728  000.452: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+160.590  000.192  000.192: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+161.198  000.589  000.589: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+161.401  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+161.409  000.176  000.164: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+161.605  000.177  000.177: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+161.657  000.025  000.025: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+161.885  000.185  000.185: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+162.001  000.091  000.091: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+162.041  000.019  000.019: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+162.284  000.223  000.223: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+188.484  026.109  026.109: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+188.658  002.196: loading plugins
+189.056  000.243  000.243: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+189.186  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+189.343  000.070  000.070: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+189.472  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+189.649  000.088  000.088: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+190.529  000.790  000.790: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+190.637  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+190.683  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+190.718  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+190.876  000.054  000.054: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+191.076  000.043  000.043: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+191.620  000.399  000.399: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+191.930  000.147  000.147: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+192.035  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+192.154  001.519: loading packages
+192.400  000.246: loading after plugins
+192.413  000.013: inits 3
+193.828  001.415: reading ShaDa
+195.053  000.176  000.176: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+195.428  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+199.193  000.395  000.395: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+199.552  005.114: opening buffers
+200.910  000.625  000.625: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+209.537  009.361: BufEnter autocommands
+209.542  000.005: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.784  000.774: locale set
+001.233  000.449: inits 1
+001.260  000.027: window checked
+001.267  000.006: parsing arguments
+001.407  000.141: expanding arguments
+001.467  000.060: inits 2
+002.243  000.776: init highlight
+002.245  000.002: waiting for UI
+003.970  001.725: done waiting for UI
+004.033  000.063: initialized screen early for UI
+011.943  000.778  000.778: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+012.605  001.537  000.758: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.345  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.390  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.441  000.031  000.031: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.546  000.016  000.016: sourcing /usr/share/nvim/runtime/filetype.vim
+024.742  000.019  000.019: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+025.171  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+025.201  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+025.238  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+025.267  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+041.397  017.715  017.619: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+041.412  017.948  000.233: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+041.790  029.101  011.084: sourcing /usr/share/nvim/runtime/filetype.vim
+041.896  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+042.541  000.232  000.232: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+043.359  000.373  000.373: sourcing /usr/share/nvim/runtime/scripts.vim
+043.558  032.594  001.342: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+143.807  000.194  000.194: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+150.595  000.171  000.171: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+151.238  000.142  000.142: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+152.829  009.444  008.937: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+152.839  148.659  106.621: sourcing /home/itscarlosecp/.config/nvim/init.lua
+152.854  000.161: sourcing vimrc file(s)
+152.957  000.043  000.043: sourcing /usr/share/nvim/runtime/ftplugin.vim
+153.211  000.032  000.032: sourcing /usr/share/nvim/runtime/indent.vim
+154.843  000.760  000.760: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+155.410  000.328  000.328: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+155.435  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/health.vim
+155.542  000.095  000.095: sourcing /usr/share/nvim/runtime/plugin/man.vim
+156.003  000.185  000.185: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+156.082  000.527  000.342: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+156.237  000.142  000.142: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+156.752  000.501  000.501: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+156.904  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+156.910  000.132  000.123: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+157.060  000.135  000.135: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+157.108  000.025  000.025: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+157.314  000.164  000.164: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+157.415  000.079  000.079: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+157.450  000.016  000.016: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+157.704  000.236  000.236: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+183.095  025.265  025.265: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+183.269  001.927: loading plugins
+183.681  000.258  000.258: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+183.813  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+183.970  000.070  000.070: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+184.099  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+184.273  000.087  000.087: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+185.006  000.640  000.640: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+185.116  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+185.142  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+185.177  000.019  000.019: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+185.270  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+185.419  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+185.882  000.258  000.258: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+186.108  000.106  000.106: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+186.182  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+186.269  001.393: loading packages
+186.449  000.180: loading after plugins
+186.458  000.009: inits 3
+187.474  001.016: reading ShaDa
+188.274  000.127  000.127: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+188.544  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+191.428  000.326  000.326: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+191.721  003.766: opening buffers
+192.844  000.519  000.519: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+201.816  009.577: BufEnter autocommands
+201.822  000.006: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.012  000.012: --- NVIM STARTING ---
+000.671  000.659: locale set
+001.115  000.445: inits 1
+001.138  000.023: window checked
+001.143  000.005: parsing arguments
+001.283  000.140: expanding arguments
+001.344  000.061: inits 2
+002.098  000.754: init highlight
+002.100  000.002: waiting for UI
+003.900  001.800: done waiting for UI
+004.038  000.138: initialized screen early for UI
+011.688  000.630  000.630: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+012.241  001.268  000.638: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.227  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.267  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.310  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+023.959  000.012  000.012: sourcing /usr/share/nvim/runtime/filetype.vim
+024.166  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+024.597  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+024.628  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+024.666  000.022  000.022: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.696  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+040.385  016.870  016.773: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+040.402  017.072  000.202: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+040.809  028.495  011.364: sourcing /usr/share/nvim/runtime/filetype.vim
+040.923  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+041.554  000.241  000.241: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+042.469  000.419  000.419: sourcing /usr/share/nvim/runtime/scripts.vim
+042.685  031.816  001.382: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+157.613  000.224  000.224: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+168.013  000.240  000.240: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+168.769  000.163  000.163: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+170.151  012.948  012.321: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+170.163  165.914  121.149: sourcing /home/itscarlosecp/.config/nvim/init.lua
+170.177  000.225: sourcing vimrc file(s)
+170.268  000.047  000.047: sourcing /usr/share/nvim/runtime/ftplugin.vim
+170.561  000.036  000.036: sourcing /usr/share/nvim/runtime/indent.vim
+172.271  000.694  000.694: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+172.765  000.304  000.304: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+172.792  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/health.vim
+172.903  000.097  000.097: sourcing /usr/share/nvim/runtime/plugin/man.vim
+173.398  000.197  000.197: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+173.479  000.561  000.364: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+173.649  000.156  000.156: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+174.133  000.469  000.469: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+174.298  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+174.305  000.142  000.132: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+174.454  000.134  000.134: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+174.507  000.024  000.024: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+174.718  000.173  000.173: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+174.827  000.085  000.085: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+174.869  000.018  000.018: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+175.097  000.209  000.209: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+200.715  025.536  025.536: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+200.884  002.013: loading plugins
+201.273  000.233  000.233: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+201.404  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+201.557  000.067  000.067: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+201.687  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+201.858  000.086  000.086: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+202.577  000.629  000.629: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+202.687  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+202.714  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+202.745  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+202.836  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+202.987  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+203.412  000.293  000.293: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+203.672  000.122  000.122: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+203.786  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+203.925  001.424: loading packages
+204.140  000.215: loading after plugins
+204.150  000.010: inits 3
+205.189  001.039: reading ShaDa
+206.070  000.131  000.131: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+206.359  000.045  000.045: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+209.333  000.329  000.329: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+209.620  003.926: opening buffers
+210.884  000.658  000.658: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+218.742  008.464: BufEnter autocommands
+218.746  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+001.682  001.672: locale set
+002.136  000.455: inits 1
+002.160  000.024: window checked
+002.166  000.006: parsing arguments
+002.316  000.151: expanding arguments
+002.380  000.064: inits 2
+003.232  000.852: init highlight
+003.234  000.002: waiting for UI
+004.711  001.477: done waiting for UI
+004.760  000.049: initialized screen early for UI
+011.380  000.559  000.559: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.915  001.198  000.639: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+021.103  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+021.137  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+021.174  000.023  000.023: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+021.727  000.011  000.011: sourcing /usr/share/nvim/runtime/filetype.vim
+021.866  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+022.312  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+022.343  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+022.377  000.019  000.019: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+022.403  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+039.688  018.338  018.245: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+039.706  018.515  000.177: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+040.121  028.142  009.575: sourcing /usr/share/nvim/runtime/filetype.vim
+040.236  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+040.875  000.252  000.252: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+041.782  000.419  000.419: sourcing /usr/share/nvim/runtime/scripts.vim
+041.995  031.371  001.348: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+146.141  000.151  000.151: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+153.099  000.162  000.162: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+153.925  000.186  000.186: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+155.577  009.730  009.232: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+155.608  150.666  109.565: sourcing /home/itscarlosecp/.config/nvim/init.lua
+155.645  000.219: sourcing vimrc file(s)
+155.733  000.047  000.047: sourcing /usr/share/nvim/runtime/ftplugin.vim
+156.010  000.029  000.029: sourcing /usr/share/nvim/runtime/indent.vim
+157.490  000.671  000.671: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+157.988  000.313  000.313: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+158.018  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/health.vim
+158.184  000.153  000.153: sourcing /usr/share/nvim/runtime/plugin/man.vim
+158.681  000.189  000.189: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+158.757  000.537  000.348: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+158.917  000.147  000.147: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+159.385  000.454  000.454: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+159.541  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+159.547  000.134  000.125: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+159.691  000.130  000.130: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+159.738  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+160.106  000.259  000.259: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+160.237  000.101  000.101: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+160.283  000.021  000.021: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+160.555  000.250  000.250: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+187.855  027.204  027.204: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+188.030  001.900: loading plugins
+188.482  000.270  000.270: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+188.617  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+188.773  000.069  000.069: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+188.906  000.039  000.039: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+189.084  000.088  000.088: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+189.821  000.644  000.644: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+189.918  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+189.947  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+189.978  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+190.073  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+190.227  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+190.607  000.263  000.263: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+190.835  000.108  000.108: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+190.924  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+191.013  001.355: loading packages
+191.191  000.178: loading after plugins
+191.201  000.010: inits 3
+192.222  001.021: reading ShaDa
+193.081  000.128  000.128: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+193.351  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+196.166  000.329  000.329: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+196.451  003.744: opening buffers
+197.703  000.517  000.517: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+206.247  009.278: BufEnter autocommands
+206.252  000.005: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.485  000.476: locale set
+000.789  000.304: inits 1
+000.804  000.015: window checked
+000.808  000.004: parsing arguments
+000.907  000.100: expanding arguments
+000.948  000.041: inits 2
+001.439  000.491: init highlight
+001.440  000.001: waiting for UI
+002.525  001.084: done waiting for UI
+002.549  000.025: initialized screen early for UI
+007.023  000.373  000.373: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+007.380  000.784  000.411: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+015.619  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+015.656  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+015.704  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+016.675  000.013  000.013: sourcing /usr/share/nvim/runtime/filetype.vim
+016.834  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+017.210  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+017.237  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+017.268  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+017.292  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+033.700  017.804  017.723: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+033.715  017.992  000.188: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+034.117  026.691  008.636: sourcing /usr/share/nvim/runtime/filetype.vim
+034.222  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+034.801  000.234  000.234: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+035.631  000.367  000.367: sourcing /usr/share/nvim/runtime/scripts.vim
+035.828  029.299  001.213: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+137.841  000.224  000.224: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+144.874  000.167  000.167: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+145.476  000.136  000.136: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+146.942  009.531  009.004: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+146.951  144.307  105.478: sourcing /home/itscarlosecp/.config/nvim/init.lua
+146.963  000.107: sourcing vimrc file(s)
+147.067  000.064  000.064: sourcing /usr/share/nvim/runtime/ftplugin.vim
+147.306  000.029  000.029: sourcing /usr/share/nvim/runtime/indent.vim
+148.978  000.676  000.676: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+149.489  000.321  000.321: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+149.551  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/health.vim
+149.869  000.219  000.219: sourcing /usr/share/nvim/runtime/plugin/man.vim
+150.453  000.191  000.191: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+150.532  000.646  000.455: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+150.694  000.148  000.148: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+151.198  000.490  000.490: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+151.361  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+151.367  000.137  000.127: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+151.513  000.131  000.131: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+151.559  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+151.776  000.163  000.163: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+151.888  000.088  000.088: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+151.921  000.015  000.015: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+152.115  000.176  000.176: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+178.651  026.468  026.468: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+178.821  002.041: loading plugins
+179.226  000.252  000.252: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+179.356  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+179.512  000.069  000.069: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+179.642  000.039  000.039: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+179.816  000.086  000.086: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+180.586  000.677  000.677: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+180.694  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+180.720  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+180.751  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+180.841  000.027  000.027: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+180.995  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+181.409  000.302  000.302: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+181.793  000.184  000.184: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+181.932  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+182.037  001.461: loading packages
+182.248  000.211: loading after plugins
+182.262  000.015: inits 3
+183.490  001.228: reading ShaDa
+184.477  000.149  000.149: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+184.798  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+188.214  000.352  000.352: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+188.597  004.571: opening buffers
+189.785  000.549  000.549: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+197.922  008.777: BufEnter autocommands
+197.927  000.005: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.006  000.006: --- NVIM STARTING ---
+000.649  000.643: locale set
+001.100  000.451: inits 1
+001.125  000.026: window checked
+001.131  000.005: parsing arguments
+001.278  000.147: expanding arguments
+001.349  000.071: inits 2
+002.137  000.789: init highlight
+002.139  000.002: waiting for UI
+003.981  001.842: done waiting for UI
+004.036  000.055: initialized screen early for UI
+011.678  001.141  001.141: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+012.368  001.995  000.854: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+021.789  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+021.829  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+021.959  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+022.641  000.013  000.013: sourcing /usr/share/nvim/runtime/filetype.vim
+022.802  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+023.181  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.211  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.248  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+023.276  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+038.572  016.397  016.309: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+038.592  016.609  000.212: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+039.248  026.802  010.127: sourcing /usr/share/nvim/runtime/filetype.vim
+039.391  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+040.291  000.300  000.300: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+041.447  000.493  000.493: sourcing /usr/share/nvim/runtime/scripts.vim
+041.877  031.690  002.086: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+046.083  000.159  000.159: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+052.023  000.149  000.149: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+052.597  000.124  000.124: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+054.465  008.676  008.244: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+054.475  050.279  009.912: sourcing /home/itscarlosecp/.config/nvim/init.lua
+054.489  000.174: sourcing vimrc file(s)
+054.631  000.046  000.046: sourcing /usr/share/nvim/runtime/ftplugin.vim
+054.890  000.032  000.032: sourcing /usr/share/nvim/runtime/indent.vim
+056.458  000.670  000.670: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+056.952  000.304  000.304: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+056.980  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/health.vim
+057.165  000.173  000.173: sourcing /usr/share/nvim/runtime/plugin/man.vim
+057.928  000.459  000.459: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+058.016  000.833  000.374: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+058.246  000.214  000.214: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+058.737  000.476  000.476: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+058.890  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+058.896  000.133  000.124: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+059.032  000.123  000.123: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+059.076  000.022  000.022: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+059.268  000.155  000.155: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+059.366  000.077  000.077: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+059.400  000.016  000.016: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+059.641  000.221  000.221: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+092.992  033.263  033.263: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+093.178  001.922: loading plugins
+093.819  000.373  000.373: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+093.982  000.040  000.040: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+094.164  000.086  000.086: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+094.380  000.092  000.092: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+094.754  000.147  000.147: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+095.875  000.994  000.994: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+096.004  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+096.035  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+096.070  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+096.175  000.031  000.031: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+096.347  000.040  000.040: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+096.767  000.292  000.292: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+097.023  000.121  000.121: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+097.108  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+097.209  001.763: loading packages
+097.414  000.205: loading after plugins
+097.424  000.011: inits 3
+098.588  001.164: reading ShaDa
+099.711  000.158  000.158: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+100.025  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+103.496  000.377  000.377: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+103.962  004.806: opening buffers
+105.139  000.534  000.534: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+114.004  009.508: BufEnter autocommands
+114.008  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.625  000.616: locale set
+001.104  000.478: inits 1
+001.131  000.027: window checked
+001.136  000.005: parsing arguments
+001.274  000.138: expanding arguments
+001.334  000.060: inits 2
+002.101  000.767: init highlight
+002.103  000.002: waiting for UI
+003.792  001.689: done waiting for UI
+003.877  000.086: initialized screen early for UI
+011.649  000.656  000.656: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+012.199  001.296  000.640: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.186  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.231  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.283  000.032  000.032: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.007  000.014  000.014: sourcing /usr/share/nvim/runtime/filetype.vim
+024.245  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+024.653  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+024.683  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+024.722  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.751  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+041.433  017.916  017.814: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+041.448  018.142  000.227: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+041.883  029.610  011.398: sourcing /usr/share/nvim/runtime/filetype.vim
+042.015  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+042.727  000.252  000.252: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+043.673  000.473  000.473: sourcing /usr/share/nvim/runtime/scripts.vim
+044.057  033.258  001.616: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+049.791  000.194  000.194: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+058.137  000.197  000.197: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+058.770  000.131  000.131: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+060.052  010.669  010.147: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+060.064  055.992  012.065: sourcing /home/itscarlosecp/.config/nvim/init.lua
+060.082  000.212: sourcing vimrc file(s)
+060.209  000.049  000.049: sourcing /usr/share/nvim/runtime/ftplugin.vim
+060.482  000.030  000.030: sourcing /usr/share/nvim/runtime/indent.vim
+061.937  000.662  000.662: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+062.481  000.334  000.334: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+062.508  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/health.vim
+062.619  000.100  000.100: sourcing /usr/share/nvim/runtime/plugin/man.vim
+063.079  000.187  000.187: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+063.156  000.524  000.337: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+063.320  000.151  000.151: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+063.809  000.475  000.475: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+063.969  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+063.976  000.141  000.130: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+064.120  000.130  000.130: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+064.167  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+064.372  000.167  000.167: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+064.510  000.117  000.117: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+064.570  000.018  000.018: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+064.789  000.201  000.201: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+095.544  030.678  030.678: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+095.710  001.817: loading plugins
+096.124  000.262  000.262: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+096.274  000.053  000.053: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+096.429  000.068  000.068: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+096.560  000.039  000.039: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+096.736  000.088  000.088: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+097.529  000.704  000.704: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+097.639  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+097.665  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+097.696  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+097.788  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+097.938  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+098.453  000.368  000.368: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+098.690  000.113  000.113: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+098.767  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+098.854  001.342: loading packages
+099.034  000.180: loading after plugins
+099.044  000.010: inits 3
+100.234  001.189: reading ShaDa
+101.202  000.134  000.134: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+101.475  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+104.438  000.345  000.345: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+104.728  003.985: opening buffers
+106.122  000.676  000.676: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+114.054  008.650: BufEnter autocommands
+114.058  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.639  000.629: locale set
+001.097  000.457: inits 1
+001.120  000.023: window checked
+001.125  000.005: parsing arguments
+001.278  000.153: expanding arguments
+001.337  000.059: inits 2
+002.140  000.802: init highlight
+002.144  000.004: waiting for UI
+003.355  001.211: done waiting for UI
+003.400  000.044: initialized screen early for UI
+008.242  000.413  000.413: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+008.633  000.868  000.455: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+016.640  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+016.673  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+016.711  000.023  000.023: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+017.292  000.011  000.011: sourcing /usr/share/nvim/runtime/filetype.vim
+017.434  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+017.860  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+017.888  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+017.924  000.020  000.020: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+017.951  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+031.536  014.635  014.551: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+031.591  014.863  000.228: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+032.329  023.643  008.729: sourcing /usr/share/nvim/runtime/filetype.vim
+032.476  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+033.244  000.258  000.258: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+034.114  000.400  000.400: sourcing /usr/share/nvim/runtime/scripts.vim
+034.431  026.743  001.562: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+038.282  000.135  000.135: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+044.900  000.157  000.157: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+045.505  000.118  000.118: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+046.605  008.568  008.158: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+046.611  043.105  007.794: sourcing /home/itscarlosecp/.config/nvim/init.lua
+046.621  000.117: sourcing vimrc file(s)
+046.704  000.048  000.048: sourcing /usr/share/nvim/runtime/ftplugin.vim
+046.961  000.051  000.051: sourcing /usr/share/nvim/runtime/indent.vim
+048.732  000.909  000.909: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+049.390  000.398  000.398: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+049.421  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/health.vim
+049.554  000.115  000.115: sourcing /usr/share/nvim/runtime/plugin/man.vim
+050.113  000.223  000.223: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+050.207  000.637  000.414: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+050.399  000.175  000.175: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+050.951  000.536  000.536: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+051.141  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+051.149  000.165  000.154: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+051.319  000.152  000.152: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+051.377  000.029  000.029: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+051.621  000.198  000.198: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+051.746  000.098  000.098: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+051.791  000.020  000.020: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+052.049  000.238  000.238: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+085.243  033.102  033.102: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+085.481  001.976: loading plugins
+085.999  000.333  000.333: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+086.152  000.041  000.041: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+086.338  000.086  000.086: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+086.486  000.042  000.042: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+086.683  000.099  000.099: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+087.678  000.895  000.895: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+087.810  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+087.840  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+087.875  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+087.982  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+088.152  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+088.617  000.303  000.303: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+088.887  000.127  000.127: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+088.976  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+089.076  001.545: loading packages
+089.281  000.205: loading after plugins
+089.293  000.012: inits 3
+090.595  001.302: reading ShaDa
+091.736  000.159  000.159: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+092.017  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+095.257  000.432  000.432: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+095.710  004.494: opening buffers
+096.959  000.575  000.575: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+105.180  008.896: BufEnter autocommands
+105.184  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.635  000.626: locale set
+001.091  000.456: inits 1
+001.114  000.023: window checked
+001.120  000.005: parsing arguments
+001.270  000.150: expanding arguments
+001.333  000.064: inits 2
+002.108  000.774: init highlight
+002.110  000.002: waiting for UI
+005.935  003.825: done waiting for UI
+006.066  000.131: initialized screen early for UI
+013.495  000.736  000.736: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+014.070  001.426  000.690: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.247  000.019  000.019: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.286  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.330  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.059  000.013  000.013: sourcing /usr/share/nvim/runtime/filetype.vim
+024.222  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+024.635  000.044  000.044: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+024.674  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+024.715  000.023  000.023: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.746  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+039.824  016.200  016.078: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+039.841  016.490  000.290: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+040.270  026.125  009.575: sourcing /usr/share/nvim/runtime/filetype.vim
+040.388  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+041.110  000.341  000.341: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+042.090  000.406  000.406: sourcing /usr/share/nvim/runtime/scripts.vim
+042.306  029.808  001.501: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+045.467  000.164  000.164: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+050.624  000.135  000.135: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+051.134  000.114  000.114: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+052.707  007.576  007.163: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+052.716  046.493  009.108: sourcing /home/itscarlosecp/.config/nvim/init.lua
+052.729  000.170: sourcing vimrc file(s)
+052.817  000.052  000.052: sourcing /usr/share/nvim/runtime/ftplugin.vim
+053.051  000.029  000.029: sourcing /usr/share/nvim/runtime/indent.vim
+055.012  000.979  000.979: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+055.517  000.310  000.310: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+055.541  000.009  000.009: sourcing /usr/share/nvim/runtime/plugin/health.vim
+055.637  000.084  000.084: sourcing /usr/share/nvim/runtime/plugin/man.vim
+056.059  000.170  000.170: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+056.156  000.507  000.337: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+056.315  000.142  000.142: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+056.791  000.463  000.463: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+057.055  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+057.062  000.220  000.209: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+057.253  000.173  000.173: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+057.304  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+057.486  000.149  000.149: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+057.579  000.073  000.073: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+057.611  000.015  000.015: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+057.808  000.180  000.180: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+090.561  032.684  032.684: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+090.766  001.944: loading plugins
+091.290  000.334  000.334: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+091.453  000.043  000.043: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+091.672  000.114  000.114: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+091.830  000.046  000.046: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+092.042  000.107  000.107: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+093.214  001.062  001.062: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+093.329  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+093.394  000.043  000.043: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+093.438  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+093.573  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+093.767  000.050  000.050: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+094.272  000.366  000.366: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+094.543  000.129  000.129: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+094.633  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+094.740  001.596: loading packages
+094.958  000.218: loading after plugins
+094.982  000.024: inits 3
+096.196  001.214: reading ShaDa
+097.256  000.140  000.140: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+097.555  000.031  000.031: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+100.520  000.328  000.328: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+100.811  004.117: opening buffers
+102.169  000.681  000.681: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+110.568  009.076: BufEnter autocommands
+110.578  000.010: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.633  000.624: locale set
+001.081  000.448: inits 1
+001.110  000.029: window checked
+001.115  000.005: parsing arguments
+001.261  000.146: expanding arguments
+001.326  000.065: inits 2
+002.135  000.808: init highlight
+002.139  000.004: waiting for UI
+003.858  001.719: done waiting for UI
+003.897  000.040: initialized screen early for UI
+010.582  001.093  001.093: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.122  001.677  000.584: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+017.823  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+017.848  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+017.877  000.018  000.018: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+018.342  000.009  000.009: sourcing /usr/share/nvim/runtime/filetype.vim
+018.450  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+018.707  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+018.727  000.008  000.008: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+018.750  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+018.769  000.008  000.008: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+033.355  015.343  015.287: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+033.386  015.496  000.153: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+034.082  022.887  007.351: sourcing /usr/share/nvim/runtime/filetype.vim
+034.206  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+034.782  000.220  000.220: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+035.553  000.355  000.355: sourcing /usr/share/nvim/runtime/scripts.vim
+035.742  026.353  001.203: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+039.019  000.143  000.143: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+045.431  000.164  000.164: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+046.019  000.129  000.129: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+047.414  008.679  008.242: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+047.425  043.372  008.339: sourcing /home/itscarlosecp/.config/nvim/init.lua
+047.438  000.169: sourcing vimrc file(s)
+047.533  000.049  000.049: sourcing /usr/share/nvim/runtime/ftplugin.vim
+047.867  000.030  000.030: sourcing /usr/share/nvim/runtime/indent.vim
+049.214  000.602  000.602: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+049.667  000.293  000.293: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+049.693  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/health.vim
+049.786  000.083  000.083: sourcing /usr/share/nvim/runtime/plugin/man.vim
+050.201  000.167  000.167: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+050.266  000.468  000.301: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+050.408  000.130  000.130: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+050.812  000.392  000.392: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+050.947  000.008  000.008: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+050.952  000.117  000.109: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+051.076  000.111  000.111: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+051.116  000.020  000.020: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+051.290  000.141  000.141: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+051.380  000.071  000.071: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+051.413  000.015  000.015: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+051.605  000.176  000.176: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+082.354  030.681  030.681: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+082.625  001.797: loading plugins
+083.097  000.299  000.299: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+083.240  000.041  000.041: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+083.405  000.074  000.074: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+083.540  000.040  000.040: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+083.722  000.090  000.090: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+084.564  000.747  000.747: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+084.666  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+084.695  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+084.728  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+084.826  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+084.985  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+085.387  000.282  000.282: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+085.642  000.130  000.130: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+085.731  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+085.825  001.382: loading packages
+086.017  000.192: loading after plugins
+086.027  000.010: inits 3
+087.236  001.209: reading ShaDa
+088.812  000.285  000.285: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+089.188  000.035  000.035: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+092.854  000.372  000.372: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+093.301  005.373: opening buffers
+094.549  000.580  000.580: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+102.904  009.023: BufEnter autocommands
+102.909  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.636  000.626: locale set
+001.086  000.450: inits 1
+001.111  000.025: window checked
+001.116  000.005: parsing arguments
+001.268  000.152: expanding arguments
+001.328  000.059: inits 2
+002.208  000.881: init highlight
+002.212  000.004: waiting for UI
+003.954  001.741: done waiting for UI
+004.022  000.068: initialized screen early for UI
+010.662  000.645  000.645: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.196  001.267  000.622: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+020.773  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+020.824  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+020.954  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+021.561  000.011  000.011: sourcing /usr/share/nvim/runtime/filetype.vim
+021.699  000.013  000.013: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+022.045  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+022.070  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+022.123  000.039  000.039: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+022.167  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+037.273  016.088  015.973: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+037.289  016.310  000.222: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+037.686  026.432  010.032: sourcing /usr/share/nvim/runtime/filetype.vim
+037.798  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+038.410  000.240  000.240: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+039.266  000.395  000.395: sourcing /usr/share/nvim/runtime/scripts.vim
+039.595  029.770  001.426: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+043.038  000.284  000.284: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+048.527  000.193  000.193: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+049.204  000.147  000.147: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+051.080  008.512  007.889: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+051.090  046.915  008.632: sourcing /home/itscarlosecp/.config/nvim/init.lua
+051.104  000.168: sourcing vimrc file(s)
+051.221  000.053  000.053: sourcing /usr/share/nvim/runtime/ftplugin.vim
+051.473  000.027  000.027: sourcing /usr/share/nvim/runtime/indent.vim
+052.933  000.663  000.663: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+053.424  000.310  000.310: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+053.450  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/health.vim
+053.554  000.093  000.093: sourcing /usr/share/nvim/runtime/plugin/man.vim
+054.029  000.187  000.187: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+054.106  000.539  000.352: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+054.266  000.147  000.147: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+054.720  000.440  000.440: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+054.876  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+054.882  000.136  000.127: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+055.022  000.125  000.125: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+055.070  000.022  000.022: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+055.270  000.161  000.161: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+055.461  000.170  000.170: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+055.529  000.021  000.021: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+055.750  000.203  000.203: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+091.151  035.301  035.301: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+091.321  001.794: loading plugins
+091.787  000.310  000.310: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+091.922  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+092.095  000.089  000.089: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+092.225  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+092.398  000.086  000.086: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+093.278  000.788  000.788: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+093.390  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+093.417  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+093.448  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+093.540  000.027  000.027: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+093.690  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+094.089  000.287  000.287: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+094.330  000.111  000.111: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+094.411  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+094.497  001.321: loading packages
+094.677  000.179: loading after plugins
+094.686  000.009: inits 3
+095.709  001.023: reading ShaDa
+096.485  000.129  000.129: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+096.894  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+100.277  000.378  000.378: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+100.653  004.404: opening buffers
+101.806  000.548  000.548: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+109.755  008.555: BufEnter autocommands
+109.759  000.004: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.013  000.013: --- NVIM STARTING ---
+000.630  000.617: locale set
+001.094  000.464: inits 1
+001.113  000.019: window checked
+001.118  000.005: parsing arguments
+001.267  000.149: expanding arguments
+001.325  000.058: inits 2
+002.098  000.773: init highlight
+002.100  000.002: waiting for UI
+003.766  001.666: done waiting for UI
+003.826  000.061: initialized screen early for UI
+009.825  000.423  000.423: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+010.138  000.778  000.354: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+017.374  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+017.404  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+017.436  000.020  000.020: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+017.921  000.011  000.011: sourcing /usr/share/nvim/runtime/filetype.vim
+018.058  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+018.354  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+018.377  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+018.407  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+018.431  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+033.251  015.657  015.586: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+033.267  015.811  000.154: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+033.680  023.506  007.651: sourcing /usr/share/nvim/runtime/filetype.vim
+033.801  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+034.554  000.341  000.341: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+035.500  000.424  000.424: sourcing /usr/share/nvim/runtime/scripts.vim
+035.715  026.413  001.354: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+038.835  000.115  000.115: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+044.928  000.177  000.177: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+045.861  000.151  000.151: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+047.380  008.756  008.313: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+047.389  043.417  008.248: sourcing /home/itscarlosecp/.config/nvim/init.lua
+047.401  000.158: sourcing vimrc file(s)
+047.487  000.045  000.045: sourcing /usr/share/nvim/runtime/ftplugin.vim
+047.758  000.034  000.034: sourcing /usr/share/nvim/runtime/indent.vim
+049.510  000.828  000.828: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+050.118  000.426  000.426: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+050.144  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/health.vim
+050.250  000.094  000.094: sourcing /usr/share/nvim/runtime/plugin/man.vim
+050.719  000.188  000.188: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+050.799  000.535  000.347: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+050.954  000.142  000.142: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+051.405  000.438  000.438: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+051.563  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+051.569  000.134  000.125: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+051.709  000.125  000.125: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+051.757  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+051.957  000.161  000.161: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+052.060  000.082  000.082: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+052.096  000.017  000.017: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+052.309  000.196  000.196: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+084.037  031.651  031.651: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+084.204  001.863: loading plugins
+084.602  000.243  000.243: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+084.731  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+084.909  000.091  000.091: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+085.038  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+085.210  000.086  000.086: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+086.147  000.817  000.817: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+086.258  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+086.284  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+086.315  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+086.407  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+086.579  000.034  000.034: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+086.947  000.256  000.256: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+087.171  000.106  000.106: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+087.247  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+087.334  001.349: loading packages
+087.514  000.180: loading after plugins
+087.523  000.009: inits 3
+088.541  001.018: reading ShaDa
+089.303  000.126  000.126: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+089.573  000.028  000.028: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+093.386  000.418  000.418: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+093.860  004.747: opening buffers
+095.284  000.598  000.598: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+104.397  009.940: BufEnter autocommands
+104.403  000.005: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- NVIM STARTING ---
+000.636  000.627: locale set
+000.984  000.347: inits 1
+000.998  000.015: window checked
+001.003  000.005: parsing arguments
+001.204  000.200: expanding arguments
+001.282  000.078: inits 2
+003.101  001.820: init highlight
+003.126  000.024: waiting for UI
+004.388  001.262: done waiting for UI
+004.413  000.026: initialized screen early for UI
+008.821  000.427  000.427: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+009.169  000.825  000.397: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+015.913  000.027  000.027: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+015.966  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+016.046  000.058  000.058: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+016.668  000.010  000.010: sourcing /usr/share/nvim/runtime/filetype.vim
+016.788  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+017.071  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+017.095  000.010  000.010: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+017.122  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+017.143  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+031.716  015.407  015.342: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+031.793  015.710  000.304: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+032.271  023.061  007.252: sourcing /usr/share/nvim/runtime/filetype.vim
+032.411  000.027  000.027: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+033.080  000.248  000.248: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+033.974  000.410  000.410: sourcing /usr/share/nvim/runtime/scripts.vim
+034.194  025.916  001.344: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+038.444  000.316  000.316: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+045.641  000.142  000.142: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+046.190  000.115  000.115: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+047.541  009.703  009.129: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+047.562  042.976  007.358: sourcing /home/itscarlosecp/.config/nvim/init.lua
+047.594  000.205: sourcing vimrc file(s)
+047.682  000.045  000.045: sourcing /usr/share/nvim/runtime/ftplugin.vim
+047.933  000.028  000.028: sourcing /usr/share/nvim/runtime/indent.vim
+049.938  000.825  000.825: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+050.453  000.334  000.334: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+050.479  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/health.vim
+050.759  000.268  000.268: sourcing /usr/share/nvim/runtime/plugin/man.vim
+051.233  000.187  000.187: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+051.309  000.534  000.347: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+051.470  000.147  000.147: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+051.929  000.445  000.445: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+052.087  000.009  000.009: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+052.093  000.137  000.128: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+052.233  000.125  000.125: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+052.279  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+052.482  000.162  000.162: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+052.610  000.106  000.106: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+052.651  000.018  000.018: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+053.073  000.402  000.402: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+086.719  033.563  033.563: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+086.913  002.147: loading plugins
+087.390  000.300  000.300: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+087.539  000.041  000.041: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+087.724  000.087  000.087: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+087.908  000.047  000.047: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+088.111  000.101  000.101: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+089.055  000.842  000.842: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+089.192  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+089.222  000.012  000.012: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+089.257  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+089.362  000.032  000.032: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+089.549  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+089.989  000.306  000.306: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+090.342  000.198  000.198: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+090.557  000.037  000.037: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+090.771  001.789: loading packages
+091.006  000.235: loading after plugins
+091.017  000.011: inits 3
+092.133  001.117: reading ShaDa
+093.122  000.135  000.135: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+093.403  000.029  000.029: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+096.484  000.337  000.337: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+096.782  004.147: opening buffers
+098.199  000.600  000.600: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+106.807  009.424: BufEnter autocommands
+106.812  000.005: editing files in windows
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.634  000.624: locale set
+001.077  000.443: inits 1
+001.103  000.026: window checked
+001.109  000.006: parsing arguments
+001.249  000.140: expanding arguments
+001.307  000.058: inits 2
+002.072  000.764: init highlight
+002.074  000.002: waiting for UI
+003.754  001.681: done waiting for UI
+003.815  000.061: initialized screen early for UI
+010.600  000.650  000.650: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+011.304  001.442  000.793: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+023.031  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+023.091  000.022  000.022: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+023.157  000.038  000.038: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.049  000.016  000.016: sourcing /usr/share/nvim/runtime/filetype.vim
+024.304  000.021  000.021: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+024.758  000.017  000.017: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+024.794  000.015  000.015: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+024.839  000.025  000.025: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+024.874  000.014  000.014: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+042.340  018.888  018.779: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/init.vim
+042.358  019.171  000.283: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+042.783  031.389  012.131: sourcing /usr/share/nvim/runtime/filetype.vim
+042.907  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/filetype.vim
+043.730  000.260  000.260: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/shebang.vim
+044.608  000.400  000.400: sourcing /usr/share/nvim/runtime/scripts.vim
+044.849  035.089  001.587: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+047.913  000.130  000.130: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+053.008  000.134  000.134: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+053.544  000.116  000.116: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+054.667  007.018  006.637: sourcing /home/itscarlosecp/.config/nvim/colors/oceanic.vim
+054.674  050.715  008.609: sourcing /home/itscarlosecp/.config/nvim/init.lua
+054.686  000.156: sourcing vimrc file(s)
+054.770  000.050  000.050: sourcing /usr/share/nvim/runtime/ftplugin.vim
+055.042  000.031  000.031: sourcing /usr/share/nvim/runtime/indent.vim
+056.579  000.573  000.573: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+057.002  000.265  000.265: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+057.027  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/health.vim
+057.121  000.084  000.084: sourcing /usr/share/nvim/runtime/plugin/man.vim
+057.526  000.162  000.162: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+057.594  000.462  000.299: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+057.732  000.126  000.126: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+058.135  000.390  000.390: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+058.271  000.008  000.008: sourcing /home/itscarlosecp/.local/share/nvim/rplugin.vim
+058.276  000.117  000.109: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+058.401  000.112  000.112: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+058.443  000.020  000.020: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+058.629  000.142  000.142: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+058.719  000.071  000.071: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+058.751  000.014  000.014: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+058.938  000.172  000.172: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+087.793  028.764  028.764: sourcing /home/itscarlosecp/.config/nvim/plugin/packer_compiled.lua
+088.086  001.998: loading plugins
+088.852  000.484  000.484: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.vim
+089.120  000.064  000.064: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lush.nvim/plugin/lush.vim
+089.508  000.190  000.190: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+089.735  000.064  000.064: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-lspinstall/plugin/lspinstall.vim
+090.099  000.186  000.186: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+091.804  001.512  001.512: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+091.966  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+092.011  000.016  000.016: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+092.062  000.026  000.026: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+092.230  000.036  000.036: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+092.410  000.040  000.040: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+092.928  000.374  000.374: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+093.224  000.137  000.137: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/plugin/polyglot.vim
+093.335  000.011  000.011: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/ftdetect/polyglot.vim
+093.509  002.251: loading packages
+093.794  000.285: loading after plugins
+093.806  000.013: inits 3
+094.976  001.170: reading ShaDa
+096.117  000.147  000.147: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align/plugin/easy_align.vim
+096.428  000.033  000.033: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua/plugin/colorizer.vim
+099.544  000.335  000.335: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-surround/plugin/surround.vim
+099.842  004.351: opening buffers
+100.991  000.527  000.527: sourcing /home/itscarlosecp/.local/share/nvim/site/pack/packer/start/vim-polyglot/autoload/polyglot/sleuth.vim
+110.701  010.332: BufEnter autocommands
+110.709  000.008: editing files in windows
