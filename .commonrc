@@ -7,15 +7,24 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
 alias ..="cd .."
-alias ls="ls --color=auto --group-directories-first"
-alias grep="grep --color=auto"
-alias la="ls -Aogh --group-directories-first"
+# alias ls="ls --color=auto --group-directories-first"
+# alias la="ls -Aogh --group-directories-first"
+alias ls="lsd --group-directories-first"
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 alias .files="cd $HOME/.dotfiles"
 alias dev="cd $HOME/dev"
 alias uba="cd $HOME/UBA"
+alias vim="nvim"
 alias nvim-perf="nvim --startuptime startup.log -c exit && tail -100 startup.log"
 
 count() {
 	find . -name "*.$1" | xargs wc -l
 }
+
+if neofetch_loc="$(type -p "neofetch")" || [[ -z "neofetch_loc" ]]; then 
+	neofetch
+fi

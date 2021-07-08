@@ -10,14 +10,8 @@ style = 'bold #CE9178'
 
 [git_status]
 format = '[$all_status$ahead_behind]($style) '
-conflicted = 'conflicted🚫'
-ahead = '⬆️'
-behind = '⬇️'
-diverged = '↕️'
-untracked = '❔'
-modified = '✏️'
-staged = '✔️'
-renamed = '📝'
-deleted = '❌'
 style = 'white'
 
+[nodejs]
+symbol = ' '
+style = 'bold #9ECE6A'

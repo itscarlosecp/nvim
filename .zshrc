@@ -11,5 +11,3 @@ if starship_loc="$(type -p "starship")" || [[ -z "starship_loc" ]]; then
 else
 	echo "Starship not installed"
 fi
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
