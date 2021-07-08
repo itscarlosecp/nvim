@@ -2,4 +2,6 @@ require "settings"
 require "plugins"
 require "mappings"
 
-vim.cmd("colorscheme tokyonight")
+require "_treesitter"
+vim.cmd("colorscheme oceanic")
+

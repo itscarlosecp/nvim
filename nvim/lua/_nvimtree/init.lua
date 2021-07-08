@@ -1,5 +1,29 @@
+vim.g.nvim_tree_ignore = {"node_modules", ".cache", "*.o"}
+vim.g.nvim_tree_follow = 1 -- Updates cursor position when entering a file
+vim.g.nvim_tree_tab_open = 1 -- Keep explorer open when switching tabs
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
--- default mappings
+
+vim.g.nvim_tree_icons = {
+  default = "",
+  symlink = "",
+  git = {
+    unstaged = "קּ",
+    staged = "",
+    unmerged = "",
+    renamed = "",
+    deleted = "",
+    untracked = "",
+    ignored = "◌"
+  },
+  folder = {
+    default = "",
+    open = "",
+    empty = "",
+    empty_open = "",
+    symlink = ""
+  }
+}
+
 vim.g.nvim_tree_bindings = {
 	{ key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
 	{ key = {"<2-RightMouse>", "<C-]>"},    cb = tree_cb("cd") },

@@ -12,19 +12,28 @@ local packer = require "packer"
 local use = packer.use
 
 local plugins = function()
-	-- TREESITTER
+	-- TREESITTER & POLYGLOT
 	use {
     "nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate"
   }
+	use "sheerun/vim-polyglot"
 
 	-- LSP
 	use "neovim/nvim-lspconfig"
 	use {
 		"kabouzeid/nvim-lspinstall",
-		event = "BufRead"
+		config = function()
+			require "_lsp"
+		end
 	}
-	
+
+	-- DIAGNOSTICS
+	use {
+		"glepnir/lspsaga.nvim",
+    event = "BufWinEnter"
+	}
+
 	-- AUTOCOMPLETION
 	use {
 		"hrsh7th/nvim-compe",
@@ -37,10 +46,16 @@ local plugins = function()
 	-- AUTOPAIRS
 	use {
     "windwp/nvim-autopairs",
+		event = "InsertEnter"
+  }
+
+	-- COLORIZER
+	use {
+    "norcalli/nvim-colorizer.lua",
     config = function()
-      require "nvim-autopairs".setup()
+      require "colorizer".setup()
     end,
-    event = "InsertEnter"
+    event = "BufWinEnter"
   }
 
 	-- NVIMTREE
@@ -57,7 +72,7 @@ local plugins = function()
 	-- TELESCOPE
 	use {
     "nvim-telescope/telescope.nvim",
-		config = function() 
+		config = function()
 			require "_telescope"
 		end,
     requires = {
@@ -66,11 +81,30 @@ local plugins = function()
     }
   }
 
-	-- PACKER
-	use "wbthomason/packer.nvim"
+	-- STATUSLINE
+	use {
+    "glepnir/galaxyline.nvim",
+    config = function()
+      require "_galaxyline"
+    end,
+  }
 
 	-- INTERFACE
+	use "rktjmp/lush.nvim"
 	use "folke/tokyonight.nvim"
+
+	-- UTILS
+	use {
+		"junegunn/vim-easy-align",
+    event = "BufWinEnter"
+	}
+	use {
+		"tpope/vim-surround",
+    event = "BufWinEnter"
+	}
+
+	-- PACKER
+	use "wbthomason/packer.nvim"
 end
 
 packer.startup(plugins)
