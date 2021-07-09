@@ -489,17 +489,20 @@ client.connect_signal(
   "focus",
   function(c)
     c.border_color = "#CECE9E"
+    c.border_width = 3
   end
 )
 client.connect_signal(
   "unfocus",
   function(c)
-    c.border_color = beautiful.border_normal
+    c.border_color = "#7aa2f7"
+    c.border_width = 3
   end
 )
 
 -- Autostart Applications
-awful.spawn.with_shell("xrandr --auto --output eDP-1 --right-of DP-1")
+awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
+awful.spawn.with_shell("xinput set-prop 13 322 1")
 
 -- Gaps within panes
 beautiful.useless_gap = 5
