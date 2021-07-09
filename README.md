@@ -13,10 +13,6 @@ These files are designed to work in UNIX-based operating systems such as Linux a
 
 My Neovim config is what makes me proud of this repo, and I bet you are here looking for it. You can either clone this entire repo or just run the following install command:
 
-```bash
-sh <(curl -s https://raw.githubusercontent.com/itscarlosecp/.dotfiles/main/scripts/nvim.sh)
-```
-
 ### Post-Install Setup
 You might need to run some commands after you finish updating your config files. 
 * **Plugin Manager:** This tool allows you to add, update or remove any plugin. The config file for these plugins is located at `nvim/lua/plugins.lua`. You can modify whatever you what, but keep in mind that some plugins have specific dependencies (detailed in this same file). My plugin manager of choice (the one included with my config) is [Packer](https://github.com/wbthomason/packer.nvim) but you can replace it with whichever plugin manager you like the most.
