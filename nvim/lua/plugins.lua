@@ -108,7 +108,7 @@ local plugins = function()
   -- UTILS
   use {
     "junegunn/vim-easy-align",
-    keys = "<Plug>(EasyAlign)"
+    cmd = "EasyAlign"
   }
   use {
     "mhartington/formatter.nvim",
