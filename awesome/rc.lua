@@ -342,13 +342,19 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "p", function() menubar.show() end,
 		{description = "show the menubar", group = "launcher"}),
 
-	-- CUSTOM BINDINGS
+-- Custom Keybinds
+	-- You can checkout which key is which with `xbindskeys --key`
 	-- Firefox
-	awful.key({ modkey }, "b",
-		function ()
-			awful.spawn.with_shell("/opt/firefox/firefox")
-		end,
-		{description = "open firefox developer edition", group = "awesome"})
+	awful.key({ modkey }, "b", function () awful.spawn.with_shell("/opt/firefox/firefox") end),
+
+	-- Volume Mixer
+	awful.key({}, "XF86AudioLowerVolume", function() os.execute("amixer set Master 5%-") end),
+	awful.key({}, "XF86AudioRaiseVolume", function() os.execute("amixer set Master 5%+") end),
+	awful.key({}, "XF86AudioMute", function() os.execute("amixer -D pulse set Master 1+ toggle") end),
+	-- Following requires `playerctl`
+	awful.key({}, "XF86AudioPlay", function() os.execute("playerctl play-pause") end),
+	awful.key({}, "XF86AudioPrev", function() os.execute("playerctl previous") end),
+	awful.key({}, "XF86AudioNext", function() os.execute("playerctl next") end)
 )
 
 clientkeys = gears.table.join(
@@ -587,9 +593,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart Applications
 awful.spawn.with_shell("xrandr --auto --output eDP-1 --right-of DP-1")
+awful.spawn.with_shell("nitrogen --restore")
 -- Active tap to click in touchpad
 awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
-awful.spawn.with_shell("nitrogen --restore")
 
+-- Gaps within panes
 beautiful.useless_gap = 5
+
 
