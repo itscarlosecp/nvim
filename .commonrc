@@ -1,15 +1,18 @@
 export EDITOR=nvim
-export BROWSER=wslview
+# export BROWSER=wslview
 export HISTCONTROL=ignoreboth
 
 # PATH exports
-export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
 alias ..="cd .."
-# alias ls="ls --color=auto --group-directories-first"
-# alias la="ls -Aogh --group-directories-first"
-alias ls="lsd"
+
+if lsd_loc="$(type -p "lsd")" || [[ -z "lsd_loc" ]]; then 
+	alias ls="lsd"
+else
+	alias ls="ls --color=auto --group-directories-first"
+fi
+
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
@@ -25,6 +28,3 @@ count() {
 	find . -name "*.$1" | xargs wc -l
 }
 
-if neofetch_loc="$(type -p "neofetch")" || [[ -z "neofetch_loc" ]]; then 
-	# neofetch
-fi
