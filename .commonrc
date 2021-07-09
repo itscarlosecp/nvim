@@ -9,7 +9,7 @@ export PATH=/usr/local/go/bin:$PATH
 alias ..="cd .."
 # alias ls="ls --color=auto --group-directories-first"
 # alias la="ls -Aogh --group-directories-first"
-alias ls="lsd --group-directories-first"
+alias ls="lsd"
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
@@ -26,5 +26,5 @@ count() {
 }
 
 if neofetch_loc="$(type -p "neofetch")" || [[ -z "neofetch_loc" ]]; then 
-	neofetch
+	# neofetch
 fi

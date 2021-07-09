@@ -31,7 +31,10 @@ local plugins = function()
 	}
 
 	-- DIAGNOSTICS
-	use "glepnir/lspsaga.nvim"
+	use {
+		"glepnir/lspsaga.nvim",
+    event = "BufWinEnter"
+	}
 
 	-- AUTOCOMPLETION
 	use {
@@ -86,20 +89,24 @@ local plugins = function()
     config = function()
       require "_lualine"
     end,
+    event = "BufWinEnter"
   }
 
+	-- TERMINAL
+	use {
+		"numtostr/FTerm.nvim",
+		config = function()
+			require "_fterm"
+		end
+	}
+
 	-- INTERFACE
-	use "rktjmp/lush.nvim"
 	use "folke/tokyonight.nvim"
 
 	-- UTILS
 	use {
 		"junegunn/vim-easy-align",
-    event = "BufWinEnter"
-	}
-	use {
-		"tpope/vim-surround",
-    event = "BufWinEnter"
+		cmd = "EasyAlign"
 	}
 
 	-- PACKER

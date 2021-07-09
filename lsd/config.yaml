@@ -71,7 +71,7 @@ indicators: false
 # Which layout to use. "oneline" might be a bit confusing here and should be
 # called "one-per-line". It might be changed in the future.
 # Possible values: grid, tree, oneline
-layout: oneline
+layout: grid
 
 # == Recursion ==
 recursion:
@@ -98,7 +98,7 @@ sorting:
   # Whether to group directories together and where.
   # When "classic" is set, this is set to "none".
   # Possible values: first, last, none
-  dir-grouping: none
+  dir-grouping: first
 
 # == No Symlink ==
 # Whether to omit showing symlink targets
