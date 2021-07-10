@@ -11,10 +11,6 @@ local hotkeys_popup = require "awful.hotkeys_popup"
 -- when client with a matching name is opened:
 require "awful.hotkeys_popup.keys"
 
--- Load Debian menu entries
-local debian = require "debian.menu"
-local has_fdo, freedesktop = pcall(require, "freedesktop")
-
 -- Handle runtime errors after startup
 do
   local in_error = false
@@ -514,10 +510,9 @@ client.connect_signal(
 )
 
 -- Autostart Applications
-awful.spawn.with_shell("xrandr --auto --output eDP-1 --right-of DP-1")
+awful.spawn.with_shell("xrandr --auto --output eDP1 --right-of DP1")
 awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
 awful.spawn.with_shell("xinput set-prop 13 322 1")
-awful.spawn.with_shell("$HOME/.config/polybar/launch.sh")
 
 -- Gaps within panes
 beautiful.useless_gap = 5
