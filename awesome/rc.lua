@@ -229,14 +229,14 @@ globalkeys =
     {},
     "XF86AudioLowerVolume",
     function()
-      awful.spawn("amixer set Master 7%-")
+      awful.spawn("amixer -D pulse sset Master 5%-")
     end
   ),
   awful.key(
     {},
     "XF86AudioRaiseVolume",
     function()
-      awful.spawn("amixer set Master 7%+")
+      awful.spawn("amixer -D pulse sset Master 5%+")
     end
   ),
   awful.key(
