@@ -1,5 +1,5 @@
 export EDITOR=nvim
-# export BROWSER=wslview
+export TERM=kitty
 export HISTCONTROL=ignoreboth
 
 # PATH exports
