@@ -10,7 +10,6 @@ local hotkeys_popup = require "awful.hotkeys_popup"
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require "awful.hotkeys_popup.keys"
-local bar = require "bar"
 
 -- Load Debian menu entries
 local debian = require "debian.menu"
@@ -230,14 +229,14 @@ globalkeys =
     {},
     "XF86AudioLowerVolume",
     function()
-      awful.spawn("amixer set Master 5%-")
+      awful.spawn("amixer set Master 7%-")
     end
   ),
   awful.key(
     {},
     "XF86AudioRaiseVolume",
     function()
-      awful.spawn("amixer set Master 5%+")
+      awful.spawn("amixer set Master 7%+")
     end
   ),
   awful.key(
@@ -323,11 +322,17 @@ clientkeys =
     {modkey},
     "n",
     function(c)
-      -- The client currently has the input focus, so it cannot be
-      -- minimized, since minimized clients can't have the focus.
       c.minimized = true
     end,
     {description = "minimize", group = "client"}
+  ),
+  awful.key(
+    {modkey},
+    "m",
+    function(c)
+      c.maximized = true
+    end,
+    {description = "maximize", group = "client"}
   )
 )
 
