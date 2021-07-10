@@ -2,17 +2,15 @@
 local gears = require "gears"
 local awful = require "awful"
 require "awful.autofocus"
--- Widget and layout library
-local wibox = require "wibox"
 -- Theme handling library
 local beautiful = require "beautiful"
 -- Notification library
 local naughty = require "naughty"
-local menubar = require "menubar"
 local hotkeys_popup = require "awful.hotkeys_popup"
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require "awful.hotkeys_popup.keys"
+local bar = require "bar"
 
 -- Load Debian menu entries
 local debian = require "debian.menu"
@@ -78,6 +76,9 @@ screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(
   function(s)
+    -- Menubar
+    -- bar(s)
+
     -- Wallpaper
     set_wallpaper(s)
 
@@ -215,13 +216,13 @@ globalkeys =
     {description = "show the menubar", group = "launcher"}
   ),
   -- Custom Keybinds
-  -- You can checkout which key is which with `xbindskeys --key`
+  -- You can checkout which key is which with `xbindkeys --key`
   -- Firefox
   awful.key(
     {modkey},
     "b",
     function()
-      awful.spawn.with_shell("/opt/firefox/firefox")
+      awful.spawn("/opt/firefox/firefox")
     end
   ),
   -- Volume Mixer
@@ -229,21 +230,21 @@ globalkeys =
     {},
     "XF86AudioLowerVolume",
     function()
-      os.execute("amixer set Master 5%-")
+      awful.spawn("amixer set Master 5%-")
     end
   ),
   awful.key(
     {},
     "XF86AudioRaiseVolume",
     function()
-      os.execute("amixer set Master 5%+")
+      awful.spawn("amixer set Master 5%+")
     end
   ),
   awful.key(
     {},
     "XF86AudioMute",
     function()
-      os.execute("amixer -D pulse set Master 1+ toggle")
+      awful.spawn("amixer -D pulse set Master 1+ toggle")
     end
   ),
   -- Following requires `playerctl`
@@ -251,21 +252,28 @@ globalkeys =
     {},
     "XF86AudioPlay",
     function()
-      os.execute("playerctl play-pause")
+      awful.spawn("playerctl play-pause")
     end
   ),
   awful.key(
     {},
     "XF86AudioPrev",
     function()
-      os.execute("playerctl previous")
+      awful.spawn("playerctl previous")
     end
   ),
   awful.key(
     {},
     "XF86AudioNext",
     function()
-      os.execute("playerctl next")
+      awful.spawn("playerctl next")
+    end
+  ),
+  awful.key(
+    {},
+    "Print",
+    function()
+      awful.spawn("gnome-screenshot -c -a")
     end
   )
 )
@@ -503,6 +511,7 @@ client.connect_signal(
 -- Autostart Applications
 awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
 awful.spawn.with_shell("xinput set-prop 13 322 1")
+awful.spawn.with_shell("$HOME/.config/polybar/launch.sh")
 
 -- Gaps within panes
 beautiful.useless_gap = 5
