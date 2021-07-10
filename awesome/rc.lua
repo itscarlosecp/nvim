@@ -509,6 +509,7 @@ client.connect_signal(
 )
 
 -- Autostart Applications
+awful.spawn.with_shell("xrandr --auto --output eDP-1 --right-of DP-1")
 awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
 awful.spawn.with_shell("xinput set-prop 13 322 1")
 awful.spawn.with_shell("$HOME/.config/polybar/launch.sh")
