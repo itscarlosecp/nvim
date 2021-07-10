@@ -472,6 +472,8 @@ client.connect_signal("unfocus", function(c)
 end)
 
 -- Custom Config
+-- nmcli dev wifi
+-- sudo nmcli dev wifi connect <network-id> password <password>
 
 -- Autostart Applications
 -- Program required: xorg-xrandr
