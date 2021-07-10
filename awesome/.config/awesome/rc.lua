@@ -510,9 +510,17 @@ client.connect_signal(
 )
 
 -- Autostart Applications
+-- Program required: xorg-xrandr
+-- `xrandr -q`
 awful.spawn.with_shell("xrandr --auto --output eDP1 --right-of DP1")
+
+-- Natural Scrolling
+-- Program required: xorg-xinput
+-- `xinput list`
+-- `xinput list-props <device-id>`
+-- `xinput set-prop <devicde-id> <prop-id> <prop-value>`
+awful.spawn.with_shell("xinput set-prop 12 320 1")
 awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
-awful.spawn.with_shell("xinput set-prop 13 322 1")
 
 -- Gaps within panes
 beautiful.useless_gap = 5
