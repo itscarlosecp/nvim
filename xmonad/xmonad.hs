@@ -4,6 +4,7 @@ import Data.Monoid
 import System.Exit
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Run
+import XMonad.Hooks.ManageDocks
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -232,8 +233,10 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
+	spawnOnce "xrandr --auto --output eDP-1 --right-of DP-1"
 	spawnOnce "nitrogen --restore &" 
 	spawnOnce "picom &" 
+	spawnOnce "xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 0"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -242,7 +245,7 @@ myStartupHook = do
 --
 main = do
 	xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/.xmobarrc"
-	xmonad defaults
+	xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
