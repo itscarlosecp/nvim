@@ -359,7 +359,35 @@ for i = 1, 9 do
 					end
 				end
 			end,
-			{description = "toggle focused client on tag #" .. i, group = "tag"})
+			{description = "toggle focused client on tag #" .. i, group = "tag"}),
+
+		-- Color picker
+		awful.key({ modkey, "Shift" }, "c", function()
+			awful.spawn("pick-colour-picker")
+		end),
+
+		-- Xbindkeys
+		awful.key({}, "XF86AudioMute", "", function()
+			awful.spawn("amixer -D pulse set Master 1+ toggle")
+		end),
+		awful.key({}, "XF86AudioRaiseVolume", function()
+			awful.spawn("amixer -D pulse set Master 5%+")
+		end),
+		awful.key({}, "XF86AudioLowerVolume", function()
+			awful.spawn("amixer -D pulse set Master 5%-")
+		end),
+		awful.key({}, "XF86AudioPlay", function()
+			awful.spawn("playerctl play-pause")
+		end),
+		awful.key({}, "XF86AudioNext", function()
+			awful.spawn("playerctl next")
+		end),
+		awful.key({}, "XF86AudioPrev", function()
+			awful.spawn("playerctl previous")
+		end),
+		awful.key({}, "Print", function()
+			awful.spawn("gnome-screenshot --interactive")
+		end)
 	)
 end
 
@@ -396,6 +424,9 @@ awful.rules.rules = {
 		}
 	},
 
+	{ rule = { name = "pick-colour-picker" },
+		properties = { floating = true } },
+
 	-- Floating clients.
 	{ rule_any = {
 		instance = {
@@ -413,7 +444,8 @@ awful.rules.rules = {
 			"Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
 			"Wpa_gui",
 			"veromix",
-			"xtightvncviewer"},
+			"xtightvncviewer",
+		},
 
 		-- Note that the name property shown in xprop might be set slightly after creation of the client
 		-- and the name shown there might not match defined rules here.
