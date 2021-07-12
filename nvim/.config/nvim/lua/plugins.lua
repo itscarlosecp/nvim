@@ -104,6 +104,7 @@ local plugins = function()
 
   -- INTERFACE
   use "folke/tokyonight.nvim"
+	use "projekt0n/github-nvim-theme"
 
   -- UTILS
   use {

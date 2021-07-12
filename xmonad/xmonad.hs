@@ -236,7 +236,7 @@ myStartupHook = do
 	spawnOnce "xrandr --auto --output eDP-1 --right-of DP-1"
 	spawnOnce "nitrogen --restore &" 
 	spawnOnce "picom &" 
-	spawnOnce "xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 0"
+	spawnOnce "xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 1"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
