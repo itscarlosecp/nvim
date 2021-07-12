@@ -1,7 +1,0 @@
-
-xmonad.hs:237:1: warning: [-Wtabs]
-    Tab character found here, and in five further locations.
-    Please use spaces instead.
-    |
-237 |         spawnOnce "xrandr --auto --output eDP-1 --right-of DP-1"
-    | ^^^^^^^^
