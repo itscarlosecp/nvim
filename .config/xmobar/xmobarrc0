@@ -6,7 +6,7 @@ Config { font = "xft:Ubuntu:weight=bold:pixelsize=13:antialias=true"
        , bgColor = "#1D2125"
        , fgColor = "#d1d5da"
        , alpha = 255
-       , position = { xpos = 1920, ypos = 0, width = 1920, height = 32 }
+       , position = Top 
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
@@ -26,7 +26,7 @@ Config { font = "xft:Ubuntu:weight=bold:pixelsize=13:antialias=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%UnsafeStdinReader% %cpu% }\
+       , template = "Main Monitor %cpu% }\
                     \{ <fc=#ee9a00>%date%</fc>"
        }
 
