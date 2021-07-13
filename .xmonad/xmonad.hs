@@ -141,6 +141,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
+
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
 --
@@ -171,6 +172,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 
+-- avoidStructs enabled always-on-top menubar
 myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
@@ -246,6 +248,10 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
+    -- Temporal: Until I learn a bit of Haskell
+    -- Custom keybindings
+    -- additionalKeysP [ ("M-<XF86AudioRaiseVolume>", spawn "amixer -D pulse set Master 5%+") ]
+
     -- Spawn xmobars for my different monitors
 	xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc0"
 	xmproc <- spawnPipe "xmobar -x 1 $HOME/.config/xmobar/xmobarrc1"
