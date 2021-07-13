@@ -24,7 +24,3 @@ vim.cmd("nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>")
 vim.cmd("nnoremap <silent> K  <cmd>Lspsaga hover_doc<CR>")
 vim.cmd("nnoremap <silent> ]g <cmd>Lspsaga diagnostic_jump_prev<CR>")
 vim.cmd("nnoremap <silent> [g <cmd>Lspsaga diagnostic_jump_next<CR>")
-
--- BUFFERLINE
-map("n", "[b", ":BufferLineCycleNext<CR>", silent)
-map("n", "b]", ":BufferLineCyclePrev<CR>", silent)

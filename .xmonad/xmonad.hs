@@ -2,19 +2,45 @@
 import XMonad
 import Data.Monoid
 import System.Exit
-import XMonad.Util.SpawnOnce
-import XMonad.Util.Run
+import XMonad.Util.SpawnOnce -- Provides: spawnOnce
+import XMonad.Util.Run       -- Provides: spawnPipe
 import XMonad.Hooks.ManageDocks
-import XMonad.Layout.Gaps
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
 -- GLOBALS
--- Default Terminal Emulator
-myTerminal      = "kitty"
+-- INTERFACE
+-- Default Font
+myFont :: String
+myFont = "xft:Ubuntu:weight=bold:pixelsize=13:antialias=true:hinting=true"
 
--- Whether focus follows the mouse pointer.
+-- Emoji Font
+myEmojiFont :: String
+myEmojiFont = "xft:CaskaydiaCove Nerd Font:pixelsize=11:antialias=true:hinting=true"
+
+-- COLORS
+-- Borders colors 
+myNormalBorderColor  = "#dddddd"
+myFocusedBorderColor = "#ff0000"
+
+-- Border Width for windows 
+-- Active/Inactive borders (Not gaps width)
+-- :: Dimension is a Xmonad Type
+myBorderWidth :: Dimension
+myBorderWidth = 2
+
+-- APPLICATIONS
+-- Default Terminal Emulator
+myTerminal :: String
+myTerminal = "kitty"
+
+-- Default Browser
+myBrowser :: String
+myBrowser = "firefox-developer-edition"
+
+-- WINDOWS
+-- Focus on cursor hover 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
 
@@ -22,31 +48,46 @@ myFocusFollowsMouse = True
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
 
--- Width of the window border in pixels.
---
-myBorderWidth   = 2
-
+-- KEYBINDS
 -- Modkey
-myModMask       = mod4Mask
+-- :: KeyMask is a Xmonad Type
+myModMask :: KeyMask
+myModMask = mod4Mask -- Super Key
 
--- The default number of workspaces (virtual screens) and their names.
--- By default we use numeric strings, but any string may be used as a
--- workspace name. The number of workspaces is determined by the length
--- of this list.
---
--- A tagging example:
---
--- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
---
+myAltMask :: KeyMask
+myAltMask = mod1Mask -- Alt Key
+
+-- WORKSPACES
+-- Workspaces names
+-- Length can be changed
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
--- Border colors for unfocused and focused windows, respectively.
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+-- AUTOSTART
+-- Run programs when XMonad starts
+myStartupHook :: X ()
+myStartupHook = do
+	spawnOnce "nitrogen --restore &" 
+	spawnOnce "picom --experimental-backends &" 
+	spawnOnce "xrandr --auto --output eDP-1 --right-of DP-1 &"
+	spawnOnce "xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 1 &"
 
-------------------------------------------------------------------------
+-- LAYOUTS
+-- avoidStructs enabled always-on-top menubar
+myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
+  where
+     -- default tiling algorithm partitions the screen into two panes
+     tiled   = Tall nmaster delta ratio
+
+     -- The default number of windows in the master pane
+     nmaster = 1
+
+     -- Default proportion of screen occupied by master pane
+     ratio   = 1/2
+
+     -- Percent of screen to increment by when resizing panes
+     delta   = 3/100
+
 -- Key bindings. Add, modify or remove key bindings here.
---
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
@@ -141,10 +182,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
-
-------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
---
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- mod-button1, Set the window to floating mode and move by dragging
@@ -162,31 +200,6 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     ]
 
 ------------------------------------------------------------------------
--- Layouts:
-
--- You can specify and transform your layouts by modifying these values.
--- If you change layout bindings be sure to use 'mod-shift-space' after
--- restarting (with 'mod-q') to reset your layout state to the new
--- defaults, as xmonad preserves your old layout settings by default.
---
--- The available layouts.  Note that each layout is separated by |||,
--- which denotes layout choice.
-
--- avoidStructs enabled always-on-top menubar
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
-  where
-     -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
-
-     -- The default number of windows in the master pane
-     nmaster = 1
-
-     -- Default proportion of screen occupied by master pane
-     ratio   = 1/2
-
-     -- Percent of screen to increment by when resizing panes
-     delta   = 3/100
-
 ------------------------------------------------------------------------
 -- Window rules:
 
@@ -236,11 +249,6 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = do
-	spawnOnce "xrandr --auto --output eDP-1 --right-of DP-1"
-	spawnOnce "nitrogen --restore &" 
-	spawnOnce "picom &" 
-	spawnOnce "xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 1"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
