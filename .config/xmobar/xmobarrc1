@@ -1,0 +1,32 @@
+-- Xmobar for main monitor (laptop)
+Config { font = "xft:Ubuntu:weight=bold:pixelsize=14:antialias=true"
+       , additionalFonts = [ "xft:CaskaydiaCove Nerd Font:pixelsize=11:antialias=true" ]
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "#1D2125"
+       , fgColor = "#d1d5da"
+       , position = { xpos = 0, ypos = 0, width = 1920, height = 32 }
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ 
+			 							-- Time and Date
+										Run Date "%b %d %Y - (%H:%M)" "date" 50
+										-- Cpu usage in percent
+									, Run Cpu ["-t", "cpu: (<total>%)", "-H", "50", "--high", "red"] 20
+										-- Workspaces
+									, Run UnsafeStdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%UnsafeStdinReader% %cpu% }\
+                    \{ <fc=#ee9a00>%date%</fc>"
+       }
+

@@ -1,6 +1,6 @@
 startup.log
-nvim/.config/nvim/plugin/
+.config/nvim/plugin/
 
-xmonad/.xmonad/xmonad-x86_64-linux
-xmonad/.xmonad/xmonad.errors
-xmonad/.xmonad/xmonad.hi
+.xmonad/xmonad-x86_64-linux
+.xmonad/xmonad.errors
+.xmonad/xmonad.hi
