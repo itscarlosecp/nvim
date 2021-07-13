@@ -5,8 +5,8 @@ local silent = {noremap = true, silent = true}
 vim.g.mapleader = " "
 map("n", "<Leader>e", ":NvimTreeToggle<CR>", noremap)
 map("n", "<Leader>ff", ":Telescope find_files hidden=true<CR>", silent)
-map("n", "<C-x>", "<CMD>lua require 'FTerm'.toggle()<CR>", silent)
-map("t", "<C-x>", "<CMD>lua require 'FTerm'.toggle()<CR>", silent)
+map("n", "<C-t>", "<CMD>lua require 'FTerm'.toggle()<CR>", silent)
+map("t", "<C-t>", "<CMD>lua require 'FTerm'.toggle()<CR>", silent)
 
 -- PANE MOMVEMENT
 map("n", "<C-J>", "<C-W><C-J>", noremap)
