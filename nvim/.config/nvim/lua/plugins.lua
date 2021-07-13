@@ -22,6 +22,11 @@ local plugins = function()
     opt = true,
     run = ":TSUpdate"
   }
+  use {
+    "sheerun/vim-polyglot",
+    event = "BufRead",
+    opt = true,
+  }
 
   -- LSP
   use "neovim/nvim-lspconfig"
