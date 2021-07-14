@@ -4,6 +4,7 @@ export HISTCONTROL=ignoreboth
 
 # PATH exports
 export PATH=/usr/local/go/bin:$PATH
+export PATH=$HOME/.emacs.d/bin:$PATH
 
 alias ..="cd .."
 
