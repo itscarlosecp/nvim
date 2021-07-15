@@ -10,6 +10,7 @@ alias ..="cd .."
 
 if lsd_loc="$(type -p "lsd")" || [[ -z "lsd_loc" ]]; then 
 	alias ls="lsd"
+	echo "LSD not installed"
 else
 	alias ls="ls --color=auto --group-directories-first"
 fi
