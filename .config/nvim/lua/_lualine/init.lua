@@ -4,7 +4,7 @@ require "lualine".setup {
 		-- theme = "tokyonight",
 		theme = "github",
 		section_separators = {'', ''},
-		component_separators = {'', ''},
+		component_separators = {'', ''},
 		disabled_filetypes = {}
 	},
 	sections = {
