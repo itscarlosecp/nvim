@@ -7,6 +7,7 @@ import XMonad.Util.Run       -- Provides: spawnPipe
 import XMonad.Hooks.ManageDocks
 
 import XMonad.Layout.Gaps
+import XMonad.Layout.Spacing
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -75,7 +76,10 @@ myStartupHook = do
 
 -- LAYOUTS
 -- avoidStructs enabled always-on-top menubar
-myLayout = avoidStruts (gaps [(U,12), (R,12), (D, 12), (L, 12)] $ tiled ||| Mirror tiled ||| Full)
+-- gaps -> only arrow screen borders
+-- spacing -> arrow windows
+mySpacing = 10
+myLayout = avoidStruts (gaps [(U, mySpacing), (R,mySpacing), (D, mySpacing), (L, mySpacing)] $ tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
