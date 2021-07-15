@@ -6,6 +6,8 @@ import XMonad.Util.SpawnOnce -- Provides: spawnOnce
 import XMonad.Util.Run       -- Provides: spawnPipe
 import XMonad.Hooks.ManageDocks
 
+import XMonad.Layout.Gaps
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -73,7 +75,7 @@ myStartupHook = do
 
 -- LAYOUTS
 -- avoidStructs enabled always-on-top menubar
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
+myLayout = avoidStruts (gaps [(U,12), (R,12), (D, 12), (L, 12)] $ tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
