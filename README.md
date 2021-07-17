@@ -2,29 +2,38 @@
 
 Welcome to my dotfiles, a repo where I store my development environment configurations. You can blindly copy these files if you wanted to, but I strongly suggest you use them as inspiration to build your dotfiles (you can learn a lot from setting up your personal configs).
 
-![dotfiles](https://user-images.githubusercontent.com/47466248/124402458-32a18600-dce5-11eb-8a53-c837d9a61849.png)
+![dotfiles](https://user-images.githubusercontent.com/47466248/126041864-a86781f3-f756-4254-842b-7770074bded6.png)
 
-## Requirements
+## Details
 
-These files are designed to work in UNIX-based operating systems such as Linux and MacOS. If you are using Windows as your desktop OS you can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) as well. If you are using my Neovim config, version `0.5` or superior is required.
+These files are designed to work in UNIX-based operating systems such as Linux and MacOS. If you are using Windows as your desktop OS you can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) as well.
+
+> ⚠️ Most of my folder structure is meant to be used with [GNU Stow](https://www.gnu.org/software/stow/). That's why you find nested folders inside some my dotfiles. To get to the actual config of the program you are looking for, you may have to navigate deeper into the file structure (ex.: `nvim/.config/nvim`, where the folder that actually contains my neovim config is the last `nvim` folder).
+
+- **Operating System**
+  - [ArcoLinuxB](https://www.arcolinux.info/downloads/)
+- **Window Manager**
+  - [AwesomeWM](https://github.com/awesomeWM/awesome)
+- **Text Editor**
+  - [Neovim](https://github.com/neovim/neovim)
+  - [Vim](https://github.com/vim/vim) (when Neovim not available)
+  - [VSCode](https://github.com/microsoft/vscode) (no longer using)
+- **Terminal Emulator**
+  - [Kitty](https://github.com/kovidgoyal/kitty)
+  - [Windows Terminal](https://github.com/microsoft/terminal) (when using Windows)
+- **Shell**
+  - Bash
+  - [Starship Prompt](https://github.com/starship/starship)
 
 ## Neovim
-### Installation
+> ⚠️ In order to use my Neovim configuration files you need to have version `0.5` or greater installed.
 
-My Neovim config is what makes me proud of this repo, and I bet you are here looking for it. You can either clone this entire repo or just run the following install command:
+### Dependencies
+- [GCC](https://gcc.gnu.org/): Required by [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) to install and compile language parsers (to improve syntax highlighting).
 
-### Post-Install Setup
-You might need to run some commands after you finish updating your config files. 
-* **Plugin Manager:** This tool allows you to add, update or remove any plugin. The config file for these plugins is located at `nvim/lua/plugins.lua`. You can modify whatever you what, but keep in mind that some plugins have specific dependencies (detailed in this same file). My plugin manager of choice (the one included with my config) is [Packer](https://github.com/wbthomason/packer.nvim) but you can replace it with whichever plugin manager you like the most.
-* **Autocomplete:** You will have to install every new language server you would like to use (non are included). These servers provide Neovim autocompletion and error diagnostic capabilities. To install a new language server run: `:LspInstall <language-name>` from the vim command-line. Example: `:LspInstall python`.
-* **Formatting:** Autoformatting for any filetype is optional. The way I set this up is using [formatter.nvim](https://github.com/mhartington/formatter.nvim) and then installing each formatter individually (details on how to install them in the `nvim/lua/_formatter/init.lua` file. Example: `npm i -g prettier`). I consider this way to be highly customizable, but if you don't what to keep installing independent formatters, you can replace this plugin with other autoformat plugin with nice defaults, such as [vim-autoformat](https://github.com/vim-autoformat/vim-autoformat), which includes formatters for pretty much whatever language you could imagine.
+### Configuration
+- **Plugins:** Plugins are managed by [Packer](https://github.com/wbthomason/packer.nvim). To install the plugins after downloading my config files, you must run `:PackerInstall` or `:PackerSync`. You can find the plugins list inside the `plugins.lua` file inside the `nvim` config folder. If you make some changes to this file, you will have to compile the plugins again. Find more information about this in the official documentation.
 
-### Features
-#### LSP (Language Server Protocol)
-Since version `0.5` Neovim provides a native way of consuming language servers that use the [LSP Standard](https://microsoft.github.io/language-server-protocol/) (the same that most editors use). This allows you to use the (literally) same autocompletion tools that you would encounter in editors such as VSCode. 
+- **Autocompletion:** Intellisense and autocompletion are provided using the official [Neovim LSP API](https://github.com/neovim/nvim-lspconfig). By default, no language servers are installed, you will have to install them manually using [LSPInstall](https://github.com/kabouzeid/nvim-lspinstall) (ex.: `:LspInstall python`).
 
-#### Fast Files Explorer and Fuzzy Finder
-Both the file explorer and fuzzy finder (tool used to search for a specific file) I use are highly performant plugins written in Lua with speed and easy-configurability in mind. You can check them out here: [NvimTree Lua](https://github.com/kyazdani42/nvim-tree.lua) (file explorer), [Telescope](https://github.com/nvim-telescope/telescope.nvim) (fuzzy finder).
-
-#### Syntax Highlighting
-If you ever tried to use Vim without configuration it might have seem like you couldn't get nice support for syntax highlighting, even when trying to get help from some well-known plugins. Neovim `0.5` introduces [Tree-sitter](https://github.com/tree-sitter/tree-sitter) support, an incremental parsing generator that allows you to customize your syntax trees as much as you would like. I provide some of my own colorschemes with my config, but you can install any colorscheme you would like (with or without Tree-sitter support), you can find some of my favorites [here](https://github.com/rockerBOO/awesome-neovim#colorscheme).
+- **Formatting:** File auto-formatting is managed by external formatters. This allows you to use any formatting programm you want externally. Formatters can be configured in the `nvim/lua/_formatter/init.lua` file. Remember to add the filetype you want at the autocommands section at the end of this file.
