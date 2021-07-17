@@ -517,7 +517,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart
-awful.spawn("xrandr --auto --output eDP-1 --right-of DP-1")
-awful.spawn("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 1")
-awful.spawn("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
+awful.spawn.with_shell("xrandr --auto --output eDP-1 --right-of DP-1")
+awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 1")
+awful.spawn.with_shell("xinput set-prop 'DELL07EC:00 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1")
 
