@@ -1,13 +1,16 @@
+-- Global Settings
 vim.g.nvim_tree_ignore = {"node_modules", ".cache", "*.o"}
-vim.g.nvim_tree_follow = 0
+vim.g.nvim_tree_follow = 1 -- (Automaitcally) show current file in explorer
 vim.g.nvim_tree_tab_open = 1 -- Keep explorer open when switching tabs
-local tree_cb = require "nvim-tree.config".nvim_tree_callback
 
+-- Default Icons
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = ""
 }
 
+-- Keybindings
+local tree_cb = require "nvim-tree.config".nvim_tree_callback
 vim.g.nvim_tree_bindings = {
   {key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit")},
   {key = {"<2-RightMouse>", "<C-]>"}, cb = tree_cb("cd")},
@@ -19,7 +22,6 @@ vim.g.nvim_tree_bindings = {
   {key = "P", cb = tree_cb("parent_node")},
   {key = "<BS>", cb = tree_cb("close_node")},
   {key = "<S-CR>", cb = tree_cb("close_node")},
-  {key = "<Tab>", cb = tree_cb("preview")},
   {key = "K", cb = tree_cb("first_sibling")},
   {key = "J", cb = tree_cb("last_sibling")},
   {key = "I", cb = tree_cb("toggle_ignored")},

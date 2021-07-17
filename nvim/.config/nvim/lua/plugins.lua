@@ -90,11 +90,18 @@ local plugins = function()
     }
   }
 
-  -- STATUSLINE
+  -- STATUSLINE && TABLINE
   use {
     "hoob3rt/lualine.nvim",
     config = function()
       require "_lualine"
+    end,
+    event = "BufWinEnter"
+  }
+  use {
+    "romgrk/barbar.nvim",
+    config = function()
+      require "_barbar"
     end,
     event = "BufWinEnter"
   }
@@ -108,7 +115,7 @@ local plugins = function()
   }
 
   -- INTERFACE
-  use "folke/tokyonight.nvim"
+  -- use "folke/tokyonight.nvim"
 	use "projekt0n/github-nvim-theme"
 
   -- UTILS
@@ -116,12 +123,12 @@ local plugins = function()
     "junegunn/vim-easy-align",
     cmd = "EasyAlign"
   }
-  use {
-    "mhartington/formatter.nvim",
-    config = function()
-      require "_formatter"
-    end
-  }
+  -- use {
+    -- "mhartington/formatter.nvim",
+    -- config = function()
+      -- require "_formatter"
+    -- end
+  -- }
 
   -- PACKER
   use {"wbthomason/packer.nvim", opt = true}

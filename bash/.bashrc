@@ -1,3 +1,4 @@
+### GLOBALS ###
 # Variables exports
 export EDITOR=nvim
 export TERM=kitty
@@ -7,8 +8,15 @@ export HISTCONTROL=ignoreboth
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-# Aliases
-# File navigation
+# Vi Mode
+set -o vi
+
+### ALIASES ###
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+
+# LS 
 if lsd_loc="$(type -p "lsd")" || [[ -z "lsd_loc" ]]; then 
 	alias ls="lsd"
 else
@@ -20,16 +28,16 @@ alias .files="cd $HOME/.dotfiles"
 alias dev="cd $HOME/dev"
 alias uba="cd $HOME/UBA"
 
-# Application specifics
+# APPLICATIONS 
 # Neovim
 alias vim="nvim"
 alias nvim-perf="nvim --startuptime startup.log -c exit && tail -100 startup.log"
 
-# This load NVM
+# Node Version Manager (NVM) 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
-# This loads starship
+# Starship Prompt 
 if starship_loc="$(type -p "starship")" || [[ -z "starship_loc" ]]; then 
 	eval "$(starship init bash)"
 else
