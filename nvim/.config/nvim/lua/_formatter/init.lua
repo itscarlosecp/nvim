@@ -38,7 +38,7 @@ augroup FormatAutogroup
   autocmd BufWritePost *.css FormatWrite
   autocmd BufWritePost *.html FormatWrite
   autocmd BufWritePost *.js,*.ts,*.jsx,*.tsx FormatWrite
-  autocmd BufWritePost *.lua FormatWrite
+  " autocmd BufWritePost *.lua FormatWrite
 augroup END
 ]],
   true

@@ -12,7 +12,6 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 if lsd_loc="$(type -p "lsd")" || [[ -z "lsd_loc" ]]; then 
 	alias ls="lsd"
 else
-	echo "LSD not installed"
 	alias ls="ls --color=auto --group-directories-first"
 fi
 
