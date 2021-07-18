@@ -1,8 +1,2 @@
 startup.log
-.config/nvim/plugin/
-
-.xmonad/xmonad-x86_64-linux
-.xmonad/xmonad.errors
-.xmonad/xmonad.hi
-
-__pycache__
+nvim/.config/nvim/plugin/*
