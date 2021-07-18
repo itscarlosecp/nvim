@@ -34,13 +34,13 @@ local plugins = function()
     "kabouzeid/nvim-lspinstall",
     config = function()
       require "_lsp"
-    end
+    end,
   }
 
   -- DIAGNOSTICS
   use {
     "glepnir/lspsaga.nvim",
-    event = "BufWinEnter"
+    event = "BufWinEnter",
   }
 
   -- AUTOCOMPLETION

@@ -19,6 +19,7 @@ vim.opt.autoindent = true -- Good auto indent
 vim.opt.number = true -- Show line numbers
 vim.opt.relativenumber = true -- Show line relative numbers
 vim.opt.scrolloff = 5 -- Scroll before last visible line
+vim.opt.cursorline = true
 vim.cmd("set iskeyword+=-") -- Treat dash separated words as a word text object
 vim.cmd("set formatoptions-=cro") -- Stop newline continution of comments
 

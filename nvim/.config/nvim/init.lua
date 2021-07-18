@@ -8,3 +8,4 @@ require "mappings"
 require"github-theme".setup {
 	themeStyle = "dark"
 }
+
