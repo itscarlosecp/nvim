@@ -41,7 +41,6 @@ local configs = {
 			}
 		}
 	},
-
 }
 
 return configs
