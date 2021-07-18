@@ -37,7 +37,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.wallpaper = "/home/itscarlosecp/Pictures/Wallpapers/github.jpg"
+beautiful.wallpaper = "../../../resources/wallpapers/surface_github.jpg"
 beautiful.font = "CaskaydiaCove Nerd Font 11"
 beautiful.useless_gap = 5
 
