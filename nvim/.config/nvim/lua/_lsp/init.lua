@@ -48,10 +48,10 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
     virtual_text = {
-      prefix = "",
+      prefix  = "",
       spacing = 0
     },
-    signs = true,
+    signs     = true,
     underline = true
   }
 )
@@ -74,7 +74,7 @@ local function setup_servers()
     client.setup {
       filetypes = config.filetypes or client.filetypes,
       on_attach = common_on_attach,
-      settings = config.settings or {}
+      settings  = config.settings or {}
     }
   end
 end
