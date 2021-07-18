@@ -41,6 +41,9 @@ local plugins = function()
   use {
     "glepnir/lspsaga.nvim",
     event = "BufWinEnter",
+    requires = {
+      "ray-x/lsp_signature.nvim",
+    }
   }
 
   -- AUTOCOMPLETION

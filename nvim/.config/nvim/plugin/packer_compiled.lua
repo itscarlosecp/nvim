@@ -84,6 +84,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -199,7 +203,7 @@ vim.cmd [[au!]]
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'barbar.nvim', 'lualine.nvim', 'lspsaga.nvim', 'nvim-colorizer.lua'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-treesitter', 'vim-polyglot'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'vim-polyglot', 'nvim-treesitter'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

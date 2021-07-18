@@ -56,6 +56,15 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   }
 )
 
+local function common_on_attach()
+  require "lsp_signature".on_attach {
+    bind = true,
+    use_lspsaga = true
+  }
+end
+
+print()
+
 local function setup_servers()
   require "lspinstall".setup()
   local servers = require "lspinstall".installed_servers()
@@ -63,12 +72,15 @@ local function setup_servers()
     local client = require "lspconfig"[server]
     local config = require "_lsp.configs"[server] or client
     client.setup {
+      filetypes = config.filetypes or client.filetypes,
+      on_attach = common_on_attach,
       settings = config.settings or {}
     }
   end
 end
 
 setup_servers()
+
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
 require'lspinstall'.post_install_hook = function ()
