@@ -12,7 +12,9 @@ local packer = require "packer"
 local use = packer.use
 
 local plugins = function()
-  -- TREESITTER & POLYGLOT
+  -- SYNTAX
+  -- Treesitter: Better highlighting
+  -- Polyglot: Better indentation
   use {
     "nvim-treesitter/nvim-treesitter",
     config = function()
@@ -28,7 +30,8 @@ local plugins = function()
     opt = true,
   }
 
-  -- LSP
+  -- LANGUAGE SERVER PROTOCOL
+  -- (Intellisense)
   use "neovim/nvim-lspconfig"
   use {
     "kabouzeid/nvim-lspinstall",
@@ -70,7 +73,7 @@ local plugins = function()
     event = "BufWinEnter"
   }
 
-  -- NVIMTREE
+  -- FILE EXPLORER
   use {
     "kyazdani42/nvim-tree.lua",
     config = function()
@@ -81,7 +84,7 @@ local plugins = function()
     }
   }
 
-  -- TELESCOPE
+  -- FUZZY FINDER
   use {
     "nvim-telescope/telescope.nvim",
     config = function()
@@ -93,7 +96,9 @@ local plugins = function()
     }
   }
 
-  -- STATUSLINE && TABLINE
+  -- INTERFACE
+  -- Lualine: Statusline
+  -- Barbar: Bufferline
   use {
     "hoob3rt/lualine.nvim",
     config = function()
@@ -117,9 +122,16 @@ local plugins = function()
     end
   }
 
-  -- INTERFACE
+  -- COLORSCHEMES
   -- use "folke/tokyonight.nvim"
-	use "projekt0n/github-nvim-theme"
+	use {
+   "projekt0n/github-nvim-theme",
+   config = function()
+     require "github-theme".setup {
+       themeStyle = "dark"
+     }
+   end
+  }
 
   -- UTILS
   use {

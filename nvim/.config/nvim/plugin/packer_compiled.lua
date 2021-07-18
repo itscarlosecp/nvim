@@ -81,6 +81,7 @@ _G.packer_plugins = {
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/barbar.nvim"
   },
   ["github-nvim-theme"] = {
+    config = { "\27LJ\1\2Q\0\0\2\0\4\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0>\0\2\1G\0\1\0\1\0\1\15themeStyle\tdark\nsetup\17github-theme\frequire\0" },
     loaded = true,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
   },
@@ -165,6 +166,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-easy-align"
   },
+  ["vim-kitty"] = {
+    loaded = false,
+    needs_bufread = true,
+    path = "/home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-kitty"
+  },
   ["vim-polyglot"] = {
     loaded = false,
     needs_bufread = true,
@@ -173,22 +179,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-lspinstall
-time([[Config for nvim-lspinstall]], true)
-try_loadstring("\27LJ\1\2$\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\t_lsp\frequire\0", "config", "nvim-lspinstall")
-time([[Config for nvim-lspinstall]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\1\2*\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\15_telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
--- Config for: FTerm.nvim
-time([[Config for FTerm.nvim]], true)
-try_loadstring("\27LJ\1\2&\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\v_fterm\frequire\0", "config", "FTerm.nvim")
-time([[Config for FTerm.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\1\2)\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\14_nvimtree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: github-nvim-theme
+time([[Config for github-nvim-theme]], true)
+try_loadstring("\27LJ\1\2Q\0\0\2\0\4\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0>\0\2\1G\0\1\0\1\0\1\15themeStyle\tdark\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
+time([[Config for github-nvim-theme]], false)
+-- Config for: FTerm.nvim
+time([[Config for FTerm.nvim]], true)
+try_loadstring("\27LJ\1\2&\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\v_fterm\frequire\0", "config", "FTerm.nvim")
+time([[Config for FTerm.nvim]], false)
+-- Config for: nvim-lspinstall
+time([[Config for nvim-lspinstall]], true)
+try_loadstring("\27LJ\1\2$\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\t_lsp\frequire\0", "config", "nvim-lspinstall")
+time([[Config for nvim-lspinstall]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -199,12 +209,21 @@ time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType kitty ++once lua require("packer.load")({'vim-kitty'}, { ft = "kitty" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'barbar.nvim', 'lualine.nvim', 'lspsaga.nvim', 'nvim-colorizer.lua'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufRead * ++once lua require("packer.load")({'vim-polyglot', 'nvim-treesitter'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-kitty/ftdetect/kitty.vim]], true)
+vim.cmd [[source /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-kitty/ftdetect/kitty.vim]]
+time([[Sourcing ftdetect script at: /home/itscarlosecp/.local/share/nvim/site/pack/packer/opt/vim-kitty/ftdetect/kitty.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
