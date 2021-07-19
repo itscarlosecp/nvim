@@ -5,7 +5,7 @@ vim.g.nvim_tree_tab_open = 1 -- Keep explorer open when switching tabs
 
 -- Icons
 vim.g.nvim_tree_icons = {
-  default = "",
+  default = "",
   symlink = "",
   git = {
     unstaged  = "",
