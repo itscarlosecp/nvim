@@ -2,7 +2,7 @@
 
 Welcome to my dotfiles, a repo where I store my development environment configurations. You can blindly copy these files if you wanted to, but I strongly suggest you use them as inspiration to build your dotfiles (you can learn a lot from setting up your personal configs).
 
-![dotfiles](https://user-images.githubusercontent.com/47466248/126041864-a86781f3-f756-4254-842b-7770074bded6.png)
+![dotfiles](https://user-images.githubusercontent.com/47466248/126183828-b66d1ce0-ccd2-48e9-a764-f909038db553.png)
 
 ## Details
 
