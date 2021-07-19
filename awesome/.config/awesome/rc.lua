@@ -333,7 +333,7 @@ globalkeys = gears.table.join(
 		end),
     -- Screenshot
 		awful.key({}, "Print", function()
-			awful.spawn("gnome-screenshot -ca")
+			awful.spawn("flameshot gui")
 		end)
 )
 
