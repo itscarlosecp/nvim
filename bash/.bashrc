@@ -1,8 +1,9 @@
 ### GLOBALS ###
 # Variables exports
-export EDITOR=nvim
-export TERM=kitty
-export HISTCONTROL=ignoreboth
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
+export TERM="kitty"
+export HISTCONTROL="ignoreboth"
 
 # PATH exports
 export PATH="/usr/local/go/bin:$PATH"
@@ -12,6 +13,9 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 # set -o vi
 
 ### ALIASES ###
+# Battery
+alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E 'state|to\ full|percentage"
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
