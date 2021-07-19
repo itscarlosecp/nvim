@@ -17,15 +17,15 @@ font:
     style: Regular
 
   bold:
-    family: CaskaydiaCove Nerd Font Bold
+    family: Cascadia Code Bold
 
   italic:
-    family: CaskaydiaCove Nerd Font Bold Italic
+    family: Cascadia Code Italic
 
   bold_italic:
-    family: CaskaydiaCove Nerd Font Bold Italic
+    family: Cascadia Code Bold Italic
 
-  size: 11.0
+  size: 8.0
 
 # Colors (Tomorrow Night)
 #colors:
