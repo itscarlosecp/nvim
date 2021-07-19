@@ -29,8 +29,8 @@ fi
 
 # Quick access
 alias .files="cd $HOME/.dotfiles"
-alias dev="cd $HOME/dev"
-alias uba="cd $HOME/UBA"
+alias dev="cd $HOME/Documents/dev"
+alias uba="cd $HOME/Documents/UBA"
 
 # APPLICATIONS 
 # Neovim

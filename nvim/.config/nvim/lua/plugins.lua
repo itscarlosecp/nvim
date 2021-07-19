@@ -144,6 +144,13 @@ local plugins = function()
       -- require "_formatter"
     -- end
   -- }
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require "gitsigns".setup()
+    end,
+    event = "BufWinEnter"
+  }
 
   -- PACKER
   use {"wbthomason/packer.nvim", opt = true}

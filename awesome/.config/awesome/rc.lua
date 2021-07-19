@@ -37,9 +37,9 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.wallpaper = "/home/itscarlosecp/.dotfiles/resources/wallpapers/surface_github.jpg"
+beautiful.wallpaper = "/home/itscarlosecp/.dotfiles/resources/wallpapers/desert_github.jpg"
 beautiful.font = "CaskaydiaCove Nerd Font 11"
-beautiful.useless_gap = 5
+beautiful.useless_gap = 8
 
 -- This is used later as the default terminal and editor to run.
 terminal = os.getenv("TERM") or "kitty"
@@ -307,6 +307,8 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Multimedia keys
+    -- Using `xbindkeys --key` to get key code
+    -- Volume Controls
     awful.key({}, "XF86AudioMute", function()
 			awful.spawn("amixer -D pulse set Master 1+ toggle")
 		end),
@@ -316,6 +318,7 @@ globalkeys = gears.table.join(
 		awful.key({}, "XF86AudioLowerVolume", function()
 			awful.spawn("amixer -D pulse set Master 5%-")
 		end),
+    -- Play/Pause/Prev/Next
 		awful.key({}, "XF86AudioPlay", function()
 			awful.spawn("playerctl play-pause")
 		end),
@@ -324,6 +327,13 @@ globalkeys = gears.table.join(
 		end),
 		awful.key({}, "XF86AudioPrev", function()
 			awful.spawn("playerctl previous")
+		end),
+		awful.key({}, "XF86AudioPrev", function()
+			awful.spawn("playerctl previous")
+		end),
+    -- Screenshot
+		awful.key({}, "Print", function()
+			awful.spawn("gnome-screenshot -ca")
 		end)
 )
 
