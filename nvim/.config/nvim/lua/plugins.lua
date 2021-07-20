@@ -124,13 +124,13 @@ local plugins = function()
 
   -- COLORSCHEMES
   -- use "folke/tokyonight.nvim"
-	use {
-   "projekt0n/github-nvim-theme",
-   config = function()
-     require "github-theme".setup {
-       themeStyle = "dark"
-     }
-   end
+  use {
+    "projekt0n/github-nvim-theme",
+    config = function()
+      require "github-theme".setup {
+        themeStyle = "dark"
+      }
+    end
   }
 
   -- UTILS
@@ -139,10 +139,10 @@ local plugins = function()
     cmd = "EasyAlign"
   }
   -- use {
-    -- "mhartington/formatter.nvim",
-    -- config = function()
-      -- require "_formatter"
-    -- end
+  -- "mhartington/formatter.nvim",
+  -- config = function()
+  -- require "_formatter"
+  -- end
   -- }
   use {
     "lewis6991/gitsigns.nvim",
@@ -150,6 +150,10 @@ local plugins = function()
       require "gitsigns".setup()
     end,
     event = "BufWinEnter"
+  }
+  use {
+    "npxbr/glow.nvim",
+    cmd = "Glow",
   }
 
   -- PACKER
