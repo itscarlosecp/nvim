@@ -7,9 +7,11 @@ vim.g.mapleader = " "
 
 -- FILE EXPLORER
 map("n", "<Leader>e", ":NvimTreeToggle<CR>", noremap)
--- FUZZY FINDER
+
+-- TELESCOPE
 map("n", "<Leader>ff", ":Telescope find_files hidden=true<CR>", silent)
-map("n", "<Leader>fb", ":Telescope buffers<CR>", silent)
+map("n", "<Leader>fs", ":Telescope lsp_workspace_symbols<CR>",   silent)
+
 -- TOGGLE TERMINAL
 map("n", "<C-t>", "<CMD>lua require 'FTerm'.toggle()<CR>", silent)
 map("t", "<C-t>", "<CMD>lua require 'FTerm'.toggle()<CR>", silent)
@@ -21,9 +23,9 @@ map("n", "<C-L>", "<C-W><C-L>", noremap)
 map("n", "<C-H>", "<C-W><C-H>", noremap)
 
 -- TABLINE (BUFFERS)
-map("n", "<Tab>", ":BufferNext<CR>", silent)
-map("n", "<S-Tab>", ":BufferPrevious<CR>", silent)
-map("n", "<Leader>c", ":BufferClose<CR>", silent)
+map("n", "<Tab>",     ":BufferNext<CR>",     silent)
+map("n", "<S-Tab>",   ":BufferPrevious<CR>", silent)
+map("n", "<Leader>c", ":BufferClose<CR>",    silent)
 
 -- LSPSAGA
 vim.cmd("inoremap <silent><expr> <C-.> compe#complete()")
