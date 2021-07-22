@@ -1,6 +1,6 @@
 {
 	// COLORSCHEME
-	// "workbench.colorTheme": "Dracula",
+	"workbench.colorTheme": "GitHub Dark",
 	"workbench.colorCustomizations": {
 		"[Default Dark+]": {
 			"activityBar.background": "#0f0f0f",
@@ -292,12 +292,12 @@
 
 	// GENERAL SETTINGS
 	"files.defaultLanguage": "python",
-	"editor.fontFamily": "JetBrainsMono NF",
+	"editor.fontFamily": "Cascadia Code",
+	"terminal.integrated.fontFamily": "CaskaydiaCove NF",
 	"editor.fontLigatures": false,
-	"terminal.integrated.fontFamily": "JetBrainsMono NF",
-	"terminal.integrated.fontSize": 14,
+	"editor.fontSize": 14,
+	"terminal.integrated,fontSize": 12,
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.startupEditor": "gettingStartedInEmptyWorkbench",
 	"security.workspace.trust.untrustedFiles": "open",
 	"security.workspace.trust.startupPrompt": "never",
 	"security.workspace.trust.enabled": false,
@@ -320,6 +320,7 @@
 	"workbench.editor.limit.perEditorGroup": true,
 	"workbench.editor.limit.value": 2,
 	"workbench.editor.showTabs": false,
+	"workbench.list.automaticKeyboardNavigation": false, // Disable explorer filtering
 
 	// FILE EXPLORER
 	"explorer.openEditors.visible": 0,
@@ -340,17 +341,16 @@
 	"vim.hlsearch": true,
 	"vim.incsearch": true,
 	"vim.useCtrlKeys": true,
-	"vim.handleKeys": {
-		"<C-a>": false, // Select all
-		"<C-c>": false, // Copy selected
-		"<C-f>": false, // Search
-		"<C-h>": false, // Replace
-		"<C-q>": false // Navigate
-	},
-	"vim.useSystemClipboard": false,
+	"vim.useSystemClipboard": true,
 	"vim.visualstar": true,
 	"vim.leader": "<space>",
 	"vim.normalModeKeyBindingsNonRecursive": [
+		// GLOBALS
+		{
+			"before": ["<leader>", "x"],
+			"commands": ["workbench.action.showCommands"]
+		},
+		// FILE EXPLORER & FUZZY FINDER
 		{
 			"before": ["<leader>", "e"],
 			"commands": ["workbench.view.explorer"]
@@ -359,23 +359,14 @@
 			"before": ["<leader>", "f", "f"],
 			"commands": ["workbench.action.quickOpen"]
 		},
-		{
-			"before": ["<leader>", "f", "s"],
-			"commands": ["workbench.action.gotoSymbol"]
-		},
+		// SEARCH & REPLACE
 		{
 			"before": ["/"],
 			"commands": ["actions.find"]
-		}
-	],
-	"vim.visualModeKeyBindings": [
-		{
-			"before": [">"],
-			"commands": ["editor.action.indentLines"]
 		},
 		{
-			"before": ["<"],
-			"commands": ["editor.action.outdentLines"]
+			"before": ["?"],
+			"commands": ["workbench.action.findInFiles"]
 		}
 	],
 
@@ -413,9 +404,9 @@
 	"prettier.singleQuote": false,
 
 	// OTHERS
-	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"python.defaultInterpreterPath": "/usr/bin/python3",
 	"workbench.editorAssociations": {
-		"*.ipynb": "jupyter.notebook.ipynb"
-	},
-	"tabnine.experimentalAutoImports": true
+		"*.ipynb": "jupyter-notebook"
+	}
 }
