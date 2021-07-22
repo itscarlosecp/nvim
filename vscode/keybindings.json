@@ -33,7 +33,7 @@
 	{
 		"key": "shift+k",
 		"command": "editor.action.showHover",
-		"when": "neovim.mode == normal && editorTextFocus"
+		"when": "vim.mode == 'Normal' && editorTextFocus"
 	},
 	// TERMINAL
 	{
@@ -123,15 +123,15 @@
 		"command": "-list.toggleExpand",
 		"when": "listFocus && !inputFocus"
 	},
-	// WORD WRAP VISUAL LINES
+	// FIND AND REPLACE ALL
 	{
-		"key": "k",
-		"command": "cursorUp",
-		"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+		"key": "ctrl+enter",
+		"command": "editor.action.replaceAll",
+		"when": "editorFocus && findWidgetVisible"
 	},
 	{
-		"key": "j",
-		"command": "cursorDown",
-		"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+		"key": "ctrl+alt+enter",
+		"command": "-editor.action.replaceAll",
+		"when": "editorFocus && findWidgetVisible"
 	}
 ]
