@@ -8,7 +8,7 @@
 		"key": "ctrl+shift+,",
 		"command": "workbench.action.openGlobalKeybindingsFile"
 	},
-	// PANES MOVEMENT
+	// PANE MOVEMENT
 	{
 		"key": "ctrl+k",
 		"command": "workbench.action.navigateUp",
@@ -33,31 +33,35 @@
 	{
 		"key": "shift+k",
 		"command": "editor.action.showHover",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
+		"when": "neovim.mode == normal && editorTextFocus"
+	},
+	// TERMINAL
+	{
+		"key": "ctrl+;",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+;",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+tab",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus && terminalProcessSupported"
 	},
 	// FILE EXPLORER
 	{
-		"key": "ctrl+e",
-		"command": "workbench.view.explorer",
-		"when": "vim.mode == 'Normal' && !filesExplorerFocus"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "workbench.action.toggleSidebarVisibility",
-		"when": "vim.mode == 'Normal' && sideBarVisible"
-	},
-	{
-		// CHANGE SPACE TO LEADER
 		"key": "space e",
 		"command": "workbench.action.toggleSidebarVisibility",
-		"when": "vim.mode != 'Insert' && filesExplorerFocus"
+		"when": "filesExplorerFocus"
 	},
-	{
-		"key": "ctrl+shift+e",
-		"command": "-workbench.view.explorer",
-		"when": "viewContainer.workbench.view.explorer.enabled"
-	},
-	// WORKSPACE FILES
 	{
 		"key": "a",
 		"command": "explorer.newFile",
@@ -108,117 +112,15 @@
 		"command": "explorer.openToSide",
 		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
 	},
-	// FUZZY FINDER
-	{
-		"key": "ctrl+n",
-		"command": "workbench.action.quickOpenNavigateNextInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+p",
-		"command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+p",
-		"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	{
-		"key": "ctrl+shift+p",
-		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-		"when": "inFilesPicker && inQuickOpen"
-	},
-	// TERMINAL
-	{
-		"key": "ctrl+x",
-		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "terminal.active"
-	},
-	{
-		"key": "ctrl+`",
-		"command": "-workbench.action.terminal.toggleTerminal",
-		"when": "terminal.active"
-	},
-	{
-		"key": "ctrl+shift+x",
-		"command": "workbench.action.terminal.new",
-		"when": "terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+`",
-		"command": "-workbench.action.terminal.new",
-		"when": "terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+tab",
-		"command": "workbench.action.terminal.focusNext",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+pagedown",
-		"command": "-workbench.action.terminal.focusNext",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+tab",
-		"command": "workbench.action.terminal.focusPrevious",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+pageup",
-		"command": "-workbench.action.terminal.focusPrevious",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	// DIAGNOSTICS
-	{
-		"key": "[g",
-		"command": "editor.action.marker.next",
-		"when": "vim.mode == 'Normal' && editorFocus"
-	},
-	{
-		"key": "alt+f8",
-		"command": "-editor.action.marker.next",
-		"when": "editorFocus"
-	},
-	{
-		"key": "g]",
-		"command": "editor.action.marker.prev",
-		"when": "vim.mode == 'Normal' && editorFocus"
-	},
-	{
-		"key": "shift+alt+f8",
-		"command": "-editor.action.marker.prev",
-		"when": "editorFocus"
-	},
 	// CLOSE WINDOW
 	{
 		"key": "ctrl+shift+w",
 		"command": "-workbench.action.closeWindow"
 	},
-	// DISABLING FOR EXPLORER
-	{
-		"key": "space",
-		"command": "-filesExplorer.openFilePreserveFocus",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-	},
+	// DISABLING KEYBINDS
 	{
 		"key": "space",
 		"command": "-list.toggleExpand",
 		"when": "listFocus && !inputFocus"
-	},
-	{
-		"key": "space",
-		"command": "-breadcrumbs.revealFocused",
-		"when": "breadcrumbsActive && breadcrumbsVisible"
-	},
-	// COMMAND LINE
-	{
-		"key": "ctrl+;",
-		"command": "workbench.action.showCommands"
-	},
-	{
-		"key": "ctrl+shift+p",
-		"command": "-workbench.action.showCommands"
 	}
 ]
