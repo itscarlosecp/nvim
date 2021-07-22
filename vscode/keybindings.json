@@ -122,5 +122,16 @@
 		"key": "space",
 		"command": "-list.toggleExpand",
 		"when": "listFocus && !inputFocus"
+	},
+	// WORD WRAP VISUAL LINES
+	{
+		"key": "k",
+		"command": "cursorUp",
+		"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+	},
+	{
+		"key": "j",
+		"command": "cursorDown",
+		"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
 	}
 ]
