@@ -367,6 +367,15 @@
 		{
 			"before": ["?"],
 			"commands": ["workbench.action.findInFiles"]
+		},
+		// DIAGNOSTICS
+		{
+			"before": ["[", "g"],
+			"commands": ["editor.action.marker.next"]
+		},
+		{
+			"before": ["]", "g"],
+			"commands": ["editor.action.marker.prev"]
 		}
 	],
 
